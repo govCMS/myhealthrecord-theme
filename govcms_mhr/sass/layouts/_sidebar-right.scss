@@ -1,0 +1,61 @@
+/*
+ * sidebar-right layout
+ */
+
+.sidebar-second {
+.inner-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+  #header-content {
+    @include clearfix;
+    clear: both;
+    float: left;
+    width: 100%;
+    .page-header {
+      padding: 0 rem(25);
+    }
+  }
+  #page {
+    @include clearfix;
+    clear: both;
+    z-index: 1;
+    position: relative;
+  }
+  #main {
+    @include clearfix;
+    clear: both;
+    // padding: rem(25) 0;
+    #content {
+      width: 65%;
+      padding: rem(50);
+      @include to(medium) {
+       width: 100%;
+       padding: rem(25);
+      }
+    }
+  }
+  aside.sidebars {
+    @include clearfix;
+    float: right;
+    width: 35%;
+    .region-sidebar-second {
+      width: 100% !important; //reset Govcms styles
+      float: left;
+      margin-top: -50px;
+      margin-bottom: 30px;
+    }
+    @include to(medium) {
+     width: 100%;
+     padding: rem(25);
+     .region-sidebar-second {
+      margin-top: 0;
+     }
+    }
+  }
+  &.logged-in {
+    aside.sidebars .region-sidebar-second {
+      margin-top: 0;
+    }
+  }
+}

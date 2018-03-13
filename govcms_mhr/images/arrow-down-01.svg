@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-532 551 11 6">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-arrow-down-01);
+      }
+
+      .cls-2 {
+        fill: #002d81;
+        stroke: #002d81;
+        stroke-width: 0.4px;
+      }
+    </style>
+    <clipPath id="clip-arrow-down-01">
+      <rect x="-532" y="551" width="11" height="6"/>
+    </clipPath>
+  </defs>
+  <g id="arrow-down-01" class="cls-1">
+    <g id="icons8-right_4" transform="translate(-522.064 551.358) rotate(90)">
+      <path id="Path_39" data-name="Path 39" class="cls-2" d="M13.34,4.749l-.548.552,3.917,3.948L12.792,13.2l.548.552,4.19-4.224.262-.276-.262-.276Z" transform="translate(-12.792 -4.749)"/>
+    </g>
+  </g>
+</svg>

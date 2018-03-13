@@ -1,0 +1,276 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
+/**
+ * By importing this CSS file as media "all", we allow this print file to be
+ * aggregated with other stylesheets, for improved front-end performance.
+ */
+@media print {
+  /* Underline all links. */
+  a:link,
+  a:visited {
+    text-decoration: underline !important;
+    /* Don't underline header. */
+    &.header__site-link {
+      text-decoration: none !important;
+    }
+  }
+  /* Add printable logo and remove screen logo */
+  header.header {
+    position: relative;
+
+    .header-wrapper {
+      padding: 0;
+    }
+
+    .header__name-and-slogan a {
+      background: none;
+      width: auto;
+      height: auto;
+      text-indent: 0;
+
+      &:after {
+        content: url("../logo.png");
+      }
+
+      & span {
+        display: none;
+      }
+    }
+  }
+
+  #header-content {
+    margin-top: 3cm !important;
+    position: relative !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+
+    &,
+    &:before,
+    * {
+      background: none !important;
+      color: $black !important;
+    }
+
+    &:before {
+      content: none !important;
+    }
+
+    .inner-wrapper {
+      margin: 0 !important;
+    }
+  }
+
+  aside {
+    display: none !important;
+  }
+
+  #content {
+    /* Add visible URL after links. */
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-weight: normal;
+    }
+    /* Only display useful links. */
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+      content: "";
+    }
+    /* Add visible title after abbreviations. */
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+
+    article {
+      float: left !important;
+      max-width: 100% !important;
+      padding: 50px 0 0 !important;
+      margin: 0 50px 0 0 !important;
+    }
+  }
+  /* reset Bootstrap grid for print. */
+  body,
+  div {
+    margin: 0 auto !important;
+    width: auto !important;
+    padding: initial !important;
+    float: none !important;
+    position: static !important;
+    display: block !important;
+  }
+
+  body {
+    overflow-x: initial;
+  }
+  /* Turn off any background colors or images. */
+  a,
+  body,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: #000 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+  }
+
+  h1 {
+    color: $white !important;
+  }
+  /* Hide sidebars and nav elements. */
+  #block-bean-readspeaker-button,
+  #block-workbench-block,
+  #cboxOverlay,
+  #footer-content,
+  #hidden-region,
+  #navbar,
+  #navigation-content,
+  #page-bottom,
+  #skip-link,
+  #toolbar,
+  .block-easy-breadcrumb,
+  .book-navigation,
+  .flag-outer-bookmark,
+  .nav,
+  .nav-tabs,
+  .region-content-bottom,
+  .region-sidebar-second,
+  .slicknav_menu,
+  .tabs--primary,
+  footer img {
+    visibility: hidden !important;
+    display: none !important;
+  }
+
+  body {
+    &::before {
+      content: "";
+      top: 0.5cm !important;
+      left: 50px !important;
+      background: url("../images/mhr-logo_large.png") no-repeat !important;
+      background-size: 6cm !important;
+      width: 6cm !important;
+      height: 2cm !important;
+      position: absolute;
+      display: block;
+      -webkit-print-color-adjust: exact !important; //forces browsers to print bg images
+      color-adjust: exact !important;
+      z-index: 99999;
+    }
+  }
+  /* Last updated date */
+  .group-header {
+    margin-bottom: 0.3cm !important;
+    padding-bottom: 0.3cm !important;
+  }
+
+  .field-name-changed-date {
+    display: block !important;
+  }
+
+  .footer {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 2.5cm !important;
+    padding-top: 1cm !important;
+    position: relative !important;
+
+    &:after {
+      color: black !important;
+      // content: "© Pharmaceutical Society of Australia LTD 2018" !important;
+      display: block !important;
+    }
+  }
+
+  html {
+    height: auto !important;
+  }
+
+  body {
+    // width: 210mm;
+    // height: 282mm;
+    margin: 1.5cm 1.5cm 0 1.5cm !important;
+    box-sizing: border-box !important;
+
+    & > *:not(#header-content):not(#page) {
+      display: none !important;
+    }
+  }
+  //home page styling
+  .front {
+    .page__title {
+      position: inherit !important;
+      width: 400px !important;
+      height: 50px !important;
+    }
+
+    a {
+      color: black !important;
+
+      &::after {
+        content: "" !important;
+      }
+    }
+
+    h1 {
+      color: $white !important;
+    }
+
+    .panel-col-top {
+      background-image: none !important;
+    }
+
+    .pane-bean-my-health-record-in-60-seconds {
+      display: none !important;
+    }
+
+    .pane-bean-heading {
+      padding-bottom: 2cm !important;
+      margin-top: 50px !important;
+
+      h1 {
+        display: none !important;
+      }
+    }
+
+    .pane-bean-discover-more {
+      background-image: none !important;
+      height: auto !important;
+
+      a {
+        display: none;
+      }
+
+      .icon img {
+        display: inline !important;
+      }
+
+      ul li {
+        display: inline !important;
+      }
+    }
+
+    .pane-bean-how-to-homepage {
+      height: auto !important;
+      padding-top: 2cm !important;
+
+      .field-name-field-how-to-items {
+        display: none !important;
+      }
+
+      .block-contact {
+        padding: 1cm !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+
+      a {
+        display: none !important;
+      }
+    }
+  }
+}

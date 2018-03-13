@@ -1,0 +1,194 @@
+// ----- Footer ----- //
+#footer-content {
+  background-color: $gray-darker;
+  #footer {
+    @extend .inner-wrapper;
+    @include clearfix;
+    padding: 50px 25px 85px;
+    * {
+      color: $white;
+    }
+    h3 {
+      font-size: rem(18);
+      margin-top: 0;
+    }
+    ul {
+      margin: 0;
+    }
+    a {
+      font-family: $text-content-sans--serif;
+      font-size: rem(16);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 3px;
+      &:hover {
+        border-color: $white;
+      }
+      &.link-external:after {
+        content: url('../images/icon-external-white.png');
+      }
+    }
+    >.block {
+      float: left;
+      width: 24%;
+      margin-right: 1%;
+      margin-bottom: 25px;
+      li {
+        margin-bottom: 5px;
+      }
+      @include to(medium) {
+        width: 100%;
+        margin: 0 0 15px;
+        padding: 0;
+        border-bottom: 1px solid $orange;
+        * {
+          text-align: center;
+        }
+        .container {
+          padding: 15px;
+        }
+      }
+    }
+    #need-help span {
+      display: block;
+    }
+    // GOVT crest
+    .block:nth-of-type(1) {
+      display: none;
+      #government-logo {
+        max-width: 220px;
+        margin: auto;
+        img {
+          padding: 20px;
+          width: 100%;
+        }
+      }
+      @include to(medium) {
+        display: block;
+      }
+    }
+    #block-menu-menu-footer-menu .menu {
+      // Reset Govcms styles
+      float: none;
+      display: block;
+      li {
+        display: block;
+        float: none;
+        a {
+          padding-left: 0;
+          display: inline;
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include to(medium) {
+      padding: 0;
+      #block-block-3, #block-bean-healthcare-professionals, #block-menu-menu-footer-menu {
+        display: none;
+      }
+      #block-block-6 {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+#bottom-content {
+  background-color: $gray-darkest;
+  position: relative;
+  * {
+    color: $white;
+  }
+
+  .region-bottom {
+    position: relative;
+    z-index: 1;
+  }
+  .container {
+    @include clearfix;
+    @extend .inner-wrapper;
+    padding: rem(15);
+  }
+  .block__content {
+    text-align: center;
+  }
+  ul.icon-social, h3, ul.icon-social li {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  h3 {
+    font-size: 1rem;
+    margin-right: rem(10);
+  }
+  ul.icon-social li a {
+    width: rem(20);
+    height: rem(20);
+    display: block;
+    margin: 0 rem(5);
+    img {
+      height: 100%;
+    }
+  }
+  #block-block-9 {
+    display: none;
+  }
+  &::before {
+    display: block;
+    content: "";
+    background: url(../images/footer-crest.png) no-repeat;
+    background-size: contain;
+    width: 345px;
+    height: 140px;
+    position: absolute;
+    top: -83px;
+    left: 0;
+  }
+  @include to(medium) {
+    background-color: $gray-darker;
+    .region-bottom {
+      max-width: none !important;
+    }
+    #block-block-9 {
+      display: block;
+      p {
+        float: left;
+        clear: both;
+        margin: 0;
+      }
+    }
+    #block-block-4 {
+      border: solid $orange;
+      border-width: 1px 0px;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  // Page Top Anchor
+  #block-block-2 {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    z-index: 10;
+    .block__title.block-title {
+      @include is-invisible;
+    }
+    a.back-to-top {
+      // required for focus
+      display: block; 
+    }
+    a img {
+      height: 44px;
+      width: 44px;
+    }
+    @include to(medium) {
+      top: auto;
+      bottom: 0;
+      right: 15px;
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}

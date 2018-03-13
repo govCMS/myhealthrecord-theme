@@ -1,0 +1,24 @@
+/*
+ * Readspeak button (Listen)
+ */
+
+#block-bean-readspeaker-button {
+position: absolute;
+top: 10px;
+right: 175px; //165px;
+z-index: 100;
+top: 12px;
+@include to(medium) {
+	display: none;
+}
+@include between(large, xlarge) {
+	right: 345px;
+}
+	.rsbtn {
+	  // prevents listen button from blocking links
+	  z-index: auto !important;
+	  a.rsbtn_play {
+	    border: none !important;
+	  }
+	}
+}

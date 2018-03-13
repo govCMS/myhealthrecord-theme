@@ -1,0 +1,22 @@
+// ----- Maintenance ----- //
+
+.maintenance-page {
+  background-color: $white;
+  background-image: url(../images/maintenance-background.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 1807px 872px;
+  .palette-1 {
+    background-color: transparent;
+    max-width: 100%;
+    img {
+      margin: 20px auto 60px auto;
+      max-height: 125px;
+      width: 80%;
+    }
+  }
+  .centered-box {
+    margin: 0 auto;
+  }
+}

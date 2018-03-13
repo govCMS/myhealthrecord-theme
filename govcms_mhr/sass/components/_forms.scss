@@ -1,0 +1,287 @@
+// ----- Forms ----- //
+
+// Search API form Header //
+
+#block-search-api-page-default-search {
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  $size: 45px;
+  #search-api-page-search-form-default-search {
+    display: block;
+    input.form-text {
+      border: 1px solid $gray-lighter;
+      border-radius: 50px;
+      font-size: 1rem;
+      height: $size;
+      max-width: 450px;
+      min-width: auto;
+      padding: 0 $size - 2px 0 0;
+      position: absolute;
+      right: 26px;
+      text-indent: 15px;
+      transition: width 0.54s ease;
+      width: 80%;
+      width: $size - 2px;
+      z-index: 149;
+    }
+    input:-webkit-input-placeholder {
+      color: #65737e;
+    }
+    input:-moz-placeholder {
+      color: #65737e;
+    }
+    input:-ms-input-placeholder {
+      color: #65737e;
+    }
+    input.form-text:active,
+    input.form-text:focus {
+      width: 300px;
+    }
+    // &:hover input.form-text {
+    &.open input.form-text {
+      width: 300px;
+    }
+    .form-submit {
+      background: url("../images/icon-search.svg") 50% 50% no-repeat white;
+      background-size: 20px;
+      border: 1px solid $gray-lighter;
+      border-radius: 50px;
+      width: $size;
+      text-indent: -9999px;
+      box-shadow: none;
+      font-weight: bold;
+      height: $size;
+      position: relative;
+      right: auto;
+      text-indent: -999px;
+      width: $size;
+      z-index: 150;
+      &:hover,
+      &:focus {
+        background-color: lighten($gray-lighter,5%);
+      }
+    }
+  }
+}
+
+// Search API search block Error message //
+#search-noresults {
+    position: absolute;
+    color: $red-dark;
+    font-size: small;
+    margin: 0;
+    z-index: 151;
+    display: none;
+    top: -2em;
+
+    @include from(small) {
+      top: 2.7em;
+      left: -175px;
+    }
+    @include at(xlarge) {
+      top: 3em;
+      left: -175px;
+    }
+    @include from(5) { // after x large to infinite
+      top: 7.4em;
+      left: -165px;
+    }
+}
+// This allow to close the search when clicking outside
+#search-locker {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background-color: transparentize($red, 0.5); // debugging
+  z-index: 148;
+}
+
+// Login Page //
+
+.not-logged-in {
+  #main {
+    .tabs-primary {
+      border: none;
+      background-color: $white;
+      max-width: 500px;
+      width: 80%;
+      @include at(small) {
+        width: 100%;
+      }
+      .is-active {
+        border: none;
+      }
+      li:first-child {
+        border-right: solid 1px $orange-light;
+      }
+    }
+    .user-login {
+      border: none;
+      width: 100%;
+    }
+    form {
+      border: none;
+      .form-item {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#main {
+  input[type="text"], input[type="email"], input[type="password"] {
+    background-color: $white;
+    border: 1px solid $gray-lighter;
+    border-radius: 50px;
+    min-height: 45px;
+    padding: 10px 50px 10px 15px;
+    height: auto;
+  }
+  textarea {
+    background-color: $white;
+    border: 1px solid $gray-lighter;
+    padding: 15px;
+  }
+  .form-required {
+    color: $red;
+  }
+  .form-type-radio {
+    label {
+      color: $text-color-paragraph;
+      font-family: $text-content-sans--serif;
+      padding-left: 15px;
+    }
+  }
+  .webform-submit, .form-submit {
+    @extend .btn;
+    @extend .btn-secondary;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .webform-component-select select {
+    // background: none !important;
+    border: 1px solid $gray-lighter;
+    border-radius: 50px;
+    // height: 45px;
+    padding: rem(11) rem(35) rem(11) rem(15);
+    color: $text-color-link;
+    background: white url("../images/icon_arrow-down.svg") no-repeat right 15px center;
+    background-size: 15px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    transition: .2s ease all;
+    &:hover, &:focus {
+      cursor: pointer;
+      background-color: lighten($gray-lighter,5%);
+    }
+  }
+}
+
+
+// Helpful Yes/No Webform //
+
+#block-webform-client-block-114 {
+  margin-bottom: 0 !important; //Overide Govcms styles
+  padding: 1rem;
+
+  form.webform-client-form {
+    text-align: center;
+    #edit-submitted-helpful,
+    label[for=edit-submitted-helpful] {
+      &,
+      * {
+        display: inline-block;
+      }
+    }
+    .webform-component--helpful {
+      margin-top: 0;
+    }
+    .form-item-submitted-helpful {
+      color: $blue-darkest;
+      margin-bottom: 0;
+      input[type=radio] {
+        // hiding the actual radio
+        @include is-invisible;
+        cursor: pointer;
+        &:focus + label:before {
+          @include base-outline;
+        }
+      }
+      label {
+        // Styling the label (clickable)
+        cursor: pointer;
+        &::before {
+          content: " ";
+          line-height: 2;
+          // Replace with image here or icofont above //
+          background-image: url(../images/thumb-up-white.png);
+          background-size: 15px 15px;
+          background-repeat: no-repeat;
+          background-position: center;
+          color: white;
+          font-weight: bold;
+          display: inline-block;
+          background-color: $blue-darkest;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50rem;
+          margin: 0 0.5em -10px 0;
+          transition: all 0.2s ease-out;
+        }
+        &:focus,
+        &:hover {
+          &::before {
+            background-color: $green;
+          }
+        }
+        &[for=edit-submitted-helpful-2] {
+          &::before {
+            //transform: rotate(180deg);
+            background-image: url(../images/thumb-down-blue.png);
+            background-color: $gray-lighter;
+          }
+        &:focus,
+        &:hover {
+          &::before {
+            background-color: $red;
+            background-image: url(../images/thumb-down-wht.png);
+          }
+        }
+        }
+      }
+    }
+    .form-actions {
+      // hiding the submit area, submit is handled via jQuery on label click
+      @include is-invisible;
+    }
+  }
+}
+
+.page-user-password #user-pass #edit-submit {
+  margin-top:20px;
+}
+
+//contact us pages
+.section-about {
+  .form-actions {
+    margin: 1rem auto;
+  }
+  .webform-client-form-91 {
+    @include at(small) {
+      max-width: 400px;
+    }
+    input {
+      @include at(small){
+        width: 100%;
+      }
+    }
+  }
+}

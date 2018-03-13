@@ -1,0 +1,53 @@
+// ----- Sidebar ----- //
+
+.region-sidebar-second {
+  background: white;
+  padding: rem(25) rem(25) 0;
+  box-shadow: 0px 0px 80px 0px rgba(black, 0.1);
+  border-radius: 3px;
+  max-width: 350px;
+  .block__title.block-title {
+    background: none;
+    border-bottom: 1px solid $gray-lightest;
+    color: $gray-darkest;
+    padding: 0 0 15px 0;
+    margin-bottom: 0;
+    font-size: rem(20);
+    line-height: 1; 
+  }
+  .block .block__content {
+    background: none;
+    padding: 0;
+    ul {
+      margin: 0 0 1rem;
+    }
+    li a {
+      font-size: 1rem;
+      display: block;
+      margin: 0 -15px;
+      padding: 10px 15px;
+      &:hover {
+        background: $gray-lightest;
+      }
+      &.active-trail.active {
+        background-color: $text-color-link;
+        color: white;
+      }
+    }
+    .menu .menu {
+      padding: 0 15px;
+      box-sizing: border-box;
+      li a {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 0 -30px 0 -15px;
+      }
+    }
+  }
+  #block-views-related-topic-block {
+    margin-bottom: 0;
+  }
+  @include to(medium) {
+    max-width: none !important;
+  }  
+}

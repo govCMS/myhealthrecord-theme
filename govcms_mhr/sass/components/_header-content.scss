@@ -1,0 +1,154 @@
+#header-content {
+	background-color: $orange-light;
+  position: relative;
+  padding: 25px 0;
+  @include reverse-text;
+  .page-header {
+    position: relative;
+    @include from(large) {
+      // padding: 0 320px 25px 50px !important;
+      width: 65%;
+    }
+  }
+	* {
+		color: $black;
+	}
+	.breadcrumb {
+	  border-bottom: none;
+	  margin: 0 0 10px;
+	  padding: 0;
+
+    li a {
+      border-bottom: 1px solid rgba($black,.2);
+      padding-bottom: 3px;
+      font-size: rem(12);
+			color: $black;
+      &:hover {
+        background-color: initial;
+        border-color: rgba(black,.5);
+      }
+    }
+    li:last-of-type {
+      color: rgba(black,.5);
+    }
+	}
+	h1 {
+		color: $black;
+	}
+}
+
+// Add coloured shapes to banner region
+#header-content:before {
+  content: "";
+  display: block;
+  background: url(../images/header-trim-consumer.png) no-repeat top right;
+  background-size: contain;
+  height: 260px;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include to(medium) {
+    display: none !important;
+  }
+}
+
+// active state For you and your family
+.section-consumer {
+// .section-for-you-your-family {
+  #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a {
+    font-weight: $text-weight-bold;
+    position: relative;
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 1px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      background: url(../images/icon-active-selector-red.png) no-repeat bottom center;
+      background-size: 25px;
+      @include to(medium) {
+        display: none;
+      }      
+    }
+  }
+  #header-content {
+    background-color: $red;
+    &:before {
+      background-image: url(../images/header-trim-consumer.png);
+    }
+		h1 {
+			color: $white;
+		}
+		.breadcrumb {
+	    li a {
+	      border-bottom: 1px solid rgba($white,.2);
+				color: $white;
+	      &:hover {
+	        background-color: initial;
+	        border-color: rgba(white,.5);
+	      }
+	    }
+	    li:last-of-type {
+	      color: rgba(white,.5);
+	    }
+		}
+		* {
+			color: $white;
+		}
+  }
+}
+
+// active state For healthcare professionals
+.section-health {
+// .section-for-healthcare-professionals {
+  #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a {
+    position: relative;
+    font-weight: $text-weight-bold;
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 1px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      background: url(../images/icon-active-selector-blue.png) no-repeat bottom center;
+      background-size: 25px;
+      @include to(medium) {
+        display: none;
+      }
+    }
+  }
+  #header-content {
+    background-color: $blue-dark;
+    &:before {
+      background-image: url(../images/header-trim-health.png);
+    }
+		h1 {
+			color: $white;
+		}
+		.breadcrumb {
+	    li a {
+	      border-bottom: 1px solid rgba($white,.2);
+				color: $white;
+	      &:hover {
+	        background-color: initial;
+	        border-color: rgba(white,.5);
+	      }
+	    }
+	    li:last-of-type {
+	      color: rgba(white,.5);
+	    }
+		}
+		* {
+			color: $white;
+		}
+  }
+}

@@ -1,0 +1,24 @@
+// ----- Variables ----- //
+
+// Breakpoints
+// ========================================================================
+
+// Phone Portrait:   Galaxy (360x640), iPhone 6 (375x667), iPhone 6+ (414x736)
+// Phone Landscape:  Galaxy (640x360), iPhone 6 (667x375), iPhone 6+ (736x414)
+// Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
+// Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
+// Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+
+$breakpoint-small:                              575px !default;  // Phone landscape
+$breakpoint-medium:                             768px !default;  // Tablet Landscape
+$breakpoint-large:                              992px !default;  // Desktop
+$breakpoint-xlarge:                             1200px !default; // Large Screens
+
+/**
+ * Breakpoints - Breakpoint slicer
+ * https://github.com/lolmaus/breakpoint-slicer
+ */
+ // Setting up breakpoint slicer with UIKit breakpoints
+$slicer-breakpoints: 0 $breakpoint-small $breakpoint-medium $breakpoint-large $breakpoint-xlarge;
+$slicer-breakpoint-names: 'small' 'medium' 'large' 'xlarge';
+$slicer-anti-overlap-corrections: 1px !default;

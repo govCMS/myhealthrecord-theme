@@ -1,0 +1,118 @@
+// ----- WYSIWYG ----- //
+
+// add  padding to ckeditor body - backend font-family
+body.cke_editable {
+  padding: 1em;
+  box-sizing: border-box;
+  // img {
+  //    max-width: none;
+  //    max-height: 150px;
+  //  }
+
+   // Beans CKEditor
+   // It sets a max-width to every image pointing to our theme (presumebly an icon)
+   // img[src*="sites/all/themes/govcms_mhr/images"] {
+   //   max-width: 100%;
+   //   max-height: 95px;
+   //   padding: 10px;
+   // }
+
+  // Attaching styles from govcms zen
+  // /profiles/govcms/themes/govcms/govcms_zen/css/govcms_styles.css
+   ol {
+      list-style-type: decimal;
+      margin-left: 19px;
+    }
+    ul {
+      list-style-type: circle;
+      margin-left: 15px;
+    }
+    p.img-float-right,
+    img.img-float-right {
+      float: right;
+      margin: 5px 0 5px 5px;
+    }
+    p.img-float-left,
+    img.img-float-left {
+      float: left;
+      margin: 0 5px 5px 5px;
+    }
+}
+
+// Big Text //
+
+.text-big {
+  color: rgba($gray-darker, 0.6);
+  font-weight: $text-weight-light;
+  font-size: rem(24);
+  line-height: 1.4;
+  font-family: $text-content-serif;
+  letter-spacing: -1px;
+}
+
+// Blockquote //
+
+blockquote {
+  border-bottom: solid 1px $gray-lighter;
+  border-top: solid 1px $gray-lighter;
+  padding: 20px 0 0 0;
+  color: $gray;
+  font-size: rem(28);
+  font-style: italic;
+  width: 60%;
+  position: relative;
+  margin: rem(40) rem(30) rem(25);
+  &:before {
+    background-color: $white;
+    content: '"';
+    color: $orange-dark;
+    font-family: $text-content-sans--serif;
+    font-size: rem(80);
+    font-weight: $text-weight-bold;
+    height: rem(50);
+    line-height: 1;
+    padding: 0px 20px 0 0;
+    margin-top: -50px;
+    position: absolute;
+  }
+  h2, h3, h4, h5, h6 {
+    color: $orange-dark;
+    font-size: rem(16);
+    font-family: $text-content-serif;
+    font-style: normal;
+    font-weight: $text-weight-bold;
+    line-height: 1.5;
+  }
+  p {
+    padding: 0;
+  }
+}
+
+// Highlight //
+
+div.text-highlight {
+  background-color: $gray-lightest;
+  padding: 45px;
+}
+
+// Bullet Points //
+body.cke_editable ul,
+.field-name-field-bean-body ul,
+.field-name-body ul {
+  margin-left: 20px;
+  li {
+    line-height: 1.85;
+    list-style-type: disc;
+    li {
+      list-style-type: square;
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+  // & > li > ul li {
+  //   &::before {
+  //     color: $gray-light;
+  //   }
+  // }
+}

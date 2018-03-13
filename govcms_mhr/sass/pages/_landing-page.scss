@@ -1,0 +1,125 @@
+/*
+ * For you and your family and heathcare professional (section landing pages)
+ */
+
+.landing-page.sidebar-second {
+  #header-content::before {
+    display: none;
+  }
+  #main {
+  padding: 0;
+    > .inner-wrapper {
+      max-width: none;
+    }
+
+    // CONTENT LEFT
+    #content {
+      width: 50%;
+      padding: 0;
+      @include clearfix;      
+      article {
+        // background: lighten($gray-lighter,10%);
+        width: 100%;
+        max-width: 600px;
+        float: right;
+        padding: 50px 50px 50px 25px;
+      }
+      ul {
+        margin: 0;
+        margin-left: 1rem;
+      }
+      li {
+        // list-style: none;
+        margin-bottom: 10px;
+      }
+      li p {
+        margin-bottom: 0;
+      }
+      @include to(medium) {
+        width: 100%;
+        article {
+          float: none;
+          padding: 25px;
+        }
+      }
+    }
+
+    // CONTENT RIGHT
+    aside.sidebars {
+      width: 50%;
+      background: $red-dark url('../images/pattern-folder-lines.png') no-repeat right bottom;
+      background-size: contain;
+      @include reverse-text;
+      .region-sidebar-second {
+        // reset base layout styles
+        margin: auto;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        max-width: 500px !important; // overide govcms styles
+        padding: 50px 25px 50px 50px;
+        h2.block__title.block-title {
+          max-width: rem(360);
+          font-size: rem(32);
+          border: 0;
+          margin-bottom: rem(5);
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+        a {
+          border-bottom: 1px solid rgba(white,.2);
+          padding-bottom: 3px;
+          &:hover {
+            background-color: initial;
+            border-color: white;
+          }
+          &.button {
+            @extend .btn;
+            @extend .btn-primary;
+            border-bottom: none;
+          }
+          &.button.button-secondary {
+            background-color: $blue-darkest;
+            border: 2px solid $white;
+            &:hover {
+              background-color: darken($blue-darkest,5%);
+            }
+          }
+        }
+      }
+      @include to(large) {
+        background-position: bottom 0 right -25%;
+        background-size: 230px;
+      }
+      @include to(medium) {
+        width: 100%;
+        padding: 25px;
+        background-position: bottom right;
+        background-size: contain;
+        .region-sidebar-second {
+          margin: 0;
+          padding: 0;
+          float: none;
+        }
+      }
+      @include to(small) {
+      background-image: none;
+      }
+    }
+  }
+}
+
+.landing-page-health.sidebar-second {
+  #content.match-height {
+    background: lighten($gray-lighter,10%);
+  }
+  aside.sidebars {
+    background-color: $blue-darkest !important;
+  }
+}
+
+// @TODO remove from drupal markup
+#block-bean-landig-page-list-consumer {
+  display: none;
+}

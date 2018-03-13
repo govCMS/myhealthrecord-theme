@@ -1,0 +1,16 @@
+// ----- Latest News ----- //
+
+#block-views-latest-news-view-block {
+  background-color: $gray-lightest;
+  float: left;
+  height: 690px;
+  width: 100%;
+  img {
+    background-color: $gray-lighter;
+    border: 1px solid $gray;
+    border-radius: 10px;
+    height: 220px;
+    max-width: 365px;
+    width: 40%; //estimate
+  }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-583 530 20 21">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-icon-search);
+      }
+
+      .cls-2 {
+        fill: #002d81;
+      }
+    </style>
+    <clipPath id="clip-icon-search">
+      <rect x="-583" y="530" width="20" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="icon-search" class="cls-1">
+    <g id="icons8-search_filled" transform="translate(-586.396 527.876)">
+      <path id="Path_40" data-name="Path 40" class="cls-2" d="M11.744,3a7.744,7.744,0,1,0,4.143,14.279l5.595,5.595,1.936-1.936-5.524-5.509A7.727,7.727,0,0,0,11.744,3Zm0,1.822a5.922,5.922,0,1,1-5.922,5.922A5.911,5.911,0,0,1,11.744,4.822Z"/>
+    </g>
+  </g>
+</svg>

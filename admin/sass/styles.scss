@@ -1,0 +1,31 @@
+// Clearfix magic @see https://css-tricks.com/snippets/css/clear-fix/
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+/* Stakeholders */
+
+.field-name-field-use {
+  @include clearfix;
+
+  .form-checkboxes {
+    & > .form-item {
+      float: left;
+      margin-right: 30px;
+    }
+  }
+}
+
+/* Context admin UI */
+table.context-admin {
+  td.tag {
+    font-weight: bold;
+  }
+}

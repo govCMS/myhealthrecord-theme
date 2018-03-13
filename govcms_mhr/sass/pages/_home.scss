@@ -1,0 +1,760 @@
+// ----- Homepage ----- //
+
+.pane-block {
+  @include clearfix;
+  clear: both;
+}
+.front {
+  background-color: $white;
+  #navigation-content {
+    position: relative;
+    z-index: 11;
+  }
+  .panel-pane {
+    border-top: none;
+  }
+  .panel-col-top {
+    background-color: $white;
+    background-image: url(../images/front-page_background.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 1807px 872px;
+    height: auto;
+    float: left;
+    padding-top: 40px;
+    width: 100%;
+    overflow-x: hidden;
+    .pane-bean-heading {
+      margin: rem(25) auto rem(50);
+      text-align: center;
+      h1 {
+        font-size: rem(50);
+      }
+      p.intro {
+        font-size: rem(30);
+        margin: rem(30) auto rem(30);
+        font-family: $text-content-serif;
+        max-width: rem(700);
+        line-height: 1.3;
+        letter-spacing: -1px;
+        span {
+          display: block;
+          font-weight: $text-weight-regular;
+        }
+      }
+      #home-content-top-navigation a.btn {
+        padding: rem(20) rem(50) rem(20) rem(40);
+        font-size: 1rem;
+      }
+      #home-content-top-navigation p {
+        margin: rem(20) rem(30);
+      }
+    }
+    .pane-bean-my-health-record-in-60-seconds {
+      margin: 90px auto 50px;
+      .field-name-field-video-resource {
+        position: relative;
+        margin: 0 auto;
+        &:before {
+          display: block;
+          content: "";
+          background: url(../images/front-page_background-video.png) no-repeat 45% 50%;
+          background-size: contain;
+          width: 100%;
+          height: 375px;
+          position: absolute;
+          top: -30px;
+          left: 61px;
+          right: 0;
+          margin: auto;
+        }
+        .field-items {
+          position: relative;
+          width: 100%;
+          iframe {
+            width: 100%;
+          }
+          .contextual-links-wrapper {
+            display: none;
+          }
+        }
+        .content {
+          max-width: 400px;
+          margin: auto;
+        }
+        .content a {
+          position: relative;
+          transition: ease all .2s;
+          display: block;
+          &::before {
+            transition: ease all .2s;
+            content: ' ';
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 80px;
+            background-image: url(../images/play-button.png);
+            background-size: contain;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          &:hover::before,
+          &:focus::before {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+      }
+      .field-name-field-video-text {
+        margin: 0 auto;
+        width: 370px;
+        .field-items {
+          background-color: $white;
+          border-radius: 5px;
+          margin-top: -45px;
+          padding: 15px;
+          position: relative;
+          z-index: 99;
+          border: 1px solid $gray-lightest;
+        }
+        .video-info h3 {
+          font-size: 1rem;
+          margin: 0 0 rem(5);
+          font-weight: $text-weight-bold;
+        }
+        .video-info p {
+          margin: 0;
+        }
+      }
+    }
+    .pane-bean-discover-more {
+      background-color: $gray-lightest;
+      float: left;
+      height: auto;
+      width: 100%;
+      .container {
+        @include clearfix;
+      }
+      .online-access h3 {
+        font-size: rem(32);
+        letter-spacing: -1px;
+        font-weight: $text-weight-light;
+      }
+      .online-access h4 {
+        margin: 10px auto 0;
+        line-height: 1.2;
+      }
+      span {
+        color: $gray-dark;
+        font-family: $text-content-serif;
+        font-size: rem(21);
+        font-weight: $text-weight-regular;
+        margin: rem(12) 0 0;
+        display: block;
+      }
+    }
+  }
+  .panel-col-middle {
+    background-color: $gray-lightest;
+    height: auto;
+    text-align: center;
+    .field-type-link-field {
+      margin-top: 45px;
+      clear: both;
+      .field-items a {
+        margin-top: 45px;
+        @extend .btn;
+        @extend .btn-secondary;
+      }
+    }
+    .pane-bean-how-to-homepage {
+      background-color: $white;
+      float: left;
+      height: auto;
+      // min-height: 750px;
+      padding: 75px 0;
+      width: 100%;
+      h2 {
+        margin: 0 0 10px 0;
+      }
+      .field-name-field-block-subtitle {
+        margin-bottom: 15px !important;
+      }
+    }
+    .pane-bean-for-healthcare-professionals-0 {
+      background-color: $gray-lightest;
+      float: left;
+      height: auto;
+      padding: 60px 0;
+      min-height: 575px;
+      width: 100%;
+      h3 {
+        margin: 0 0 15px 0;
+      }
+      p {
+        margin: 0 auto;
+        max-width: 600px;
+        width: 80%;
+      }
+      .getting-started-items {
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 40px;
+        a.item-large, a.item-small {
+          background-image: url(../images/link-arrow-background.svg);
+          background-repeat: no-repeat;
+          background-position: right 15px bottom 15px;
+          background-size: 45px;
+          border: 1px solid $gray-light;
+          border-radius: 10px;
+          color: $gray-dark;
+          display: block;
+          font-family: $text-content-sans--serif;
+          height: auto;
+          min-height: 200px;
+          float: left;
+          //letter-spacing: 0.02rem;
+          line-height: 2rem;
+          margin: 0 1%;
+          text-align: left;
+          p {
+            font-size: rem(13);
+
+          }
+        }
+        a.item-large {
+          background-color: $white;
+          padding: 40px 0 0 8%;
+          width: 42%;
+          img {
+            float: left;
+            max-width: 80px;
+            width: 30%;
+          }
+          p {
+            color: $blue-darkest;
+            font-size: rem(16);
+            float: left;
+            font-weight: $text-weight-bold;
+            line-height: 1.5;
+            max-width: 120px;
+            margin: 0 8%;
+            width: 45%;
+          }
+        }
+        a.item-small {
+          background-color: $blue-lighter;
+          padding: 25px 0 0 0;
+          width: 26%;
+          img {
+            margin: 0 auto;
+            padding-bottom: 10px;
+            max-width: 80px;
+            width: 100%;
+          }
+          p {
+            color: $white;
+            float: left;
+            font-size: rem(16);
+            font-weight: $text-weight-bold;
+            line-height: 1.5;
+            margin: 0 8%;
+            max-width: 120px;
+            width: 60%;
+          }
+          &:nth-child(3) {
+            background-color: $blue-darkest;
+          }
+        }
+      }
+    }
+  }
+}
+
+.front {
+  .pane-bean-how-to-homepage {
+    background-color: $white;
+    float: left;
+    height: auto;
+    // min-height: 750px;
+    padding: 75px 0;
+    width: 100%;
+    .block-contact {
+      border: 1px solid $gray-light;
+      border-radius: 10px;
+      float: left;
+      height: auto;
+      padding: 25px;
+      position: relative;
+      text-align: left;
+      background-image: url(../images/background-how--to.svg);
+      background-repeat: no-repeat;
+      background-position: right 0 bottom 0;
+      background-size: 332px 176px;
+      width: 44%;
+      // margin-left: 1%;
+      h3 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: $text-weight-light;
+      }
+      p {
+        margin: 0;
+      }
+      span {
+        font-weight: $text-weight-regular;
+        font-family: $text-content-serif;
+        &:first-of-type {
+          color: $red;
+        }
+      }
+      @include to(large) {
+        width: 44%;
+        margin-left: 1%;
+      }
+      @include to(medium) {
+        width: 49%;
+      }
+      @include to(small) {
+        width: 100%;
+        margin: auto;
+      }
+      img {
+        margin: 0;
+        max-height: 28px;
+        float: left;
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    h2 {
+      margin: 0 0 10px;
+    }
+    .field-name-field-hp-hoto-last-item,
+    .field-name-field-how-to-items {
+      padding: 20px 0 0;
+      width: 80%;
+      max-width: rem(960) !important;
+      margin: auto;
+    }
+
+    .field-name-field-how-to-items {
+
+      .field-items {
+
+        .field-item {
+          @include from(large) {
+            &:nth-of-type(1n) article {
+              width: 44%;
+            }
+
+            &:nth-of-type(2n) article {
+              width: 25%;
+            }
+
+            &:nth-of-type(3n) article {
+              width: 25%;
+            }
+
+            &:nth-of-type(4n) article {
+              width: 25%;
+            }
+
+            &:nth-of-type(5n) article {
+              width: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----- Responsive ----- //
+
+@media (max-width: 575px) {
+  .front {
+    h1, h2, h3, h4, h5, p {
+      line-height: normal;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: rem(32);
+    }
+    h3 {
+      font-size: rem(20);
+    }
+    p {
+      font-size: rem(14);
+    }
+    .panel-col-top {
+      padding-top: 20px;
+      .pane-bean-heading {
+        margin-left: 5%;
+        width: 90%;
+        #home-content-top-navigation {
+          // margin: 40px 0;
+          h3 {
+            margin: 0 7.5%;
+            width: 85%;
+          }
+          p {
+            display: block;
+          }
+          .btn {
+            font-size: rem(14);
+            margin: 0;
+          }
+        }
+      }
+      .pane-bean-my-health-record-in-60-seconds {
+        background: url(../images/front-page_background-video.png) no-repeat 32% 10%;
+        background-size: 600px;
+        padding: 50px 0;
+        margin: 50px auto 0;
+        .field-name-field-video-resource {
+          min-width: unset;
+          width: 80%;
+          .field-items {
+            position: relative;
+            width: 100%;
+            iframe {
+              height: 100%;
+              width: 100%;
+            }
+          }
+          &:before {
+            display: none;
+          }
+        }
+        .field-name-field-video-text {
+          margin-top: -10px !important;
+          min-width: unset;
+          width: 80%;
+          max-width: 400px !important;
+          .field-items {
+            border-radius: 0;
+            margin: 0 auto;
+            width: 100%;
+          }
+        }
+      }
+      .pane-bean-discover-more {
+        background-image: none;
+        height: auto;
+        min-height: 440px;
+        .btn {
+          margin-top: 45px;
+        }
+        .online-access {
+          margin: 50px 15%;
+          text-align: left;
+          width: 70%;
+          h3 {
+            font-weight: $text-weight-light;
+            font-size: rem(30);
+            strong {
+              display: block;
+            }
+          }
+          ul {
+            li {
+              float: left;
+              margin: 10px 0;
+              width: 100%;
+              .icon {
+                float: left;
+                height: 3rem;
+                margin-top: 15px;
+                width: 20%;
+                img {
+                  width: 5rem;
+                }
+              }
+              h4 {
+                width: 75%;
+                float: right;
+              }
+              .description {
+                width: 75%;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .panel-col-middle {
+      .pane-bean-how-to-home-page {
+        padding: 45px 0;
+        .how-to-container {
+          margin: 0 5%;
+          max-width: 90%;
+          a.block-link {
+            background-size: 26px;
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+              width: 48%!important;
+              p {
+                width: 60%;
+              }
+            }
+            &:nth-of-type(6) {
+              p {
+                width: 100%;
+              }
+            }
+            img {
+              max-height: 55px;
+            }
+          }
+        }
+      }
+      .pane-bean-for-healthcare-professionals-0 {
+        height: auto;
+        padding: 45px 0 0 0;
+        min-height: 550px;
+        h3 {
+          word-spacing: 100vw;
+        }
+        .getting-started-items {
+          width: 90%;
+          a.item-large {
+            background-size: 35px;
+            height: auto;
+            padding: 25px 0 0 8%;
+            min-height: 112px;
+            width: 100%;
+            img {
+              max-width: 55px;
+            }
+          }
+          a.item-small {
+            background-size: 26px;
+            height: auto;
+            padding: 10px 0 0 0;
+            min-height: 145px;
+            width: 47.5%;
+            img {
+              max-width: 50px;
+            }
+            &:nth-child(2) {
+              margin: 20px 2.5% 0 0;
+            }
+            &:nth-child(3) {
+              margin: 20px 0 0 2.5%;
+            }
+          }
+        }
+        .btn {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .front {
+    .panel-col-top {
+      .pane-bean-heading {
+        // margin-left: 10%;
+        // width: 80%;
+        #home-content-top-navigation {
+          // margin: 60px 0;
+          h3 {
+            margin: 0 7.5%;
+            width: 85%;
+          }
+          p {
+            display: block;
+          }
+          .btn {
+            margin: 0;
+          }
+        }
+      }
+      .pane-bean-discover-more {
+        .online-access {
+          margin: 60px 2.5%;
+          text-align: center;
+          width: 90%
+          ;
+          ul {
+            float: left;
+            width: 100%;
+            margin: rem(15) auto 0;
+            li {
+              float: left;
+              margin: 0 1%;
+              width: 31.33%;
+              p {
+                color: $gray-dark;
+              }
+              .icon {
+                height: 50px;
+                width: 50px;
+                img {
+                  max-height: 100%;
+                  width: auto;
+                  max-width: none;
+                }
+              }
+            }
+          }
+          .btn {
+            margin: auto;
+          }
+        }
+      }
+    }
+    .panel-col-middle {
+      .pane-bean-how-to-home-page {
+        .how-to-container {
+          margin: 0 5%;
+          max-width: 90%;
+          a.block-link {
+            background-size: 30px 30px;
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+              p {
+                width: 50%;
+              }
+            }
+            &:nth-of-type(6) {
+              p {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .front {
+    .panel-col-top {
+      .pane-bean-heading {
+        // margin-left: 5%;
+        // width: 90%;
+        #home-content-top-navigation {
+          p {
+            display: inline-block;
+          }
+        }
+      }
+      .pane-bean-discover-more {
+        .online-access {
+          margin: 60px 15%;
+          width: 70%;
+        }
+      }
+    }
+    .panel-col-middle {
+      .pane-bean-for-healthcare-professionals-0 {
+        .getting-started-items {
+          width: 80%;
+        }
+      }
+      .pane-bean-how-to-home-page {
+        .how-to-container {
+          margin: 0 5%;
+          max-width: 90%;
+          a.block-link {
+            background-size: 45px 45px;
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+              p {
+                width: 60%;
+              }
+            }
+            &:nth-of-type(1) {
+              img, p {
+                float: left;
+                margin: 30px 2% 0 0;
+              }
+              img {
+                width: 30%;
+              }
+              p {
+                bottom: auto;
+                position: relative;
+                margin-left: 10%;
+                width: 35%;
+              }
+            }
+            &:nth-of-type(6) {
+              background-image: url(../images/background-how--to.svg);
+              background-repeat: no-repeat;
+              background-position: right 0 bottom 0;
+              background-size: 378px 201px;
+              p {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .front {
+    .panel-col-top {
+      .pane-bean-discover-more {
+        background-image: url(../images/discover-more-background.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        min-height: 700px;
+        .online-access {
+          float: left;
+          margin: 90px 30% 0 7.5%;
+          min-width: 480px;
+          width: 30%;
+          .btn {
+            margin: 30px 0;
+          }
+        }
+      }
+    }
+    .panel-col-middle {
+      .pane-bean-how-to-home-page {
+        .how-to-container {
+          margin: 0 20%;
+          max-width: 60%;
+          a.block {
+            img {
+              max-height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .front {
+    .panel-col-middle {
+      .pane-bean-how-to-home-page {
+        .how-to-container {
+          a.block {
+            img {
+              margin-top: 10px;
+              max-height: 75px;
+            }
+          }
+        }
+      }
+      .pane-bean-for-healthcare-professionals-0 {
+        .getting-started-items {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

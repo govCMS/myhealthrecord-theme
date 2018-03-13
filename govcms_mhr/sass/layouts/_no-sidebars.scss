@@ -1,0 +1,37 @@
+/*
+ * no-sidebar layout
+ */
+
+.no-sidebars {
+.inner-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+  #header-content {
+    @include clearfix;
+    clear: both;
+    min-height: 200px;
+    padding: 50px 0;
+    .page-header {
+      padding: 0 rem(25);
+    }
+  }
+  #page {
+    @include clearfix;
+    clear: both;
+    z-index: 1;
+    position: relative;
+  }
+  #main {
+    @include clearfix;
+    clear: both;
+    padding: rem(60) 0;
+    #content {
+      width: 65%;
+      padding: 0 rem(25);
+      @include to(medium) {
+       width: 100%;
+      }
+    }
+  }
+}

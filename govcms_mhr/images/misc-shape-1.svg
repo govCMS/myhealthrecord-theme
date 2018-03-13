@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1585 1548 276 190">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-misc-shape-1);
+      }
+
+      .cls-2 {
+        fill: #ffa620;
+      }
+    </style>
+    <clipPath id="clip-misc-shape-1">
+      <rect x="-1585" y="1548" width="276" height="190"/>
+    </clipPath>
+  </defs>
+  <g id="misc-shape-1" class="cls-1">
+    <path id="Path_1167" data-name="Path 1167" class="cls-2" d="M271.319,46.007S240,15.625,229.632,5.262c-11.069-11.069-16.015-3.533-29.911,10.363C187.945,27.4,175.7,38.941,163.687,50.717a15.239,15.239,0,0,1-9.421,3.768H0a12.444,12.444,0,0,0,3.768,9.185l124.59,121.293a13.226,13.226,0,0,0,18.371,0L271.084,63.906A12.444,12.444,0,0,0,271.319,46.007Z" transform="translate(-1584.5 1548.214)"/>
+  </g>
+</svg>

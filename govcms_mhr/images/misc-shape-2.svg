@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1258 1548 360 352">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-misc-shape-2);
+      }
+
+      .cls-2 {
+        fill: #26abdf;
+      }
+
+      .cls-3 {
+        fill: #20407f;
+        opacity: 0.5;
+      }
+    </style>
+    <clipPath id="clip-misc-shape-2">
+      <rect x="-1258" y="1548" width="360" height="352"/>
+    </clipPath>
+  </defs>
+  <g id="misc-shape-2" class="cls-1">
+    <g id="Group_693" data-name="Group 693" transform="translate(-1258.178 1899.338) rotate(-90)">
+      <path id="Path_1042" data-name="Path 1042" class="cls-2" d="M346.3,167.637a17.256,17.256,0,0,1,0,24.014L187.313,354.517a16.086,16.086,0,0,1-23.462,0L4.862,192.267a17.639,17.639,0,0,1,0-24.322L163.85,5.08a16.086,16.086,0,0,1,23.462,0Z" transform="translate(351.163 359.597) rotate(180)"/>
+      <path id="Path_1039" data-name="Path 1039" class="cls-3" d="M90.948,176.967c-.052-.367,0-14.046,0-16.592V9.308C90.948.675,86.941-2.1,81.391,1.6c-.308.308-.617.308-.617.617h0c-.308.308-.925.617-1.233,1.233L0,84.841S91.231,176.967,90.948,176.967Z" transform="translate(266.766 358.523) rotate(180)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+// ----- Color ----- //
+
+// Functional Color Palette //
+
+$white: #FFFFFF;
+$gray-lightest: #F5F5F5;
+$gray-lighter: #DFDFDF;
+$gray-light: #DEDEDE;
+$gray: #6A6C6E;
+$gray-dark: #3E3E3E;
+$gray-darker: #302E2E;
+$gray-darkest: #242424;
+$black: #000000;
+
+$blue-lighter: #00A8E6;
+$blue-light: #007dbc;
+$blue: #68bbe4;
+$blue-dark: #007FBF;
+$blue-darkest: #002D81;
+
+$green-light: #A6CF38;
+$green: #8BC440;
+$green-dark: #298533;
+
+$orange-light: #FFA620;
+$orange: #ff8b3e;
+$orange-dark: #E06610;
+$orange-darkest: #EE4123;
+
+$red: #de2f11;
+$red-dark: #AC0D16;
+$red-darkest: #A2201C;
+
+// Text //
+
+$text-color-primary: $gray-dark;
+$text-color-sub_header: #7C7C7C;
+$text-color-paragraph: $gray-dark;
+$text-color-link: $blue-darkest;
+$base-outline: #A5C7FE;
+
+// Classes //
+
+.color--gray-light {
+  color: $gray-light;
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="22 286 45 45">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-link-arrow-background);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #efeff2;
+      }
+
+      .cls-3 {
+        fill: #002d81;
+        stroke: #002d81;
+        stroke-width: 0.4px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-link-arrow-background">
+      <rect x="22" y="286" width="45" height="45"/>
+    </clipPath>
+  </defs>
+  <g id="link-arrow-background" class="cls-1">
+    <g id="Group_610" data-name="Group 610" transform="translate(-559 -1800)">
+      <g id="Ellipse_34" data-name="Ellipse 34" class="cls-2" transform="translate(582 2087)">
+        <circle class="cls-4" cx="21.777" cy="21.777" r="21.777"/>
+        <circle class="cls-5" cx="21.777" cy="21.777" r="21.277"/>
+      </g>
+      <g id="icons8-right_4" transform="translate(600.427 2102.542)">
+        <path id="Path_39" data-name="Path 39" class="cls-3" d="M13.635,4.749l-.843.843L18.82,11.62l-6.028,6.028.843.843,6.449-6.449.4-.421-.4-.421Z" transform="translate(-12.792 -4.749)"/>
+      </g>
+    </g>
+  </g>
+</svg>

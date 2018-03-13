@@ -1,0 +1,80 @@
+// @include debug-grid;
+// @include debug-breakpoint;
+
+// ----- Base ----- //
+html,
+body {
+  // overflow-x: hidden;
+}
+
+body {
+ background-color: $white;
+ color: $text-color-primary;
+ margin: 0;
+ width: 100%;
+ .header__logo {
+   display: none;
+   visibility: hidden;
+ }
+ #page {
+   background-color: transparent; // reset Govcms styles
+   max-width: none !important;
+   width: 100%;
+ }
+ .field {
+   margin: 0;
+ }
+}
+
+#main .panel-panel {
+  .panel-pane {
+    & > * {
+      @include container;
+    }
+  }
+}
+
+// Basic content spacing
+#page #content article.node {
+  padding-bottom: rem(35);
+}
+
+
+// Error Management //
+
+#page {
+ .error, .messages--error {
+   margin: 30px 10;
+   width: 50%;
+   @include to(medium) {
+     margin: 30px 5%;
+     width: 90%;
+   }
+   @include at(large) {
+     margin: 30px 5%;
+     width: 50%;
+   }
+ }
+}
+
+// Hidden Content //
+
+.front .page-header, .header, .front #header-content {
+ display: none;
+}
+
+@media (min-width: 992px) {
+ .header {
+   display: block;
+ }
+}
+
+// Clearing all the messy flaoty blocks
+#page div.block {
+   clear: both;
+   @include clearfix;
+}
+
+  #hidden-region {
+  display: none;
+}

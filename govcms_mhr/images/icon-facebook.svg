@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-516 476 13 26">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-icon-facebook);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-icon-facebook">
+      <rect x="-516" y="476" width="13" height="26"/>
+    </clipPath>
+  </defs>
+  <g id="icon-facebook" class="cls-1">
+    <path id="Path_1177" data-name="Path 1177" class="cls-2" d="M8.938,4.875H13V0H8.938A5.652,5.652,0,0,0,3.25,5.688V8.125H0V13H3.25V26H8.125V13h4.063L13,8.125H8.125V5.688A.874.874,0,0,1,8.938,4.875Z" transform="translate(-516 476)"/>
+  </g>
+</svg>

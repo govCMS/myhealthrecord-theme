@@ -1,0 +1,66 @@
+// ----- Glossary ----- //
+
+#block-views-glossary-of-terms-block {
+  background-color: $white;
+  clear: both;
+  padding: 25px;
+  margin-bottom: 0 !important;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: $text-weight-regular;
+    text-align: center;
+    padding-bottom: 35px;
+  }
+  #content .views-row {
+    border-top: none;
+  }
+}
+
+span.menu-collapser {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 2px 5px;
+  background: url('../images/icon-plus.svg') no-repeat center;
+  background-size: rem(25);
+  background-color: white;
+  float: right;
+  position: relative;
+  transform: rotate(0deg);
+  text-indent: -9999999px;
+  transition: .2s ease-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+// GLOSSARY TERM COLLAPSER //
+#block-views-glossary-of-terms-block {
+  max-width: 800px;
+  padding: rem(75) 25px;
+  margin: 0 auto !important; // overide Govcms styles
+}
+// .field-name-title {
+  
+// }
+.view-glossary-of-terms .taxonomy-term.vocabulary-glossary-of-terms h3 {
+  cursor: pointer;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-family: $text-content-sans--serif;
+  color: $text-color-link;
+  border-bottom: 1px solid $gray-lighter;
+  padding-bottom: 15px;
+  transition: .2s ease-out all;
+  &:hover {
+    color: lighten($text-color-link,10%);
+    border-bottom-color: $text-color-link;
+  }
+  &.menu-collapser-collapsed .menu-collapser {
+    transform: rotate(-45deg);
+  }
+}
+.taxonomy-term-description {
+  display: none;
+}

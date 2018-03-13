@@ -1,0 +1,24 @@
+//table styles
+table {
+  width: 100%;
+}
+table, tr, th, td {
+  border: none;
+  border-bottom: 1px solid $gray-lighter;
+}
+td {
+  padding-bottom: 3rem;
+  a {
+    color: $blue;
+    font-weight: $text-weight-bold;
+  }
+}
+tr.odd {
+  background-color: $white;
+}
+thead {
+  background-color: $gray-lighter;
+  a {
+    color: $gray-darkest;
+  }
+}

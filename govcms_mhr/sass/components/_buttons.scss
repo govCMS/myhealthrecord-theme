@@ -1,0 +1,52 @@
+// ----- Buttons ----- //
+
+a, a:visited {
+  color: $text-color-link;
+  text-decoration: none;
+  transition: .2s ease-out all;
+  outline: 0;
+  &:hover {
+    color: lighten($text-color-link,10%);
+    text-decoration: none;
+  }
+  &:focus {
+    @include base-outline;
+    text-decoration: none;
+  }
+}
+.btn-primary {
+  background: $blue-light url(../images/arrow-right-2.svg) no-repeat center right 20px;
+  color: $white !important;
+  font-weight: $text-weight-light;
+  &:hover {
+    background-color: darken( $blue-light, 10% );
+  }
+}
+.btn-secondary {
+  background: $white url(../images/arrow-right-1.png) no-repeat center right 20px;
+  background-size: rem(15) !important;
+  border: 1px solid $gray-light;
+  color: $text-color-link!important;
+  font-weight: $text-weight-regular;
+  &:hover {
+    background-color: darken( $white, 10% );
+  }
+}
+.btn {
+  background-size: 10px;
+  border-radius: 32px;
+  box-shadow: none;
+  display: inline-block;
+  font-family: $text-content-sans--serif;
+  font-size: rem(15);
+  padding: 15px 45px 15px 30px;
+  text-decoration: none;
+  transition: background-color .2s ease-out;
+
+  /*compatability for IE*/
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   /* IE10+ specific styles go here */
+   background-size: 60px;
+   background-position-x: right;
+  }
+}

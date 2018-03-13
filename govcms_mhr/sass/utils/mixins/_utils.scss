@@ -1,0 +1,80 @@
+// ----- Utils ----- //
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+// in case we need the class
+/*
+.container {
+  @include container;
+}
+*/
+
+// Clearfix magic @see https://css-tricks.com/snippets/css/clear-fix/
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+
+// Debug grid
+@mixin debug-grid {
+  body * {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+
+// Debug brekpoints
+@mixin debug-breakpoint {
+  // body:not(.cke_editable) {
+  body.admin-menu {
+    &:after {
+      content: "beyond xlarge";
+      position: fixed;
+      z-index: 999999;
+      bottom:0;
+      left:0;
+      padding: 0.5em;
+      color: white;
+      text-shadow: 1px 1px 1px transparentize(black,0.2);
+      background-color: transparentize(black,0.4);
+      @include at(small) {
+        content: "small";
+      }
+      @include at(medium) {
+        content: "medium";
+      }
+      @include at(large) {
+        content: "large";
+      }
+      @include at(xlarge) {
+        content: "xlarge";
+      }
+    }
+  }
+}
+
+@mixin reverse-text {
+  *  {
+    color: $white;
+  }
+}
+
+@mixin base-outline {
+  outline: 3px auto #85b3ff;
+  body.keynav & {
+    outline: 2px solid $base-outline;
+    outline-offset: 1px;
+    box-shadow: 0 0 5px 2px $base-outline;
+  }
+}

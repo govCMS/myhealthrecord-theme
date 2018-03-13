@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-532 530 15 15">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-checkbox-2);
+      }
+
+      .cls-2 {
+        fill: #df6610;
+      }
+    </style>
+    <clipPath id="clip-checkbox-2">
+      <rect x="-532" y="530" width="15" height="15"/>
+    </clipPath>
+  </defs>
+  <g id="checkbox-2" class="cls-1">
+    <g id="Group_616" data-name="Group 616" transform="translate(-810 -416)">
+      <g id="Group_691" data-name="Group 691">
+        <circle id="Ellipse_58" data-name="Ellipse 58" class="cls-2" cx="7.5" cy="7.5" r="7.5" transform="translate(278 946)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+// ----- Site Map ----- //
+
+#site-map {
+  ul {
+    padding: 5px 0;
+    li {
+      a {
+        padding: 0 5px;
+        line-height: 2;
+        &:before {
+          content: '\2022';
+          color: $orange;
+          font-size: rem(33);
+          padding: 15px 10px 0;
+          float: left;
+          line-height: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.page-glossary {
+  @include clearfix;
+  .view-id-glossary_list {
+    ul {
+      border-bottom: 1px solid #727272;
+      margin-bottom: 15px;
+      @include clearfix;
+    }
+    li {
+      display: inline-block;
+      font-size: rem(20);
+      color: #727272;
+      margin: 0 3px 15px;
+      a {
+        font-size: rem(20);
+        font-weight: $text-weight-bold;
+        border-bottom: 1px solid rgba($text-color-link,.2);
+        padding-bottom: 3px;
+        &:hover {
+          background-color: initial;
+          border-color: $text-color-link;
+        }
+        &.active {
+        border: 1px solid rgba($text-color-link,.2);
+        padding: 3px;
+        border-radius: 3px;
+        display: block;
+        min-width: 50px;
+        text-align: center;
+        }
+      }
+    }
+  }
+  .view-content .field-name-title {
+    border-bottom: none;
+  }
+  .view-content > h2 {
+    float: left;
+    width: 50px;
+    clear: both;
+  }
+  ul.view-listing-unformatted {
+    margin: 0;
+  }
+  .view-content .views-row {
+    float: right;
+    width: calc(100% - 75px);
+    border-top: 0 !important; // reset Govcms
+    border-bottom: 1px solid $gray-lighter;
+    h3 {
+      font-size: rem(20);
+      margin-top: 0;
+    }
+  }
+  .taxonomy-term-description {
+    display: block;
+    margin: 0;
+    p {
+      margin-bottom: 12px !important; // reset Govcms
+      font-size: 1rem;
+      color: $text-color-paragraph;
+    }
+  }
+}

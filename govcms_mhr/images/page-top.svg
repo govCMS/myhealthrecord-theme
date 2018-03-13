@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-583 476 51 44">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-page-top);
+      }
+
+      .cls-2 {
+        fill: #ffa620;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke: #fff;
+      }
+    </style>
+    <clipPath id="clip-page-top">
+      <rect x="-583" y="476" width="51" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="page-top" class="cls-1">
+    <rect id="Rectangle_273" data-name="Rectangle 273" class="cls-2" width="51" height="44" rx="5" transform="translate(-583 476)"/>
+    <g id="icons8-right_4" transform="translate(-570.809 515.659) rotate(-90)">
+      <path id="Path_39" data-name="Path 39" class="cls-3" d="M13.793,4.749l-1,1,7.16,7.16-7.16,7.16,1,1,7.66-7.66.479-.5-.479-.5Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

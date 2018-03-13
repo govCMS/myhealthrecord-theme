@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+# Compass for the dummy app
+gem 'compass', require: false
+gem 'breakpoint', require: false
+gem 'sass', require: false
+gem 'sass-globbing', require: false
+
+group :development do
+  gem 'byebug', platforms: [:mri_21, :mri_22], require: false
+end

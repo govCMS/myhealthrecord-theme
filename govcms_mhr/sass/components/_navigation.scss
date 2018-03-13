@@ -1,0 +1,352 @@
+/*
+ * Main menu
+ */
+
+#header {
+  display: none;
+}
+#navigation-content, .region-navigation {
+  @include clearfix;
+  padding: 0;
+}
+#navigation-content .region-navigation {
+  background: white; // Reset Govcms styles
+  display: block; // Reset Govcms styles
+  height: 100%;
+  border-bottom: 1px solid $gray-lighter;
+
+  // MHR logo
+  #block-block-1 {
+    float: left;
+    padding: 25px 15px 15px;
+    max-width: 300px;
+    a {
+      display: block; // accessibility fix for outline
+    }
+    .mhr-logo {
+      width: 100%;
+    }
+    // large logo
+    @include from(xlarge) {
+      #mhr-logo-small,
+      .mhr-logo-small {
+        display: none;
+      }
+      #mhr-logo-large,
+      .mhr-logo-large {
+        display: block;
+      }
+    }
+    // small logo
+    @include to(large) {
+      padding: 15px 15px 14px;
+      #mhr-logo-small,
+      .mhr-logo-small {
+        display: block;
+        max-width: 120px;
+      }
+      #mhr-logo-large,
+      .mhr-logo-large {
+        display: none;
+      }
+    }
+    @include to(medium) {
+      max-width: 150px;
+      z-index: 11;
+      position: relative;
+      padding: 15px;
+    }
+  }
+
+  // language selector
+  #block-locale-language {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 30px;
+    @include to(xlarge) {
+      float: none;
+      position: absolute;
+      top: 11px;
+      right: 200px;
+      padding: 0;
+    }
+    @include to(medium) {
+      display: none;
+    }
+  }
+
+  //search field
+  #block-search-api-page-default-search {
+    float: right;
+    padding: 50px 15px 25px 0;
+    @include to(xlarge) {
+      float: none;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      padding: 0;
+      #search-api-page-search-form-default-search {
+        .form-submit {
+          width: 35px;
+          height: 35px;
+          background-size: 15px;
+        }
+        input.form-text {
+          right: 10px;
+          height: 35px;
+          width: 35px;
+          padding: 0 33px 0 0;
+        }
+        // &:hover input.form-text {
+        //   width: 300px;
+        // }
+      }
+    }
+    @include to(medium) {
+      top: 32px;
+      right: 60px;
+    }
+    @include between(large, xlarge) {
+      #search-api-page-search-form-default-search {
+        input.form-text {
+          right: 11px;
+        }
+      }
+    }
+    #search-api-page-search-form-default-search.open {
+      input.form-text {
+        width: 300px;
+      }
+    }
+  }
+  // login to MyGov
+  #block-block-12 {
+    float: right;
+    width: auto;
+    padding: 50px 30px 15px 0;
+    .mygov-login {
+      border-radius: 50px;
+      display: block;
+      font-size: rem(14);
+      text-transform: uppercase;
+      color: #026440;
+      font-weight: $text-weight-bold;
+      padding: rem(15) rem(60) rem(10) rem(15);
+      background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center right 20px;
+      background-size: rem(30);
+      border: 1px solid $gray-lighter;
+      transition: .2s ease all;
+      &:hover {
+        background-color: lighten($gray-lighter,5%);
+      }
+      span {
+        @include is-invisible;
+      }
+    }
+    @include to(xlarge) {
+      float: none;
+      position: absolute;
+      top: 7px;
+      right: 65px;
+      padding: 0;
+      z-index: 11;
+      .mygov-login {
+        padding: 8px 15px;
+        background: none;
+        white-space: nowrap;
+        font-size: 11px;
+        span {
+          @include is-visible;
+        }
+      }
+    }
+    @include to(medium) {
+      top: 32px;
+      right: 120px;
+    }
+    @include to(small) {
+      background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center;
+      text-indent: -9999px;
+      width: 35px;
+      height: 35px;
+      background-size: 15px;            
+    }    
+  }
+}
+
+// Main menu
+#block-superfish-1 {
+  height: 100%;
+  width: calc(100vw - 560px);
+  float: left;
+  max-width: none !important;
+  #superfish-1 {
+    background-color: transparent;
+    float: none;
+    @include clearfix;
+    background: transparent;
+  }
+  .menu li.sf-depth-1 > a {
+    padding: 65px 10px 30px;
+  }
+  .block__title.block-title {
+    @include is-invisible;
+  }
+  // 'about' and 'support' styles
+  .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) {
+    float: right;
+    a {
+      font-size: rem(13);
+    }
+  }
+  li a,
+  .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
+    letter-spacing: initial !important;
+    @include to(xlarge) {
+      font-size: 15px;
+    }
+    @include to(large) {
+      font-size: 13px;
+    }
+  }
+  .menu.sf-menu li {
+    background: transparent;
+    white-space: normal;
+    a {
+      border: none;
+      position: relative;
+      transition: .2s all;
+      &:link, &:visited, &:active {
+        background-color: transparent; // Reset Govcms styles
+        text-transform: none; // Reset Govcms styles
+        color: $text-color-link;
+        font-family: $text-content-sans--serif;
+        font-weight: $text-weight-regular;
+        //letter-spacing: 0.02rem;
+      }
+      &:hover {
+        color: lighten($text-color-link,10%);
+      }
+      &:before {
+        border: none !important; // Reset Govcms styles
+      }
+    }
+    // add expander arrow to menu-items with children
+    &.menuparent > a:after {
+      display: block;
+      content: url('../images/icon_arrow-down.svg');
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      float: right;
+    }
+    // adding a background to dropdown menus
+    &.sfHover li {
+      display: block;
+      background: transparent;
+    }
+  }
+  // second level menu
+  .sf-menu li ul {
+    background: $white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .2);
+    li.menuparent > a:after {
+      transform: translateY(10px) rotate(-90deg);
+    }
+    // adding blue border on hover for dropdowns
+    a:before {
+      transition: .2s all;
+      width: 100%;
+      height: 1px;
+      background: lighten($text-color-link,10%);
+      content: "";
+      bottom: 0;
+      left: 0;
+      display: block;
+      position: absolute;
+      opacity: 0;
+    }
+    a:hover {
+      color: lighten($text-color-link,10%);
+      &:before {
+        transition: .2s all;
+        opacity: 1;
+      }
+    }
+  }
+  // hide accordion by default
+  #superfish-1-accordion {
+    background-color: transparent;
+  }
+  div.sf-accordion-toggle.sf-style-white {
+    display: none;
+  }    
+  @include to(xlarge) {
+    float: right;
+    width: auto;
+    margin-right: 15px;
+    .menu li a.sf-depth-1 {
+      padding: 60px 10px 25px;
+    }
+  }
+  @include to(medium) {
+    margin: auto !important;
+    float: none !important;  // overide javascript
+    position: absolute !important;  // overide javascript
+    max-width: none !important;
+    width: 100% !important;
+    z-index: 10;
+    top: 25px;
+    .sf-hidden {
+      display: none !important; // overide javascript
+    }
+    div.sf-accordion-toggle.sf-style-white {
+      @include clearfix;
+      background: white;
+      display: block;
+      a {
+        float: right;
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-right: 14px;
+        @include hide-text;
+        background: white url('../images/icon-hamburger.svg') no-repeat 50% 50%;
+        background-size: 30px;
+        border: none;
+        &:hover {
+          background-color: $gray-lighter;
+        }
+      }
+    }
+    #superfish-1-accordion {
+      border-bottom: 1px solid $gray-lighter;
+      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .2);
+      background: white;
+    }
+    .sf-accordion {
+      margin-top: 28px; // offset the accordion by the height of logo
+    }
+    .sf-style-white.menu.sf-menu {
+      float: none;
+      ul {
+        position: static !important; // overide javascript
+        box-shadow: none;
+        border: none;
+        padding-left: 10px;
+        background: none;
+      }
+      li,
+      li.sf-depth-1:nth-last-of-type(-n+2) {
+        float: none;
+        display: block;
+        background: none;
+        a {
+          padding: 15px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

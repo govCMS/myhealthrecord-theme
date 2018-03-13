@@ -1,0 +1,22 @@
+/*
+ * Homepage
+ */
+
+.front.no-sidebars #main {
+ width: 100%;
+ padding: 0;
+ #header-content:before {
+  display: none;
+ }
+ .inner-wrapper {
+  max-width: none;
+ }
+ #content {
+  width: 100%;
+  padding: 0;
+ }
+  #page {
+    background-color: transparent;
+    margin: 0;
+  }
+}

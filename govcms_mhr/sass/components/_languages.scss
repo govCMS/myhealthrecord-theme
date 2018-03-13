@@ -1,0 +1,38 @@
+// ----- Block Quote ----- //
+
+#block-locale-language {
+  // This is the Language block
+  ul.language-switcher-locale-url {
+    // Original ul list from drupal
+    &.l_tinynav1 {
+      // processed by the script, made invisible-character
+      display: none;
+    }
+    .locale-untranslated {
+      // fallback if no JS: do not display untranslated languages
+      display: none;
+    }
+  }
+
+  // this is the JS-generated select list
+  select.tinynav {
+    display: block;
+    border: 1px solid $blue-dark;
+    font-size: rem(12);
+    padding: 3px 5px;
+    width: 106px;
+  }
+  .block__content{
+    margin-top: -30px;
+  }
+  &::before {
+    background-image: url(../images/globe.png);
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"";
+    margin-left: -30px;
+    margin-top: 5px;
+  }
+}
