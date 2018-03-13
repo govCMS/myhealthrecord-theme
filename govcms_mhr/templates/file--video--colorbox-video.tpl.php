@@ -88,7 +88,7 @@
     hide($content['links']);
     // Check to see if the file has an external url for linking.
     if (isset($video_id) && !empty($video_id) && $video_provider == "youtube") {; ?>
-      <a href="https://www.youtube.com/embed/<?php print $video_id?>?autoplay=1&rel=0&showinfo=0" class="colorbox-video"><?php print render($content);?></a>
+      <a href="https://www.youtube.com/embed/<?php print $video_id?>?autoplay=1&rel=0&showinfo=0" class="colorbox-video" alt="Video: <?php print $label; ?>"><?php print render($content);?></a>
     <?php
       } else {
         print render($content);

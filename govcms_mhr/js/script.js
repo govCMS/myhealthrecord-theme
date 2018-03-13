@@ -20,6 +20,7 @@
       if (!$('ul.language-switcher-locale-url').hasClass('l_tinynav1')) {
         $('ul.language-switcher-locale-url').tinyNav({
           active: 'active',
+          label: 'Language selector',
           // header: 'Languages', // String: Specify text for "header" and show header instead of the active item
         });
       }
@@ -205,7 +206,7 @@
         if(e.which == 13) {
           expandCollapseGlossary($(this));
         }
-      }); 
+      });
 
       function expandCollapseGlossary($this) {
         $this.parents('.field-name-title').next('.taxonomy-term-description').slideToggle();
@@ -216,7 +217,7 @@
         } else {
           $this.attr("aria-expanded", "false");
         }
-      }          
+      }
     }
   };
 
@@ -262,7 +263,7 @@
     if(event.keyCode == 9 ) {
       $('body').addClass('keynav');
     }
-  });  
+  });
 
   /**
    * Make landing blocks to match height
@@ -305,6 +306,15 @@
       $('#block-bean-readspeaker-button a').attr("tabindex","6");
       $('#block-locale-language select').attr("tabindex","7");
     }
-  };  
+  };
+
+  /**
+   * Make statistic Tables accessible (legacy)
+   */
+  Drupal.behaviors.mhrTablesAccessible = {
+    attach: function(context, settings) {
+      $(".about-statistics-breakdown-table thead th:not([scope])").attr('scope', 'col');
+    }
+  };
 
 })(jQuery, Drupal, this, this.document);

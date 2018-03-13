@@ -19,12 +19,10 @@
       font-size: rem(20);
       margin-bottom: 0;
     }
-  }  
+  }
 }
 
 // Search Page //
-
-
 .section-search {
   $size: 45px;
   #page {
@@ -83,7 +81,7 @@
             }
             > div {
               max-width: 500px;
-              position: relative;              
+              position: relative;
             }
             .form-type-textfield {
               @include clearfix;
@@ -135,14 +133,14 @@
                 transition: .2s ease all;
                 @extend %link-internal__icon;
                 transform: translateX(0);
-              }        
+              }
               &:hover {
                 color: lighten($blue-darkest,10%);
                 background-color: initial;
                 &:after {
                   transform: translateX(5px);
                 }
-              }        
+              }
             }
           }
           .search-api-page-results {
@@ -209,6 +207,21 @@
             padding-bottom: 40px;
           }
         }
+      }
+    }
+  }
+}
+
+// Search 404 Page //
+.page-search404 {
+  #content {
+    form.search-form {
+      label[for=edit-keys] {
+        display: block;
+        float: none;
+      }
+      input[type=submit].form-submit {
+        padding: 8px 45px 32px 30px;
       }
     }
   }

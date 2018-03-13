@@ -22,6 +22,9 @@
     padding: 3px 5px;
     width: 106px;
   }
+  label.tinynav_label {
+    @include is-invisible;
+  }
   .block__content{
     margin-top: -30px;
   }

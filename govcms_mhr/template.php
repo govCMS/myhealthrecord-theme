@@ -357,6 +357,10 @@ function govcms_mhr_preprocess_search_api_page_result(&$variables) {
     }
   }
   $variables['bredcrumbs'] = $bredcrumbs;
+
+  // Make headings for resuts accessible
+  // $variables['snippet'] = filter_xss($variables['snippet'], $allowed_tags = array('strong', 'p', 'br', 'em'));
+  $variables['snippet'] = preg_replace('/<h[1-3]>(.*?)<\/h[1-3]>/', '<h4>$1</h4>', $variables['snippet']);
 }
 
 /**
