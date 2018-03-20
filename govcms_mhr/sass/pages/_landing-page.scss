@@ -46,10 +46,11 @@
 
     // CONTENT RIGHT
     aside.sidebars {
-      width: 50%;
+      width: 40%;
       background: $red-dark url('../images/pattern-folder-lines.png') no-repeat right bottom;
       background-size: contain;
       @include reverse-text;
+      position: relative;
       .region-sidebar-second {
         // reset base layout styles
         margin: auto;
@@ -110,8 +111,69 @@
   }
 }
 
+// adding coloured trinagles to consumer page
+.landing-page-consumer {
+  #content article {
+    position: relative;
+    &:before {
+    display: block;
+    position: absolute;
+    content: "";
+    background: url('../images/landing-trim-consumer-2.png') no-repeat center;    
+    width: 128px;
+    height: 486px;
+    top: 50%;
+    left: -140px; 
+    transform: translateY(-25%);    
+    }
+  }
+  @media screen and (min-width: 1480px) {
+    #content {
+      position: relative;
+      &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      background: url('../images/landing-trim-consumer-2.png') no-repeat center;
+      width: 128px;
+      height: 486px;
+      top: 50%;
+      left: 0; 
+      }
+    }    
+    #content article {
+      &:before {
+      display: none;
+      }
+    }
+  }
+  aside.sidebars:before {
+    display: block;
+    position: absolute;
+    content: "";
+    background: url('../images/landing-trim-consumer-1.png') no-repeat center;
+    background-size: 281px 204px;
+    width: 281px;
+    height: 204px;
+    bottom: -141px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    @include to(medium) {
+      display: none;
+    }
+  }
+  // additional whitespace above how-to guides
+  .region-content-bottom {
+    margin-top: 50px;
+    @include to(medium) {
+      margin: 0;
+    }
+  }  
+}
+
 .landing-page-health.sidebar-second {
-  #content.match-height {
+  #main > .inner-wrapper {
     background: lighten($gray-lighter,10%);
   }
   aside.sidebars {
