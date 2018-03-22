@@ -102,7 +102,6 @@ function govcms_mhr_preprocess_html(&$variables, $hook) {
     'group' => JS_THEME,
   ));
 
-
   // Colorbox
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js', array(
     'type' => 'external',

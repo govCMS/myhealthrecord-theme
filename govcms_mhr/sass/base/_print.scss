@@ -18,6 +18,10 @@
       text-decoration: none !important;
     }
   }
+  .link-external__icon,
+  .link-external:after {
+    display: inline !important;
+  }
   /* Add printable logo and remove screen logo */
   header.header {
     position: relative;
@@ -43,10 +47,14 @@
   }
 
   #header-content {
-    margin-top: 3cm !important;
+    margin-top: 1cm !important;
     position: relative !important;
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
+
+    .page-header {
+      padding: 0 !important;
+    }
 
     &,
     &:before,
@@ -87,13 +95,14 @@
     article {
       float: left !important;
       max-width: 100% !important;
-      padding: 50px 0 0 !important;
-      margin: 0 50px 0 0 !important;
+      padding: 25px 0 0 !important;
+      margin: 0 150px 0 0 !important;
     }
   }
   /* reset Bootstrap grid for print. */
-  body,
-  div {
+  body
+  div.header-content,
+  div.header-content div {
     margin: 0 auto !important;
     width: auto !important;
     padding: initial !important;
@@ -267,10 +276,32 @@
         -webkit-print-color-adjust: exact !important;
         color-adjust: exact !important;
       }
-
       a {
         display: none !important;
       }
     }
   }
+  .page-node-112 .region-content-bottom {
+    .block {
+      display: none !important;
+    }
+    &,
+    .block#block-views-statistics-block-bundle-block {
+      display: block !important;
+      visibility: visible !important;
+      .view-content {
+        .view-listing-unformatted {
+          padding: 25px 0 0 !important;
+          margin: 0 150px 0 0 !important;
+          .views-field {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  // * {
+  //   background-color: transparentize(blue,0.9) !important;
+  // }
 }

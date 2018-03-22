@@ -13,7 +13,9 @@
       $counts[$row->link] = $row->count;
       $total += $row->count;
   }
-  $urls['All'] = str_replace(strtolower($row->link), "all", $row->url);
+  $url = explode('/', $row->url);
+  array_pop($url);
+  $urls['All'] = implode('/', $url) . '/all';
   $counts['All'] = $total;
 
   $first = true;

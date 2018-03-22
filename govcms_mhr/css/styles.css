@@ -3360,34 +3360,34 @@ thead a {
 .page-glossary::after {
   clear: both;
 }
-.page-glossary .view-id-glossary_list ul {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 ul {
   border-bottom: 1px solid #727272;
   margin-bottom: 15px;
 }
-.page-glossary .view-id-glossary_list ul::before, .page-glossary .view-id-glossary_list ul::after {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 ul::before, .page-glossary .view-id-glossary_list.view-display-id-attachment_1 ul::after {
   content: "";
   display: table;
 }
-.page-glossary .view-id-glossary_list ul::after {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 ul::after {
   clear: both;
 }
-.page-glossary .view-id-glossary_list li {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 li {
   display: inline-block;
   font-size: 1.25rem;
   color: #727272;
   margin: 0 3px 15px;
 }
-.page-glossary .view-id-glossary_list li a {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 li a {
   font-size: 1.25rem;
   font-weight: 700;
   border-bottom: 1px solid rgba(0, 45, 129, 0.2);
   padding-bottom: 3px;
 }
-.page-glossary .view-id-glossary_list li a:hover {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 li a:hover {
   background-color: initial;
   border-color: #002D81;
 }
-.page-glossary .view-id-glossary_list li a.active {
+.page-glossary .view-id-glossary_list.view-display-id-attachment_1 li a.active {
   border: 1px solid rgba(0, 45, 129, 0.2);
   padding: 3px;
   border-radius: 3px;
@@ -3643,6 +3643,13 @@ thead a {
 }
 .view-stakeholder-materials-listing .view-listing-unformatted .views-row .node-stakeholder-material .field-name-node-link a {
   font-weight: bold;
+}
+
+.node-type-stakeholder-material #main #content {
+  width: 100%;
+}
+.node-type-stakeholder-material td.views-field-filename {
+  word-break: break-word;
 }
 
 .no-sidebars.page-search #header-content {
@@ -3934,6 +3941,11 @@ thead a {
     text-decoration: none !important;
   }
 
+  .link-external__icon,
+  .link-external:after {
+    display: inline !important;
+  }
+
   /* Add printable logo and remove screen logo */
   header.header {
     position: relative;
@@ -3955,10 +3967,13 @@ thead a {
   }
 
   #header-content {
-    margin-top: 3cm !important;
+    margin-top: 1cm !important;
     position: relative !important;
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
+  }
+  #header-content .page-header {
+    padding: 0 !important;
   }
   #header-content, #header-content:before,
   #header-content * {
@@ -3996,13 +4011,14 @@ thead a {
   #content article {
     float: left !important;
     max-width: 100% !important;
-    padding: 50px 0 0 !important;
-    margin: 0 50px 0 0 !important;
+    padding: 25px 0 0 !important;
+    margin: 0 150px 0 0 !important;
   }
 
   /* reset Bootstrap grid for print. */
-  body,
-  div {
+  body
+  div.header-content,
+  div.header-content div {
     margin: 0 auto !important;
     width: auto !important;
     padding: initial !important;
@@ -4161,6 +4177,25 @@ thead a {
   }
   .front .pane-bean-how-to-homepage a {
     display: none !important;
+  }
+
+  .page-node-112 .region-content-bottom .block {
+    display: none !important;
+  }
+  .page-node-112 .region-content-bottom,
+  .page-node-112 .region-content-bottom .block#block-views-statistics-block-bundle-block {
+    display: block !important;
+    visibility: visible !important;
+  }
+  .page-node-112 .region-content-bottom .view-content .view-listing-unformatted,
+  .page-node-112 .region-content-bottom .block#block-views-statistics-block-bundle-block .view-content .view-listing-unformatted {
+    padding: 25px 0 0 !important;
+    margin: 0 150px 0 0 !important;
+  }
+  .page-node-112 .region-content-bottom .view-content .view-listing-unformatted .views-field,
+  .page-node-112 .region-content-bottom .block#block-views-statistics-block-bundle-block .view-content .view-listing-unformatted .views-field {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
