@@ -32,7 +32,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width">
   <?php endif; ?>
-  <meta http-equiv="cleartype" content="on">
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><meta http-equiv="cleartype" content="on"><!--<![endif]-->
 
   <?php print $styles; ?>
   <?php print $scripts; ?>
