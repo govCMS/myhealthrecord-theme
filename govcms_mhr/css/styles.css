@@ -276,6 +276,13 @@ body.cke_editable ul li li li,
   list-style-type: circle;
 }
 
+.media-p .media-element-container {
+  display: inline;
+}
+.media-p .media-element-container div {
+  display: inline-block;
+}
+
 /*
  * sidebar-right layout
  */

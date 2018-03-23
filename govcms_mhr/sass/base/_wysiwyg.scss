@@ -110,9 +110,14 @@ body.cke_editable ul,
       }
     }
   }
-  // & > li > ul li {
-  //   &::before {
-  //     color: $gray-light;
-  //   }
-  // }
+}
+
+// Media in WYSIWYG
+.media-p {
+  .media-element-container {
+    display: inline;
+    div {
+      display: inline-block;
+    }
+  }
 }
