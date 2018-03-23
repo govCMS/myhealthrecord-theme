@@ -47,10 +47,10 @@
   </h3>
   <div class="search-snippet-info">
     <?php if ($snippet) : ?>
-      <p class="search-snippet"><?php print $snippet; ?></p>
+      <div class="search-snippet"><?php print $snippet; ?></div>
     <?php endif; ?>
     <?php if ($bredcrumbs) : ?>
-      <p class="bredcrumbs"><?php print $bredcrumbs; ?></p>
+      <div class="bredcrumbs"><?php print $bredcrumbs; ?></div>
     <?php endif; ?>
   </div>
 </li>
