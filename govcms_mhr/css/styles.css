@@ -276,6 +276,9 @@ body.cke_editable ul li li li,
   list-style-type: circle;
 }
 
+.media-p {
+  margin-bottom: 1rem;
+}
 .media-p .media-element-container {
   display: inline;
 }
