@@ -5,7 +5,6 @@
 
 
 // ----- Utilities and Variables ----- //
-
 @import "utils/variables";
 @import "base/color";
 @import "utils/mixins/utils";
@@ -16,7 +15,6 @@
 @import 'utils/mixins/visually-hidden';
 
 // ----- Base ----- //
-
 @import "base/base";
 @import "base/reset";
 @import "base/fonts";
@@ -24,7 +22,6 @@
 
 
 // ----- Layouts ----- //
-
 // @import "layouts/body";
 @import "layouts/sidebar-right";
 @import "layouts/no-sidebars";
@@ -51,7 +48,6 @@
 @import "components/table";
 
 // ----- Pages ----- //
-
 @import "pages/home";
 @import "pages/landing-page";
 @import "pages/content-page";

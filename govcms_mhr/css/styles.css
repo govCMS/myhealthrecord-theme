@@ -1021,6 +1021,28 @@ span.menu-collapser:hover {
   width: auto;
   padding: 50px 30px 15px 0;
 }
+#navigation-content .region-navigation #block-block-12 .container::before, #navigation-content .region-navigation #block-block-12 .container::after {
+  content: "";
+  display: table;
+}
+#navigation-content .region-navigation #block-block-12 .container::after {
+  clear: both;
+}
+#navigation-content .region-navigation #block-block-12 .block__content .mygov-login-icon {
+  float: left;
+  display: inline-block;
+  background: transparent url(../images/mygov-logo.png) no-repeat center left;
+  background-size: contain;
+  padding: 0.6875rem 0.8125rem;
+  text-indent: -9999999px;
+  width: 28px;
+  margin-right: 10px;
+}
+@media (max-width: 1200px) {
+  #navigation-content .region-navigation #block-block-12 .block__content .mygov-login-icon {
+    display: none;
+  }
+}
 #navigation-content .region-navigation #block-block-12 .mygov-login {
   border-radius: 50px;
   display: block;
@@ -1028,9 +1050,8 @@ span.menu-collapser:hover {
   text-transform: uppercase;
   color: #026440;
   font-weight: 700;
-  padding: 0.9375rem 3.75rem 0.625rem 0.9375rem;
-  background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center right 20px;
-  background-size: 1.875rem;
+  padding: 0.6875rem 0.8125rem;
+  float: left;
   border: 1px solid #DFDFDF;
   transition: .2s ease all;
 }
@@ -2148,6 +2169,7 @@ span.mailto {
   background-color: #ec8e00;
 }
 
+/* HEALTH STYLES */
 .how-to-id-16 .vocabulary-how-to-category .field-name-title,
 .node-how-to-page.view-mode-compact.category-id-16 h3 > a,
 .node-how-to-page.view-mode-compact_hp.category-id-16 h2 > a,
@@ -2178,7 +2200,7 @@ span.mailto {
 .node-how-to-page.view-mode-compact_hp.category-id-18 .statistic-numeric-items li .stat-number > a,
 .statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-18 .stat-number > a {
   background-color: #007dbc;
-  background-image: url("../images/how-to/MyHR_Icon_15.png");
+  background-image: url("../images/how-to/MyHR_Icon_49.png");
   color: white;
 }
 .how-to-id-18 .vocabulary-how-to-category .field-name-title:hover,
@@ -2196,20 +2218,36 @@ span.mailto {
   color: white;
 }
 
-.how-to-id-19 .vocabulary-how-to-category .field-name-title,
-.node-how-to-page.view-mode-compact.category-id-19 h3 > a,
-.node-how-to-page.view-mode-compact_hp.category-id-19 h2 > a,
-.node-how-to-page.view-mode-compact_hp.category-id-19 .statistic-numeric-items li .stat-number > a,
-.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-19 .stat-number > a {
+.how-to-id-50 .vocabulary-how-to-category .field-name-title,
+.node-how-to-page.view-mode-compact.category-id-50 h3 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-50 h2 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-50 .statistic-numeric-items li .stat-number > a,
+.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-50 .stat-number > a {
   background-color: #68bbe4;
-  background-image: url("../images/how-to/MyHR_Icon_28.png");
+  background-image: url("../images/how-to/MyHR_Icon_5.png");
 }
-.how-to-id-19 .vocabulary-how-to-category .field-name-title:hover,
-.node-how-to-page.view-mode-compact.category-id-19 h3 > a:hover,
-.node-how-to-page.view-mode-compact_hp.category-id-19 h2 > a:hover,
-.node-how-to-page.view-mode-compact_hp.category-id-19 .statistic-numeric-items li .stat-number > a:hover,
-.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-19 .stat-number > a:hover {
+.how-to-id-50 .vocabulary-how-to-category .field-name-title:hover,
+.node-how-to-page.view-mode-compact.category-id-50 h3 > a:hover,
+.node-how-to-page.view-mode-compact_hp.category-id-50 h2 > a:hover,
+.node-how-to-page.view-mode-compact_hp.category-id-50 .statistic-numeric-items li .stat-number > a:hover,
+.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-50 .stat-number > a:hover {
   background-color: #93ceec;
+}
+
+.how-to-id-49 .vocabulary-how-to-category .field-name-title,
+.node-how-to-page.view-mode-compact.category-id-49 h3 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-49 h2 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-49 .statistic-numeric-items li .stat-number > a,
+.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-49 .stat-number > a {
+  background-color: #DFDFDF;
+  background-image: url("../images/how-to/MyHR_Icon_15.png");
+}
+.how-to-id-49 .vocabulary-how-to-category .field-name-title:hover,
+.node-how-to-page.view-mode-compact.category-id-49 h3 > a:hover,
+.node-how-to-page.view-mode-compact_hp.category-id-49 h2 > a:hover,
+.node-how-to-page.view-mode-compact_hp.category-id-49 .statistic-numeric-items li .stat-number > a:hover,
+.statistic-numeric-items li .node-how-to-page.view-mode-compact_hp.category-id-49 .stat-number > a:hover {
+  background-color: #c6c6c6;
 }
 
 .how-to-id-20 .vocabulary-how-to-category .field-name-title,

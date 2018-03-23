@@ -263,15 +263,17 @@
 		background-color: darken($orange-light,10%);
 	}
 }
-// HEALTH STYLES
-// Get connected
+
+/* HEALTH STYLES */
+
+// Register and connect
 .how-to-id-16 .vocabulary-how-to-category .field-name-title,
 .node-how-to-page.view-mode-compact.category-id-16 h3 > a,
 .node-how-to-page.view-mode-compact_hp.category-id-16 h2 > a {
 	background-image: url("../images/how-to/MyHR_Icon_79.png");
 }
-// Get training
 
+// Access training and resources
 .how-to-id-17 .vocabulary-how-to-category .field-name-title,
 .node-how-to-page.view-mode-compact.category-id-17 h3 > a,
 .node-how-to-page.view-mode-compact_hp.category-id-17 h2 > a {
@@ -282,13 +284,13 @@
 		background-color: darken($gray-lighter,10%);
 	}
 }
-// Support patients
 
+// Inform and Support patients
 .how-to-id-18 .vocabulary-how-to-category .field-name-title,
 .node-how-to-page.view-mode-compact.category-id-18 h3 > a,
 .node-how-to-page.view-mode-compact_hp.category-id-18 h2 > a {
 	background-color: $blue-light;
-	background-image: url("../images/how-to/MyHR_Icon_15.png");
+	background-image: url("../images/how-to/MyHR_Icon_49.png");
 	color: white;
 
 	&:hover {
@@ -299,20 +301,32 @@
 		color: white;
 	}
 }
-// Use and contribute to a patient's record
 
-.how-to-id-19 .vocabulary-how-to-category .field-name-title,
-.node-how-to-page.view-mode-compact.category-id-19 h3 > a,
-.node-how-to-page.view-mode-compact_hp.category-id-19 h2 > a {
+// View and upload clinical info
+.how-to-id-50 .vocabulary-how-to-category .field-name-title,
+.node-how-to-page.view-mode-compact.category-id-50 h3 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-50 h2 > a {
 	background-color: $blue;
-	background-image: url("../images/how-to/MyHR_Icon_28.png");
+	background-image: url("../images/how-to/MyHR_Icon_5.png");
 
 	&:hover {
 		background-color: lighten($blue,10%);
 	}
 }
-// Get help and support
 
+// Understand privacy, security and consent
+.how-to-id-49 .vocabulary-how-to-category .field-name-title,
+.node-how-to-page.view-mode-compact.category-id-49 h3 > a,
+.node-how-to-page.view-mode-compact_hp.category-id-49 h2 > a {
+	background-color: $gray-lighter;
+	background-image: url("../images/how-to/MyHR_Icon_15.png");
+
+	&:hover {
+		background-color: darken($gray-lighter,10%);
+	}
+}
+
+// Get help and support
 .how-to-id-20 .vocabulary-how-to-category .field-name-title,
 .node-how-to-page.view-mode-compact.category-id-20 h3 > a,
 .node-how-to-page.view-mode-compact_hp.category-id-20 h2 > a {
@@ -323,6 +337,7 @@
 	&:hover {
 		background-color: darken($blue-darkest,10%);
 	}
+
 	* {
 		color: white;
 	}

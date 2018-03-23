@@ -125,6 +125,24 @@
     float: right;
     width: auto;
     padding: 50px 30px 15px 0;
+    .container {
+      @include clearfix;
+    }
+    .block__content {
+      .mygov-login-icon {
+        float: left;
+        display: inline-block;
+        background: transparent url(../images/mygov-logo.png) no-repeat center left;
+        background-size: contain;
+        padding: rem(11) rem(13);
+        text-indent: -9999999px;
+        width: 28px;
+        margin-right: 10px;
+        @include to(xlarge) {
+          display: none;
+        }
+      }
+    }
     .mygov-login {
       border-radius: 50px;
       display: block;
@@ -132,9 +150,11 @@
       text-transform: uppercase;
       color: #026440;
       font-weight: $text-weight-bold;
-      padding: rem(15) rem(60) rem(10) rem(15);
-      background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center right 20px;
-      background-size: rem(30);
+      padding: rem(11) rem(13);
+      float: left;
+      // padding: rem(15) rem(60) rem(10) rem(15);
+      // background-size: rem(30);
+      // background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center right 20px;
       border: 1px solid $gray-lighter;
       transition: .2s ease all;
       &:hover {
@@ -170,8 +190,8 @@
       text-indent: -9999px;
       width: 35px;
       height: 35px;
-      background-size: 15px;            
-    }    
+      background-size: 15px;
+    }
   }
 }
 
@@ -281,7 +301,7 @@
   }
   div.sf-accordion-toggle.sf-style-white {
     display: none;
-  }    
+  }
   @include to(xlarge) {
     float: right;
     width: auto;
