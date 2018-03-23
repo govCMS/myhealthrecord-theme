@@ -31,7 +31,7 @@
           $nav[] = '<li class="views-summary views-summary-unformatted result"><a href=' . $urls[$letter] . ' class=" ' . $active_class . '">' . $letter . '</a></li>';
       } else {
           //  commented out for displaying chars with no results
-          $nav[] = '<li class="views-summary views-summary-unformatted no-result" class=" ' . $active_class . '">' . $letter . '</li>';
+          $nav[] = '<li class="views-summary views-summary-unformatted no-result ' . $active_class . '">' . $letter . '</li>';
       }
   }
   print '<ul>';
