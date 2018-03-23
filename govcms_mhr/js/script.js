@@ -22,7 +22,7 @@
           active: 'active',
           label: 'Language selector',
           // header: 'Languages', // String: Specify text for "header" and show header instead of the active item
-        });
+        }).remove();
       }
 
       // Auto-rotate it //
