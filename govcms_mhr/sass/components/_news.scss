@@ -71,7 +71,7 @@
     }
     .node-title {
       font-weight: bold;
-      font-family: $text-content-sans--serif;      
+      font-family: $text-content-sans--serif;
       font-size: rem(20);
       margin-top: 16px;
       a {
@@ -81,14 +81,14 @@
           transition: .2s ease all;
           @extend %link-internal__icon;
           transform: translateX(0);
-        }        
+        }
         &:hover {
           color: lighten($blue-darkest,10%);
           background-color: initial;
           &:after {
             transform: translateX(5px);
           }
-        }        
+        }
       }
     }
   }
@@ -120,8 +120,8 @@ table, tr, th, td {
 td {
   padding-bottom: 3rem;
   a {
-    color: $blue;
-    font-weight: $text-weight-bold;
+    // color: $blue;
+    // font-weight: $text-weight-bold;
   }
 }
 tr.odd {

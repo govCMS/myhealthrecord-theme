@@ -1,16 +1,19 @@
 //table styles
 table {
   width: 100%;
+  vertical-align: top;
 }
 table, tr, th, td {
   border: none;
   border-bottom: 1px solid $gray-lighter;
+  text-align: left;
 }
 td {
+  padding: 5px;
   padding-bottom: 3rem;
   a {
-    color: $blue;
-    font-weight: $text-weight-bold;
+    // color: $blue;
+    // font-weight: $text-weight-bold;
   }
 }
 tr.odd {

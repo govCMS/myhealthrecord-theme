@@ -1,13 +1,17 @@
-.page-for-healthcare-professionals-stakeholder-materials,
-.node-type-stakeholder-material {
+.node-type-stakeholder-material,
+.page-for-healthcare-professionals-stakeholder-materials {
   .views-exposed-form .views-exposed-widget {
-    #edit-submit-stakeholder-materials-listing, #edit-reset, #edit-submit-stakeholder-view {
+    #edit-reset,
+    #edit-submit-stakeholder-materials-listing,
+    #edit-submit-stakeholder-view {
       padding: 8px 40px;
       white-space: nowrap;
       font-size: 14px;
     }
   }
-  #edit-field-material-category-tid, #edit-field-type-tid {
+
+  #edit-field-material-category-tid,
+  #edit-field-type-tid {
     border: 1px solid $blue-darkest;
     font-size: 0.8rem;
     padding: 3px 5px;
@@ -16,42 +20,54 @@
   }
 
   .view-content .views-table {
-    table, tr, th, td {
+    table,
+    td,
+    th,
+    tr {
       border: none;
       border-bottom: 1px solid $gray-lighter;
     }
+
     td {
       padding-bottom: 3rem;
+
       a {
         color: $blue;
         font-weight: $text-weight-bold;
       }
     }
+
     tr.odd {
       background-color: $white;
     }
+
     thead {
       background-color: $gray-lighter;
+
       a {
         color: $gray-darkest;
       }
     }
   }
+
   .group-left {
     width: 30%;
     margin-right: 5%;
   }
+
   .group-right {
-    width:65%;
+    width: 65%;
+
     .field-name-title {
       border-bottom: none;
+    }
   }
-}
 }
 
 .view-stakeholder-materials-listing .view-listing-unformatted {
   .views-row {
     padding-top: 25px !important;
+
     .node-stakeholder-material {
       .field-name-node-link a {
         font-weight: bold;
@@ -62,8 +78,9 @@
 
 .node-type-stakeholder-material {
   #main #content {
-    width: 100%; 
+    width: 100%;
   }
+
   td.views-field-filename {
     word-break: break-word;
   }
