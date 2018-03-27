@@ -1,12 +1,12 @@
 //table styles
 table {
   width: 100%;
-  vertical-align: top;
 }
 table, tr, th, td {
   border: none;
   border-bottom: 1px solid $gray-lighter;
   text-align: left;
+  vertical-align: top;
 }
 td {
   padding: 5px;

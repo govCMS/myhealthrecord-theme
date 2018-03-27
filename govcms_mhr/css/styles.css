@@ -746,9 +746,6 @@ body.cke_editable ul li li li,
 #bottom-content ul.icon-social li a img {
   height: 100%;
 }
-#bottom-content #block-block-9 {
-  display: none;
-}
 #bottom-content::before {
   display: block;
   content: "";
@@ -2414,6 +2411,7 @@ table {
 table, tr, th, td {
   border: none;
   border-bottom: 1px solid #DFDFDF;
+  vertical-align: top;
 }
 
 td {
@@ -2433,13 +2431,13 @@ thead a {
 
 table {
   width: 100%;
-  vertical-align: top;
 }
 
 table, tr, th, td {
   border: none;
   border-bottom: 1px solid #DFDFDF;
   text-align: left;
+  vertical-align: top;
 }
 
 td {

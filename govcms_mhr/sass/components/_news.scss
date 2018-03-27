@@ -116,6 +116,7 @@ table {
 table, tr, th, td {
   border: none;
   border-bottom: 1px solid $gray-lighter;
+  vertical-align: top;
 }
 td {
   padding-bottom: 3rem;

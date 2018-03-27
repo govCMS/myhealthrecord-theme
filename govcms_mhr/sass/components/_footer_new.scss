@@ -130,9 +130,6 @@
       height: 100%;
     }
   }
-  #block-block-9 {
-    display: none;
-  }
   &::before {
     display: block;
     content: "";
@@ -176,7 +173,7 @@
     }
     a.back-to-top {
       // required for focus
-      display: block; 
+      display: block;
     }
     a img {
       height: 44px;
