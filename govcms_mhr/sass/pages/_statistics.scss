@@ -23,7 +23,7 @@
     width: calc(25% - 30px);
     margin: 15px;
     list-style: none !important;
-    text-align: center;
+    text-align: left;
 
     img {
       width: auto;
@@ -45,7 +45,7 @@
   @include to(large) {
     li {
       width: calc(50% - 30px);
-      text-align: left;
+      text-align: center;
 
       &:nth-of-type(2) {
         clear: right;

@@ -3532,7 +3532,7 @@ thead a {
   width: calc(25% - 30px);
   margin: 15px;
   list-style: none !important;
-  text-align: center;
+  text-align: left;
 }
 .statistic-numeric-items li img {
   width: auto;
@@ -3550,7 +3550,7 @@ thead a {
 @media (max-width: 992px) {
   .statistic-numeric-items li {
     width: calc(50% - 30px);
-    text-align: left;
+    text-align: center;
   }
   .statistic-numeric-items li:nth-of-type(2) {
     clear: right;
