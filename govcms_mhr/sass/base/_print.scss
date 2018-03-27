@@ -284,6 +284,16 @@
     .block {
       display: none !important;
     }
+    .view-statistics-block-bundle {
+      .views-row {
+        @include clearfix;
+        page-break-inside: avoid;
+        margin-bottom: 1em;
+      }
+      .views-row-2 {
+        page-break-before: always;
+      }
+    }
     &,
     .block#block-views-statistics-block-bundle-block {
       display: block !important;

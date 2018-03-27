@@ -279,10 +279,11 @@ body.cke_editable ul li li li,
 .media-p {
   margin-bottom: 1rem;
 }
-.media-p .media-element-container {
+
+.media-element-container {
   display: inline;
 }
-.media-p .media-element-container div {
+.media-element-container div {
   display: inline-block;
 }
 
@@ -3531,11 +3532,13 @@ thead a {
   width: calc(25% - 30px);
   margin: 15px;
   list-style: none !important;
+  text-align: center;
 }
 .statistic-numeric-items li img {
+  width: auto;
+  margin: auto;
   max-height: 95px;
   margin-bottom: 15px;
-  width: auto;
 }
 .statistic-numeric-items li .media-element-container {
   margin-bottom: 43px;
@@ -3547,6 +3550,7 @@ thead a {
 @media (max-width: 992px) {
   .statistic-numeric-items li {
     width: calc(50% - 30px);
+    text-align: left;
   }
   .statistic-numeric-items li:nth-of-type(2) {
     clear: right;
@@ -4242,6 +4246,20 @@ thead a {
 
   .page-node-112 .region-content-bottom .block {
     display: none !important;
+  }
+  .page-node-112 .region-content-bottom .view-statistics-block-bundle .views-row {
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+  .page-node-112 .region-content-bottom .view-statistics-block-bundle .views-row::before, .page-node-112 .region-content-bottom .view-statistics-block-bundle .views-row::after {
+    content: "";
+    display: table;
+  }
+  .page-node-112 .region-content-bottom .view-statistics-block-bundle .views-row::after {
+    clear: both;
+  }
+  .page-node-112 .region-content-bottom .view-statistics-block-bundle .views-row-2 {
+    page-break-before: always;
   }
   .page-node-112 .region-content-bottom,
   .page-node-112 .region-content-bottom .block#block-views-statistics-block-bundle-block {
