@@ -79,7 +79,8 @@
   #content {
     /* Add visible URL after links. */
     a[href]:after {
-      content: " (" attr(href) ")";
+      // content: " (" attr(href) ")";
+      content: "";
       font-weight: normal;
     }
     /* Only display useful links. */
@@ -311,11 +312,13 @@
       }
     }
   }
-  // * {
-  //   background-color: transparentize(blue,0.9) !important;
-  // }
   .about-statistics-breakdown-table {
     margin: 15px 2.5% !important;
     width: 45% !important;
+  }
+
+  .statistic-numeric-items li {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }

@@ -4064,7 +4064,7 @@ thead a {
     /* Add visible title after abbreviations. */
   }
   #content a[href]:after {
-    content: " (" attr(href) ")";
+    content: "";
     font-weight: normal;
   }
   #content a[href^="javascript:"]:after,
@@ -4282,6 +4282,11 @@ thead a {
   .about-statistics-breakdown-table {
     margin: 15px 2.5% !important;
     width: 45% !important;
+  }
+
+  .statistic-numeric-items li {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
