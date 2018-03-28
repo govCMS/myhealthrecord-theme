@@ -13,7 +13,7 @@
     padding: 0 0 15px 0;
     margin-bottom: 0;
     font-size: rem(20);
-    line-height: 1; 
+    line-height: 1;
   }
   .block .block__content {
     background: none;
@@ -37,6 +37,7 @@
     .menu .menu {
       padding: 0 15px;
       box-sizing: border-box;
+      margin-bottom: 0;
       li a {
         padding: 5px 10px;
         font-size: 14px;
@@ -49,5 +50,5 @@
   }
   @include to(medium) {
     max-width: none !important;
-  }  
+  }
 }

@@ -257,7 +257,7 @@ div.text-highlight {
 body.cke_editable ul,
 .field-name-field-bean-body ul,
 .field-name-body ul {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 body.cke_editable ul li,
 .field-name-field-bean-body ul li,
@@ -1354,6 +1354,7 @@ span.menu-collapser:hover {
 .region-sidebar-second .block .block__content .menu .menu {
   padding: 0 15px;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 .region-sidebar-second .block .block__content .menu .menu li a {
   padding: 5px 10px;
@@ -1853,6 +1854,7 @@ span.file-size {
   position: absolute;
   top: 10px;
   right: 175px;
+  right: 30px;
   z-index: 100;
   top: 12px;
 }
@@ -1864,6 +1866,7 @@ span.file-size {
 @media (min-width: 769px) and (max-width: 1200px) {
   #block-bean-readspeaker-button {
     right: 345px;
+    right: 205px;
   }
 }
 #block-bean-readspeaker-button .rsbtn {
@@ -4176,6 +4179,7 @@ thead a {
 
   html {
     height: auto !important;
+    font-size: 14px;
   }
 
   body {
@@ -4273,6 +4277,11 @@ thead a {
   .page-node-112 .region-content-bottom .block#block-views-statistics-block-bundle-block .view-content .view-listing-unformatted .views-field {
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  .about-statistics-breakdown-table {
+    margin: 15px 2.5% !important;
+    width: 45% !important;
   }
 }
 

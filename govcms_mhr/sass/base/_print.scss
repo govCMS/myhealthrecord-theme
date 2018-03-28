@@ -196,6 +196,7 @@
 
   html {
     height: auto !important;
+    font-size: 14px;
   }
 
   body {
@@ -313,4 +314,8 @@
   // * {
   //   background-color: transparentize(blue,0.9) !important;
   // }
+  .about-statistics-breakdown-table {
+    margin: 15px 2.5% !important;
+    width: 45% !important;
+  }
 }
