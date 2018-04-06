@@ -3388,6 +3388,10 @@ thead a {
   }
 }
 
+#page #content article.node-228 {
+  padding-bottom: 0;
+}
+
 .maintenance-page {
   background-color: #FFFFFF;
   background-image: url(../images/maintenance-background.svg);
@@ -4283,8 +4287,6 @@ thead a {
 
   .statistic-numeric-items li {
     height: auto !important;
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
   }
 }
 
