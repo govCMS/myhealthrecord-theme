@@ -22,4 +22,4 @@ core        = 7.x
 base theme  = shiny
 
 ; Then we add our own stylesheet.
-; stylesheets[all][] = css/overrides.css
+stylesheets[all][] = css/styles.css
