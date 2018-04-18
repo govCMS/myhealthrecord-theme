@@ -118,7 +118,8 @@
         var has_child_image          = $this.children("img").length;
         var has_popup                = $this.hasClass('external-link-alert');
 
-        if (this.hostname && this.hostname !== location.hostname && !is_link_external_no_icon && !has_child_image) {
+
+        if (this.hostname && this.hostname !== location.hostname && this.hostname !== 'my.gov.au' && !is_link_external_no_icon && !has_child_image) {
           // Read More Links
           if ($this.hasClass('read-more')) {
             $this.addClass('external-link').attr('target','_blank');
