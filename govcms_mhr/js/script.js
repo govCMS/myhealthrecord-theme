@@ -116,6 +116,7 @@
         var $this                    = $(this);
         var is_link_external_no_icon = $this.hasClass('link-external__no-icon');
         var has_child_image          = $this.children("img").length;
+        var has_popup                = $this.hasClass('external-link-alert');
 
         if (this.hostname && this.hostname !== location.hostname && !is_link_external_no_icon && !has_child_image) {
           // Read More Links
@@ -127,7 +128,7 @@
           else {
             $this.addClass('link-external').attr('target','_blank');
           }
-          if ($("body").hasClass('html')) {
+          if (has_popup && $("body").hasClass('html')) {
             $this.click(function (e) {
               e.preventDefault();
               $.magnificPopup.open({

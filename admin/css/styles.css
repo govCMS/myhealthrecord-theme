@@ -1,1 +1,2 @@
 .field-name-field-use:after,.field-name-field-use:before{content:"";display:table}.field-name-field-use:after{clear:both}.field-name-field-use .form-checkboxes>.form-item{float:left;margin-right:30px}table.context-admin td.tag{font-weight:bold}
+#linkit-modal .form-item-linkit-class:after{content:'For external link with popup, add "external-link-alert"';font-size:13px;font-weight:100;color: #999;}

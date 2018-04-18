@@ -29,3 +29,10 @@ table.context-admin {
     font-weight: bold;
   }
 }
+
+#linkit-modal .form-item-linkit-class:after {
+  content: 'For external link with popup, add "external-link-alert"';
+  font-size: 13px;
+  font-weight: 100;
+  color: #999;
+}
