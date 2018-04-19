@@ -2514,6 +2514,7 @@ thead a {
 .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
   padding: 1.25rem 3.125rem 1.25rem 2.5rem;
   font-size: 1rem;
+  white-space: nowrap;
 }
 .front .panel-col-top .pane-bean-heading #home-content-top-navigation p {
   margin: 1.25rem 1.875rem;
