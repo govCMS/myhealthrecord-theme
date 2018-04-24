@@ -1551,14 +1551,18 @@ body.keynav a:focus, body.keynav a:visited:focus {
 .not-logged-in #main form .form-item {
   margin: 0;
 }
+.not-logged-in #main form .webform-submit, .not-logged-in #main form .form-submit {
+  margin-top: 1.4em;
+}
 
-#main input[type="text"], #main input[type="email"], #main input[type="password"] {
+#main .form-text, #main input[type="text"], #main input[type="email"], #main input[type="password"] {
   background-color: #FFFFFF;
   border: 1px solid #DFDFDF;
   border-radius: 50px;
   min-height: 45px;
   padding: 10px 50px 10px 15px;
   height: auto;
+  width: 100%;
 }
 #main textarea {
   background-color: #FFFFFF;

@@ -67,26 +67,26 @@
 
 // Search API search block Error message //
 #search-noresults {
-    position: absolute;
-    color: $red-dark;
-    font-size: small;
-    margin: 0;
-    z-index: 151;
-    display: none;
-    top: -2em;
+  position: absolute;
+  color: $red-dark;
+  font-size: small;
+  margin: 0;
+  z-index: 151;
+  display: none;
+  top: -2em;
 
-    @include from(small) {
-      top: 2.7em;
-      left: -175px;
-    }
-    @include at(xlarge) {
-      top: 3em;
-      left: -175px;
-    }
-    @include from(5) { // after x large to infinite
-      top: 7.4em;
-      left: -165px;
-    }
+  @include from(small) {
+    top: 2.7em;
+    left: -175px;
+  }
+  @include at(xlarge) {
+    top: 3em;
+    left: -175px;
+  }
+  @include from(5) { // after x large to infinite
+    top: 7.4em;
+    left: -165px;
+  }
 }
 // This allow to close the search when clicking outside
 #search-locker {
@@ -128,18 +128,22 @@
       .form-item {
         margin: 0;
       }
+      .webform-submit, .form-submit {
+        margin-top: 1.4em;
+      }
     }
   }
 }
 
 #main {
-  input[type="text"], input[type="email"], input[type="password"] {
+  .form-text, input[type="text"], input[type="email"], input[type="password"] {
     background-color: $white;
     border: 1px solid $gray-lighter;
     border-radius: 50px;
     min-height: 45px;
     padding: 10px 50px 10px 15px;
     height: auto;
+    width: 100%;
   }
   textarea {
     background-color: $white;
@@ -173,10 +177,10 @@
     background: white url("../images/icon_arrow-down.svg") no-repeat right 15px center;
     background-size: 15px;
     -webkit-appearance: none;
-       -moz-appearance: none;
-        -ms-appearance: none;
-         -o-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     transition: .2s ease all;
     &:hover, &:focus {
       cursor: pointer;
@@ -248,13 +252,13 @@
             background-image: url(../images/thumb-down-blue.png);
             background-color: $gray-lighter;
           }
-        &:focus,
-        &:hover {
-          &::before {
-            background-color: $red;
-            background-image: url(../images/thumb-down-wht.png);
+          &:focus,
+          &:hover {
+            &::before {
+              background-color: $red;
+              background-image: url(../images/thumb-down-wht.png);
+            }
           }
-        }
         }
       }
     }
