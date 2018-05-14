@@ -81,6 +81,9 @@
           transition: .2s ease all;
           @extend %link-internal__icon;
           transform: translateX(0);
+          -ms-transform: translateX(0);
+          /*border: 1px solid red;*/
+          height: 16px;
         }
         &:hover {
           color: lighten($blue-darkest,10%);

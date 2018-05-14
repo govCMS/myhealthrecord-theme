@@ -259,6 +259,7 @@ body.cke_editable ul,
 .field-name-body ul {
   margin-left: 30px;
 }
+#block-bean-contact-us-below-form ul li,
 body.cke_editable ul li,
 .field-name-field-bean-body ul li,
 .field-name-body ul li {
@@ -1686,15 +1687,18 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   margin-top: 20px;
 }
 
+#block-bean-contact-us-below-form ul li .form-actions,
 .section-about .form-actions {
   margin: 1rem auto;
 }
 @media (max-width: 575px) {
+  #block-bean-contact-us-below-form ul li .webform-client-form-91,
   .section-about .webform-client-form-91 {
     max-width: 400px;
   }
 }
 @media (max-width: 575px) {
+  #block-bean-contact-us-below-form ul li .webform-client-form-91 input,
   .section-about .webform-client-form-91 input {
     width: 100%;
   }
@@ -2389,6 +2393,9 @@ span.file-size {
 .page-news .view-latest-news article .node-title a:after {
   transition: .2s ease all;
   transform: translateX(0);
+  -ms-transform: translateX(0);
+  /*border: 1px solid red;*/
+  height: 16px;
 }
 .page-news .view-latest-news article .node-title a:hover {
   color: #003fb4;
