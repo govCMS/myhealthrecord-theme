@@ -274,7 +274,6 @@
 }
 
 //contact us pages
-#block-bean-contact-us-below-form ul li,
 .section-about {
   .form-actions {
     margin: 1rem auto;
@@ -286,6 +285,21 @@
     input {
       @include at(small){
         width: 100%;
+      }
+    }
+  }
+}
+
+// Bullet Points 
+#block-bean-contact-us-below-form ul {
+  margin-left: 30px;
+  li {
+    line-height: 1.85;
+    list-style-type: disc;
+    li {
+      list-style-type: square;
+      li {
+        list-style-type: circle;
       }
     }
   }

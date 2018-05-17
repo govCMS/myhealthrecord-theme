@@ -1718,6 +1718,10 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   display: inline-block;
 }
 
+.node-type-news-article article .file img.file-icon {
+  padding-bottom: 0; 
+}
+
 #block-locale-language ul.language-switcher-locale-url.l_tinynav1 {
   display: none;
 }

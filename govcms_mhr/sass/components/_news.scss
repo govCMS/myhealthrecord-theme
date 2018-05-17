@@ -77,13 +77,14 @@
       a {
         color: $blue-darkest;
         border-bottom: none !important;
+        line-height: 16px;
         &:after {
           transition: .2s ease all;
           @extend %link-internal__icon;
           transform: translateX(0);
           -ms-transform: translateX(0);
-          /*border: 1px solid red;*/
           height: 16px;
+          line-height: 16px;
         }
         &:hover {
           color: lighten($blue-darkest,10%);
@@ -97,7 +98,7 @@
   }
 }
 
-.node-type-news-article article {
+.node-type-news-article article { 
   img {
     max-height: 450px;
     padding-bottom: 20px;
@@ -105,6 +106,9 @@
   .field-name-field-news-date {
     padding: 25px 0 15px;
     color: $text-color-sub_header;
+  }
+  .file img.file-icon {
+    padding-bottom: 0; 
   }
 }
 
