@@ -259,7 +259,6 @@ body.cke_editable ul,
 .field-name-body ul {
   margin-left: 30px;
 }
-#block-bean-contact-us-below-form ul li,
 body.cke_editable ul li,
 .field-name-field-bean-body ul li,
 .field-name-body ul li {
@@ -1126,6 +1125,7 @@ span.menu-collapser:hover {
   background-color: transparent;
   float: none;
   background: transparent;
+  display: flex;
 }
 #block-superfish-1 #superfish-1::before, #block-superfish-1 #superfish-1::after {
   content: "";
@@ -1135,7 +1135,7 @@ span.menu-collapser:hover {
   clear: both;
 }
 #block-superfish-1 .menu li.sf-depth-1 > a {
-  padding: 65px 10px 30px;
+  padding: 65px 15px 30px;
 }
 #block-superfish-1 .block__title.block-title {
   position: absolute;
@@ -1147,25 +1147,28 @@ span.menu-collapser:hover {
   height: 1px;
   border: 0;
 }
-#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) {
+#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-of-type(2) {
+  margin-right: auto;
+}
+#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-child(1n+3) {
   float: right;
 }
-#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
+#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
   font-size: 0.8125rem;
 }
 #block-superfish-1 li a,
-#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
-  letter-spacing: initial !important;
+#block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
+  letter-spacing: normal !important;
 }
 @media (max-width: 1200px) {
   #block-superfish-1 li a,
-  #block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
+  #block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
     font-size: 15px;
   }
 }
 @media (max-width: 992px) {
   #block-superfish-1 li a,
-  #block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
+  #block-superfish-1 .menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
     font-size: 13px;
   }
 }
@@ -1304,13 +1307,13 @@ span.menu-collapser:hover {
     background: none;
   }
   #block-superfish-1 .sf-style-white.menu.sf-menu li,
-  #block-superfish-1 .sf-style-white.menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) {
+  #block-superfish-1 .sf-style-white.menu.sf-menu li.sf-depth-1:nth-child(1n+3) {
     float: none;
     display: block;
     background: none;
   }
   #block-superfish-1 .sf-style-white.menu.sf-menu li a,
-  #block-superfish-1 .sf-style-white.menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
+  #block-superfish-1 .sf-style-white.menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
     padding: 15px;
     box-sizing: border-box;
   }
@@ -1687,21 +1690,32 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   margin-top: 20px;
 }
 
-#block-bean-contact-us-below-form ul li .form-actions,
 .section-about .form-actions {
   margin: 1rem auto;
 }
 @media (max-width: 575px) {
-  #block-bean-contact-us-below-form ul li .webform-client-form-91,
   .section-about .webform-client-form-91 {
     max-width: 400px;
   }
 }
 @media (max-width: 575px) {
-  #block-bean-contact-us-below-form ul li .webform-client-form-91 input,
   .section-about .webform-client-form-91 input {
     width: 100%;
   }
+}
+
+#block-bean-contact-us-below-form ul {
+  margin-left: 30px;
+}
+#block-bean-contact-us-below-form ul li {
+  line-height: 1.85;
+  list-style-type: disc;
+}
+#block-bean-contact-us-below-form ul li li {
+  list-style-type: square;
+}
+#block-bean-contact-us-below-form ul li li li {
+  list-style-type: circle;
 }
 
 .icon {
@@ -1716,10 +1730,6 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
 .media .file img.file-icon {
   margin-right: 0.4em;
   display: inline-block;
-}
-
-.node-type-news-article article .file img.file-icon {
-  padding-bottom: 0; 
 }
 
 #block-locale-language ul.language-switcher-locale-url.l_tinynav1 {
@@ -2393,13 +2403,14 @@ span.file-size {
 .page-news .view-latest-news article .node-title a {
   color: #002D81;
   border-bottom: none !important;
+  line-height: 16px;
 }
 .page-news .view-latest-news article .node-title a:after {
   transition: .2s ease all;
   transform: translateX(0);
   -ms-transform: translateX(0);
-  /*border: 1px solid red;*/
   height: 16px;
+  line-height: 16px;
 }
 .page-news .view-latest-news article .node-title a:hover {
   color: #003fb4;
@@ -2416,6 +2427,9 @@ span.file-size {
 .node-type-news-article article .field-name-field-news-date {
   padding: 25px 0 15px;
   color: #7C7C7C;
+}
+.node-type-news-article article .file img.file-icon {
+  padding-bottom: 0;
 }
 
 .page-news #content #readspeaker-content .view-latest-news article {

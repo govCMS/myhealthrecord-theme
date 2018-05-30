@@ -195,7 +195,7 @@
   }
 }
 
-// Main menu
+// Main Menu
 #block-superfish-1 {
   height: 100%;
   width: calc(100vw - 560px);
@@ -206,23 +206,29 @@
     float: none;
     @include clearfix;
     background: transparent;
+    display: flex;
   }
   .menu li.sf-depth-1 > a {
-    padding: 65px 10px 30px;
+    padding: 65px 15px 30px;
   }
   .block__title.block-title {
     @include is-invisible;
   }
+  .menu.sf-menu li.sf-depth-1:nth-of-type(2) {
+    // Push the other to the right
+    margin-right: auto;
+  }
   // 'about' and 'support' styles
-  .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) {
+  .menu.sf-menu li.sf-depth-1:nth-child(1n+3) {
+    // from third and on
     float: right;
     a {
       font-size: rem(13);
     }
   }
   li a,
-  .menu.sf-menu li.sf-depth-1:nth-last-of-type(-n+2) a {
-    letter-spacing: initial !important;
+  .menu.sf-menu li.sf-depth-1:nth-child(1n+3) a {
+    letter-spacing: normal !important;
     @include to(xlarge) {
       font-size: 15px;
     }
@@ -358,7 +364,7 @@
         background: none;
       }
       li,
-      li.sf-depth-1:nth-last-of-type(-n+2) {
+      li.sf-depth-1:nth-child(1n+3) {
         float: none;
         display: block;
         background: none;
