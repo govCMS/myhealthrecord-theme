@@ -67,6 +67,7 @@ stylesheets[all][] = css/styles.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = 'js/jquery.matchHeight-min.js'
+scripts[] = 'js/psl.min.js'
 scripts[] = 'js/script.js'
 
 
