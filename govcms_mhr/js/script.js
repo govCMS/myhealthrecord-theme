@@ -117,7 +117,7 @@
         var is_link_external_no_icon = $this.hasClass('link-external__no-icon');
         var has_child_image          = $this.children("img").length;
         var has_popup                = $this.hasClass('external-link-alert');
-        var domainWhitelist          = ['my.gov.au', 'ehealth.gov.au', 'health.gov.au'];
+        var domainWhitelist          = ['my.gov.au', 'ehealth.gov.au', 'health.gov.au', 'myhealthrecord.gov.au'];
         var parsedHostname           = psl.parse(this.hostname); // Parse the domain
         var containsWhitelisted      = domainWhitelist.indexOf(parsedHostname.domain) >= 0;
 
