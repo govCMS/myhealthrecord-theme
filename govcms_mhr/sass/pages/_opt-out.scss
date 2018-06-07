@@ -3,7 +3,6 @@
 
 }
 
-
 /* OPT OUT PAGE */
 .block-contact {
   border: 1px solid #DEDEDE;
@@ -13,11 +12,34 @@
   padding: 25px;
   position: relative;
   text-align: left;
-  background-image: url(/sites/g/files/net4826/themes/site/govcms_mhr/images/background-how--to.svg);
+  background-image: url("/sites/g/files/net4826/themes/site/govcms_mhr/images/background-how--to.svg");
   background-repeat: no-repeat;
   background-position: right 0 bottom 0;
   background-size: 332px 176px;
   width: 422px;
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 300;
+  }
+  p {
+    margin: 0;
+  }
+  span {
+    font-weight: 400;
+    font-family: "Roboto Slab","Times New Roman",serif;
+    &:first-of-type {
+      color: #de2f11;
+    }
+  }
+
+  img {
+    margin: 0;
+    max-height: 28px;
+    float: left;
+    display: inline-block;
+    width: auto;
+  }
 }
 
 .block.block-bean {
@@ -35,6 +57,7 @@
   .text-highlight {
     border-radius: 8px;
     border: 1px solid lightgrey;
+    padding: 20px 30px;
   }
   img {
     max-width: none;
@@ -42,6 +65,8 @@
   table {
     &, tr, td {
       border: none;
+      padding: 10px;
+      margin: 0;
     }
   }
 }
@@ -57,7 +82,7 @@
   transition: background-color .2s ease-out;
 
   &.btn-primary {
-    background: #007dbc url(/sites/g/files/net4826/themes/site/govcms_mhr/images/arrow-right-2.svg) no-repeat center right 20px;
+    background-color: #007dbc;
     color: #FFFFFF !important;
     font-weight: 300;
   }

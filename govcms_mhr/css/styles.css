@@ -4046,11 +4046,33 @@ thead a {
   padding: 25px;
   position: relative;
   text-align: left;
-  background-image: url(/sites/g/files/net4826/themes/site/govcms_mhr/images/background-how--to.svg);
+  background-image: url("/sites/g/files/net4826/themes/site/govcms_mhr/images/background-how--to.svg");
   background-repeat: no-repeat;
   background-position: right 0 bottom 0;
   background-size: 332px 176px;
   width: 422px;
+}
+.block-contact h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 300;
+}
+.block-contact p {
+  margin: 0;
+}
+.block-contact span {
+  font-weight: 400;
+  font-family: "Roboto Slab","Times New Roman",serif;
+}
+.block-contact span:first-of-type {
+  color: #de2f11;
+}
+.block-contact img {
+  margin: 0;
+  max-height: 28px;
+  float: left;
+  display: inline-block;
+  width: auto;
 }
 
 .block.block-bean .block__content hr {
@@ -4062,12 +4084,15 @@ thead a {
 #block-bean-landing-opt-out-now .text-highlight {
   border-radius: 8px;
   border: 1px solid lightgrey;
+  padding: 20px 30px;
 }
 #block-bean-landing-opt-out-now img {
   max-width: none;
 }
 #block-bean-landing-opt-out-now table, #block-bean-landing-opt-out-now table tr, #block-bean-landing-opt-out-now table td {
   border: none;
+  padding: 10px;
+  margin: 0;
 }
 
 .sidebar-second #content a.btn, .sidebar-second #content #main a.webform-submit, #main .sidebar-second #content a.webform-submit, .sidebar-second #content #main a.form-submit, #main .sidebar-second #content a.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .sidebar-second #content a, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button {
@@ -4081,7 +4106,7 @@ thead a {
   transition: background-color .2s ease-out;
 }
 .sidebar-second #content a.btn.btn-primary, .sidebar-second #content #main a.btn-primary.webform-submit, #main .sidebar-second #content a.btn-primary.webform-submit, .sidebar-second #content #main a.btn-primary.form-submit, #main .sidebar-second #content a.btn-primary.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a.btn-primary, #block-views-latest-news-block .more-link .sidebar-second #content a.btn-primary, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a.btn-primary, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a.btn-primary, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button {
-  background: #007dbc url(/sites/g/files/net4826/themes/site/govcms_mhr/images/arrow-right-2.svg) no-repeat center right 20px;
+  background-color: #007dbc;
   color: #FFFFFF !important;
   font-weight: 300;
 }
