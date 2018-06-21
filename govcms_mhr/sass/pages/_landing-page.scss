@@ -16,7 +16,7 @@
     #content {
       width: 50%;
       padding: 0;
-      @include clearfix;      
+      @include clearfix;
       article {
         // background: lighten($gray-lighter,10%);
         width: 100%;
@@ -78,7 +78,8 @@
           &.button {
             @extend .btn;
             @extend .btn-primary;
-            border-bottom: none;
+            border:2px solid $white;
+            font-weight: bold;
           }
           &.button.button-secondary {
             background-color: $blue-darkest;
@@ -119,12 +120,12 @@
     display: block;
     position: absolute;
     content: "";
-    background: url('../images/landing-trim-consumer-2.png') no-repeat center;    
+    background: url('../images/landing-trim-consumer-2.png') no-repeat center;
     width: 128px;
     height: 486px;
     top: 50%;
-    left: -140px; 
-    transform: translateY(-25%);    
+    left: -140px;
+    transform: translateY(-25%);
     }
   }
   @media screen and (min-width: 1480px) {
@@ -138,9 +139,9 @@
       width: 128px;
       height: 486px;
       top: 50%;
-      left: 0; 
+      left: 0;
       }
-    }    
+    }
     #content article {
       &:before {
       display: none;
@@ -169,7 +170,7 @@
     @include to(medium) {
       margin: 0;
     }
-  }  
+  }
 }
 
 .landing-page-health.sidebar-second {

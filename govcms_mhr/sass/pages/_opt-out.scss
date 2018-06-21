@@ -1,6 +1,15 @@
 /* FRONT */
 .pane-bean-hp-opt-out-notice {
-
+  .field-name-field-block-text {
+    text-align: center;
+    h4 {
+      line-height: initial;
+      margin-bottom: 1rem;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 /* OPT OUT PAGE */
@@ -33,6 +42,7 @@
     }
   }
 
+
   img {
     margin: 0;
     max-height: 28px;
@@ -42,25 +52,40 @@
   }
 }
 
-.block.block-bean {
+#block-bean-before-you-opt-out {
   .block__content {
     // Generic Bean block content
+    padding: 20px 15px 15px;
     hr {
       height: 1px;
       border: none;
       background: whitesmoke;
+      margin: 1.4em 0 1em;
+    }
+    ul li a {
+      // font-weight: bold;
     }
   }
+}
+
+.page-node-1131 #block-menu-block-1 {
+  display: none;
 }
 
 #block-bean-landing-opt-out-now {
   .text-highlight {
     border-radius: 8px;
     border: 1px solid lightgrey;
-    padding: 20px 30px;
+    padding: 20px 40px;
+    .text-big {
+      margin-bottom: 1.8em;
+      // font-size: 1.3rem;
+    }
   }
   img {
     max-width: none;
+    width: 80px;
+    margin-right: 16px;
   }
   table {
     &, tr, td {
@@ -68,6 +93,10 @@
       padding: 10px;
       margin: 0;
     }
+  }
+  a.btn.btn-primary {
+    border: 2px solid #FFFFFF;
+    font-weight: bold !important;
   }
 }
 

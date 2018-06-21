@@ -58,6 +58,53 @@ function govcms_mhr_html_head_alter(&$head_elements) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
+
+function govcms_mhr_css_alter(&$css) {
+  /* Removing all rtl css' */
+  if ($css['modules/system/system.base-rtl.css']) {
+    unset($css['modules/system/system.base-rtl.css']);
+  }
+  if ($css['modules/system/system.menus-rtl.css']) {
+    unset($css['modules/system/system.menus-rtl.css']);
+  }
+  if ($css['modules/system/system.messages-rtl.css']) {
+    unset($css['modules/system/system.messages-rtl.css']);
+  }
+  if ($css['modules/system/system.theme-rtl.css']) {
+    unset($css['modules/system/system.theme-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/date/date_api/date-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/date/date_api/date-rtl.css']);
+  }
+  if ($css['modules/field/theme/field-rtl.css']) {
+    unset($css['modules/field/theme/field-rtl.css']);
+  }
+  if ($css['modules/search/search-rtl.css']) {
+    unset($css['modules/search/search-rtl.css']);
+  }
+  if ($css['modules/user/user-rtl.css']) {
+    unset($css['modules/user/user-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/views/css/views-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/views/css/views-rtl.css']);
+  }
+  if ($css['modules/contextual/contextual-rtl.css']) {
+    unset($css['modules/contextual/contextual-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/navbar/css/navbar.menu-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/navbar/css/navbar.menu-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/navbar/css/navbar.module-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/navbar/css/navbar.module-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/navbar/css/navbar.theme-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/navbar/css/navbar.theme-rtl.css']);
+  }
+  if ($css['profiles/govcms/modules/contrib/navbar/css/navbar.icons-rtl.css']) {
+    unset($css['profiles/govcms/modules/contrib/navbar/css/navbar.icons-rtl.css']);
+  }
+}
+
 function govcms_mhr_preprocess_html(&$variables, $hook) {
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().

@@ -1,0 +1,11 @@
+html[dir="rtl"] {
+  // Arabic and others
+  &, * {
+    // everything as 'normal'
+    direction: ltr;
+  }
+  #main #content article {
+    direction: rtl;
+    text-align: right;
+  }
+}

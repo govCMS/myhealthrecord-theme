@@ -16,7 +16,44 @@
 
   Drupal.behaviors.languageMenu = {
     attach: function (context, settings) {
+      var $switcher = $('#block-block-14 .container .block__content');
+      // if the page has translations
+      if ($('article > ul.links.inline')) {
+        //create the dropdowns
+        $switcher.clone().append($('article > ul.links.inline'));
+        if (!$('ul.links', $switcher).hasClass('l_tinynav1')) {
+          $('ul.links', $switcher).tinyNav({
+            active: 'active',
+            label: 'Language selector',
+            // header: 'Languages', // String: Specify text for "header" and show header instead of the active item
+          }).remove(); // to remove the original
+        }
+      }
+      // Auto-rotate it //
+      var original = $('.tinynav option:selected', $switcher);
+      var rotateInterval = setInterval( function() { startRotate() }, 2000);
 
+      // Stop on focus and set the original selection
+      $('.tinynav', $switcher).focus( function(event) {
+          clearInterval(rotateInterval);
+          var originalIndex = original.index();
+          $('.tinynav option', $switcher).eq(originalIndex).prop('selected', true);
+      });
+      // Restart on loosing focus
+      $('.tinynav', $switcher).blur(function() {
+        rotateInterval = setInterval( function() { startRotate() }, 2000);
+      });
+
+      // The roating function
+      function startRotate () {
+          var actual = $('.tinynav option:selected', $switcher);
+          var actualIndex = actual.index();
+          var nextIndex = (actualIndex + 1 == $('.tinynav option', $switcher).length) ? 0 : actualIndex + 1;
+          var next = $('.tinynav option', $switcher).eq(nextIndex);
+          next.prop('selected', true);
+      }
+
+      /*
       if (!$('ul.language-switcher-locale-url').hasClass('l_tinynav1')) {
         $('ul.language-switcher-locale-url').tinyNav({
           active: 'active',
@@ -47,7 +84,7 @@
           var nextIndex = (actualIndex + 1 == $('#block-locale-language .tinynav option').length) ? 0 : actualIndex + 1;
           var next = $('#block-locale-language .tinynav option').eq(nextIndex);
           next.prop('selected', true);
-      }
+      }*/
 
     }
   };

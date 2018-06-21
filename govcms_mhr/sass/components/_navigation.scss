@@ -1,6 +1,6 @@
 /*
- * Main menu
- */
+* Main menu
+*/
 
 #header {
   display: none;
@@ -59,17 +59,17 @@
   }
 
   // language selector
+  #block-block-14,
   #block-locale-language {
     position: absolute;
     z-index: 1;
-    top: 8px;
-    right: 30px;
+    top: 10px;
+    right: 160px;
     @include to(xlarge) {
       float: none;
       position: absolute;
-      top: 11px;
-      right: 200px;
       padding: 0;
+      right: 330px;
     }
     @include to(medium) {
       display: none;
@@ -209,6 +209,9 @@
     display: flex;
   }
   .menu li.sf-depth-1 > a {
+    padding: 65px 34px 30px 15px;
+  }
+  .menu li.sf-depth-1.sf-no-children > a {
     padding: 65px 15px 30px;
   }
   .block__title.block-title {
@@ -267,6 +270,14 @@
       margin-left: 10px;
       float: right;
     }
+    &.sf-depth-1.menuparent > a:after {
+      position: absolute;
+      right: 15px;
+      width: 10px;
+      top: 65px;
+      margin: 0;
+      float: none;
+    }
     // adding a background to dropdown menus
     &.sfHover li {
       display: block;
@@ -313,7 +324,14 @@
     width: auto;
     margin-right: 15px;
     .menu li a.sf-depth-1 {
+      padding: 60px 29px 25px 10px;
+    }
+    .menu li.sf-depth-1.sf-no-children > a {
       padding: 60px 10px 25px;
+    }
+    .menu.sf-menu li.sf-depth-1.menuparent > a:after {
+      top: 60px;
+      right: 10px;
     }
   }
   @include to(medium) {
@@ -372,6 +390,13 @@
           padding: 15px;
           box-sizing: border-box;
         }
+      }
+      li.sf-depth-1.menuparent > a:after,
+      li.sf-depth-1.menuparent > a:after {
+        position: relative;
+        float: right;
+        top: auto;
+        right: 0;
       }
     }
   }
