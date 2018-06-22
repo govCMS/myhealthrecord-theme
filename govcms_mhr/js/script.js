@@ -16,46 +16,11 @@
 
   Drupal.behaviors.languageMenu = {
     attach: function (context, settings) {
-      var $switcher = $('#block-block-14 .container .block__content');
-      // if the page has translations
-      if ($('article > ul.links.inline')) {
-        //create the dropdowns
-        $switcher.clone().append($('article > ul.links.inline'));
-        if (!$('ul.links', $switcher).hasClass('l_tinynav1')) {
-          $('ul.links', $switcher).tinyNav({
-            active: 'active',
-            label: 'Language selector',
-            // header: 'Languages', // String: Specify text for "header" and show header instead of the active item
-          }).remove(); // to remove the original
-        }
-      }
-      // Auto-rotate it //
-      var original = $('.tinynav option:selected', $switcher);
-      var rotateInterval = setInterval( function() { startRotate() }, 2000);
 
-      // Stop on focus and set the original selection
-      $('.tinynav', $switcher).focus( function(event) {
-          clearInterval(rotateInterval);
-          var originalIndex = original.index();
-          $('.tinynav option', $switcher).eq(originalIndex).prop('selected', true);
-      });
-      // Restart on loosing focus
-      $('.tinynav', $switcher).blur(function() {
-        rotateInterval = setInterval( function() { startRotate() }, 2000);
-      });
+      $languageBlock = $('ul.language-list').parent().parent().parent();
 
-      // The roating function
-      function startRotate () {
-          var actual = $('.tinynav option:selected', $switcher);
-          var actualIndex = actual.index();
-          var nextIndex = (actualIndex + 1 == $('.tinynav option', $switcher).length) ? 0 : actualIndex + 1;
-          var next = $('.tinynav option', $switcher).eq(nextIndex);
-          next.prop('selected', true);
-      }
-
-      /*
-      if (!$('ul.language-switcher-locale-url').hasClass('l_tinynav1')) {
-        $('ul.language-switcher-locale-url').tinyNav({
+      if (!$('ul.language-list').hasClass('l_tinynav1')) {
+        $('ul.language-list').tinyNav({
           active: 'active',
           label: 'Language selector',
           // header: 'Languages', // String: Specify text for "header" and show header instead of the active item
@@ -63,28 +28,28 @@
       }
 
       // Auto-rotate it //
-      var original = $('#block-locale-language .tinynav option:selected');
+      var original = $('.tinynav option:selected', $languageBlock);
       var rotateInterval = setInterval( function() { startRotate() }, 2000);
 
       // Stop on focus and set the original selection
-      $('#block-locale-language .tinynav').focus( function(event) {
+      $('.tinynav', $languageBlock).focus( function(event) {
           clearInterval(rotateInterval);
           var originalIndex = original.index();
-          $('#block-locale-language .tinynav option').eq(originalIndex).prop('selected', true);
+          $('.tinynav option', $languageBlock).eq(originalIndex).prop('selected', true);
       });
       // Restart on loosing focus
-      $('#block-locale-language .tinynav').blur(function() {
-        rotateInterval = setInterval( function() { startRotate() }, 2000);
+      $('.tinynav', $languageBlock).blur(function() {
+        rotateInterval = setInterval( function() { startRotate($languageBlock) }, 2000);
       });
 
       // The roating function
-      function startRotate () {
-          var actual = $('#block-locale-language .tinynav option:selected');
+      function startRotate ($languageBlock) {
+          var actual = $('.tinynav option:selected', $languageBlock);
           var actualIndex = actual.index();
-          var nextIndex = (actualIndex + 1 == $('#block-locale-language .tinynav option').length) ? 0 : actualIndex + 1;
-          var next = $('#block-locale-language .tinynav option').eq(nextIndex);
+          var nextIndex = (actualIndex + 1 == $('.tinynav option', $languageBlock).length) ? 0 : actualIndex + 1;
+          var next = $('.tinynav option', $languageBlock).eq(nextIndex);
           next.prop('selected', true);
-      }*/
+      }
 
     }
   };
@@ -345,7 +310,7 @@
       $('#edit-keys-1').attr("tabindex","5");
       $('#block-block-12 a').attr("tabindex","6");
       $('#block-bean-readspeaker-button a').attr("tabindex","6");
-      $('#block-locale-language select').attr("tabindex","7");
+      $('select.tinynav').attr("tabindex","7");
     }
   };
 
