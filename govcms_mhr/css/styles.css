@@ -967,6 +967,7 @@ span.menu-collapser:hover {
   }
 }
 #navigation-content .region-navigation #block-block-14,
+#navigation-content .region-navigation #block-block-15,
 #navigation-content .region-navigation #block-locale-language {
   position: absolute;
   z-index: 1;
@@ -975,6 +976,7 @@ span.menu-collapser:hover {
 }
 @media (max-width: 1200px) {
   #navigation-content .region-navigation #block-block-14,
+  #navigation-content .region-navigation #block-block-15,
   #navigation-content .region-navigation #block-locale-language {
     float: none;
     position: absolute;
@@ -984,6 +986,7 @@ span.menu-collapser:hover {
 }
 @media (max-width: 768px) {
   #navigation-content .region-navigation #block-block-14,
+  #navigation-content .region-navigation #block-block-15,
   #navigation-content .region-navigation #block-locale-language {
     display: none;
   }
@@ -1760,14 +1763,17 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
 }
 
 #block-block-14 ul.language-switcher-locale-url.l_tinynav1,
+#block-block-16 ul.language-switcher-locale-url.l_tinynav1,
 #block-locale-language ul.language-switcher-locale-url.l_tinynav1 {
   display: none;
 }
 #block-block-14 ul.language-switcher-locale-url .locale-untranslated,
+#block-block-16 ul.language-switcher-locale-url .locale-untranslated,
 #block-locale-language ul.language-switcher-locale-url .locale-untranslated {
   display: none;
 }
 #block-block-14 select.tinynav,
+#block-block-16 select.tinynav,
 #block-locale-language select.tinynav {
   display: block;
   border: 1px solid #007FBF;
@@ -1776,6 +1782,7 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   width: 106px;
 }
 #block-block-14 label.tinynav_label,
+#block-block-16 label.tinynav_label,
 #block-locale-language label.tinynav_label {
   position: absolute;
   overflow: hidden;
@@ -1787,10 +1794,12 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   border: 0;
 }
 #block-block-14 .block__content,
+#block-block-16 .block__content,
 #block-locale-language .block__content {
   margin-top: -30px;
 }
 #block-block-14::before,
+#block-block-16::before,
 #block-locale-language::before {
   background-image: url(../images/globe.png);
   background-size: 20px 20px;
