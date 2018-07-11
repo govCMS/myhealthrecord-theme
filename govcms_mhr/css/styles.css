@@ -2529,12 +2529,39 @@ thead a {
   color: #242424;
 }
 
-html[dir="rtl"], html[dir="rtl"] * {
+html[dir="rtl"],
+html[dir="rtl"] * {
   direction: ltr;
 }
-html[dir="rtl"] #main #content article {
+html[dir="rtl"] #page-title {
   direction: rtl;
   text-align: right;
+}
+html[dir="rtl"] #main #content article, html[dir="rtl"] #main #content article * {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] #main #content article ul {
+  margin-left: 0;
+  margin-right: 30px;
+}
+html[dir="rtl"] #main #content article .link-external__icon, html[dir="rtl"] #main #content article .link-external:after {
+  padding-right: .25rem;
+}
+html[dir="rtl"] #main #content article img[title^="application/"],
+html[dir="rtl"] #main #content article img[alt="PDF icon"] {
+  margin-right: 0;
+  margin-left: 0.4em;
+}
+
+.cke_editable ul[dir="rtl"] {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.cke_editable p[dir="rtl"] img[title^="application/"],
+.cke_editable p[dir="rtl"] img[alt="PDF icon"] {
+  margin-right: 0;
+  margin-left: 0.4em;
 }
 
 .pane-block {

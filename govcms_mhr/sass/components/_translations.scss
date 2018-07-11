@@ -1,11 +1,45 @@
 html[dir="rtl"] {
   // Arabic and others
-  &, * {
+  &,
+  * {
     // everything as 'normal'
     direction: ltr;
   }
-  #main #content article {
+  #page-title {
     direction: rtl;
     text-align: right;
+  }
+  #main #content article {
+    &, * {
+      direction: rtl;
+      text-align: right;
+    }
+    ul {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+    .link-external__icon, .link-external:after {
+      padding-right: .25rem;
+    }
+    img[title^="application/"],
+    img[alt="PDF icon"] {
+      margin-right: 0;
+      margin-left: 0.4em;
+    }
+  }
+}
+
+// CKEditor specific
+.cke_editable {
+  ul[dir="rtl"] {
+      margin-left: 0;
+      margin-right: 30px;
+  }
+  p[dir="rtl"] {
+    img[title^="application/"],
+    img[alt="PDF icon"] {
+      margin-right: 0;
+      margin-left: 0.4em;
+    }
   }
 }
