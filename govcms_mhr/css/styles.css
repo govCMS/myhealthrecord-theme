@@ -2537,17 +2537,24 @@ html[dir="rtl"] #page-title {
   direction: rtl;
   text-align: right;
 }
-html[dir="rtl"] #main #content article, html[dir="rtl"] #main #content article * {
+html[dir="rtl"] .region-sidebar-second, html[dir="rtl"] .region-sidebar-second *,
+html[dir="rtl"] #main #content article,
+html[dir="rtl"] #main #content article * {
   direction: rtl;
   text-align: right;
 }
+html[dir="rtl"] .region-sidebar-second ul,
 html[dir="rtl"] #main #content article ul {
   margin-left: 0;
   margin-right: 30px;
 }
-html[dir="rtl"] #main #content article .link-external__icon, html[dir="rtl"] #main #content article .link-external:after {
+html[dir="rtl"] .region-sidebar-second .link-external__icon, html[dir="rtl"] .region-sidebar-second .link-external:after,
+html[dir="rtl"] #main #content article .link-external__icon,
+html[dir="rtl"] #main #content article .link-external:after {
   padding-right: .25rem;
 }
+html[dir="rtl"] .region-sidebar-second img[title^="application/"],
+html[dir="rtl"] .region-sidebar-second img[alt="PDF icon"],
 html[dir="rtl"] #main #content article img[title^="application/"],
 html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   margin-right: 0;
