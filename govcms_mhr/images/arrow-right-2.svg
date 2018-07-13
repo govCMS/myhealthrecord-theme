@@ -10,12 +10,12 @@
         stroke: #fff;
         stroke-width: 0.4px;
       }
-    </style>
+</style>
     <clipPath id="clip-arrow-right-2">
       <rect x="-510" y="548" width="9" height="15"/>
     </clipPath>
   </defs>
   <g id="arrow-right-2" class="cls-1">
     <path id="Path_1169" data-name="Path 1169" class="cls-2" d="M13.635,4.749l-.843.843L18.82,11.62l-6.028,6.028.843.843,6.449-6.449.4-.421-.4-.421Z" transform="translate(-522.365 543.792)"/>
-  </g>
+</g>
 </svg>

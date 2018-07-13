@@ -1,0 +1,118 @@
+// Basic card styling - white background, grey border, border radius and transition.
+#page #content {
+  article.view-mode-card,
+  .view-mode-compact {
+    cursor: pointer;
+    border: 1px solid $gray-lighter;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 0;
+    transition: 0.2s ease all;
+    a {
+      text-decoration: none;
+      border: 0;
+    }
+    &:hover, &:active, &:focus {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 50px -10px rgba(black, 0.1);
+      .field-name-field-video-resource .content::before {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
+}
+
+// News and media view styling.
+#content .view-news-and-media .item-list > ul {
+  margin: 0 0 0 0;
+  > li {
+    border: 0;
+    padding: 0;
+  }
+}
+#block-views-news-and-media-block .view-display-id-block > .view-content > .item-list > ul {
+  margin: 0 0 2.5rem 0;
+}
+
+// Card styling for media.
+#page #content article.view-mode-card {
+  .field-name-title .field-item > * {
+    font-weight: bold;
+    font-size: rem(20);
+  }
+  .field-name-title .field-item a {
+    position: relative;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+  .field-name-field-video-resource .content {
+    position: relative;
+    &::before {
+      transition: ease all .2s;
+      content: ' ';
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 80px;
+      background-image: url(../images/play-button.png);
+      background-size: contain;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  .field-name-title {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .field-name-body {
+    padding: 0 1rem 1rem 1rem;
+    .field-item > * {
+      @extend %body;
+    }
+  }
+}
+
+//News and media card view with title overlay.
+.node-video-content.node-promoted.view-mode-full {
+  .field-name-title {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    z-index: 444;
+    border: 1px solid $gray-lightest;
+    width: calc(100% - 2rem);
+    margin: -45px auto 3rem auto;
+    font-size: 1rem;
+    .field-item > * {
+      margin: 0;
+    }
+  }
+}
+
+// compact card styling.
+#page #content .view-mode-compact {
+  padding: 1rem;
+  .field-name-title .field-item > * {
+    font-weight: bold;
+    font-size: rem(20);
+  }
+  &.node-video-content .field-name-title {
+    padding-right: 3.5rem;
+    position: relative;
+    &::after {
+      // add arrow button
+      display: block;
+      content: "";
+      background: url("../images/link-vid-arrow-background.svg");
+      width: 35px;
+      height: 35px;
+      margin: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+}

@@ -106,3 +106,21 @@ img[alt="PDF icon"] {
 span.file-size {
   display: none;
 }
+
+//More link.
+.more-link {
+  a {
+    line-height: 1;
+    &:after {
+      transition: .2s ease all;
+      @extend %link-internal__icon;
+      transform: translateX(0);
+      -ms-transform: translateX(0);
+    }
+    &:hover {
+      &:after {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

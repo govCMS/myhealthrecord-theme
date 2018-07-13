@@ -1,0 +1,165 @@
+// Media stories and Provider news page layout styling.
+#content .view-my-health-record-stories {
+  .views-exposed-widget {
+    margin: 0 0 .5rem 0;
+  }
+  #edit-field-category-value-wrapper {
+    width: 35%;
+    select {
+      width: 100%;
+    }
+    @include to(medium) {
+      width: auto;
+    }
+  }
+  #edit-field-news-topics-tid-wrapper {
+    position: relative;
+    max-width: 65%;
+    .chosen-container {
+      width: 100% !important;
+    }
+    .chosen-choices {
+      background: none;
+      border: 0;
+      box-shadow: none;
+      padding: rem(11) rem(35) rem(11) rem(15);
+    }
+    .chosen-drop {
+      border: 0;
+      li.highlighted {
+        background-color: $text-color-link;
+        background-image: none;
+      }
+    }
+    .form-type-select {
+      border: 1px solid $gray-lighter;
+      border-radius: 25px;
+      background: white url(../images/icon_arrow-down.svg) no-repeat right 15px center;
+      background-size: 15px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      min-height: 45px;
+      appearance: none;
+      transition: .2s ease all;
+      &:hover, &:focus {
+        cursor: pointer;
+        background-color: lighten($gray-lighter,5%);
+      }
+      input[type="text"] {
+        font-size: 1rem;
+        color: $text-color-link;
+        border-radius: 0;
+        width: 100% !important;
+        padding: 0;
+        white-space: nowrap;
+        margin: 3px 5px 3px 0;
+        min-height: 0;
+      }
+    }
+    @include to(medium) {
+      max-width: 100%;
+    }
+  }
+  #edit-type-wrapper {
+    clear: left;
+  }
+  #edit-submit-my-health-record-stories {
+    border: 1px solid $text-color-link;
+    color: white !important;
+    background: $text-color-link url("../images/arrow-right-3.svg") no-repeat right 20px center;
+    &:hover, &:focus, &:active {
+      cursor: pointer;
+      border: 1px solid $gray-lighter;
+      color: $text-color-link !important;
+      background: lighten($gray-lighter,5%) url("../images/arrow-right-1.svg") no-repeat right 20px center;
+    }
+  }
+  // .views-submit-button {
+  //   clear: left;
+  //   margin-left: calc(100% - 214px);
+  // }
+  .views-submit-button,
+  .views-reset-button {
+    // padding: rem(16)0 0 rem(16);
+    padding: 1rem 1rem 0 0;
+    .form-submit {
+      padding: rem(11) rem(35) rem(11) rem(15);
+      margin-right: 0;
+    }
+  }
+  .view-content ul {
+    margin: 0;
+    li {
+      border: 0;
+      display: inline-block;
+      margin: 0 3% 3.5% 0;
+      padding: 0;
+      vertical-align: top;
+      width: 30%;
+      @include from(large) {
+        &:nth-child(3n+3) {
+          margin: 0 0 3.5% 0;
+        }
+      }
+      @include to(medium) {
+        width: 48%;
+        &:nth-child(2n+2) {
+          margin: 0 0 2.5% 0;
+        }
+      }
+      @include to(small) {
+        margin: 0 0 4% 0;
+        width: 100%;
+      }
+    }
+  }
+  .view-filters {
+    margin: 0 0 2rem 0;
+  }
+}
+
+// Form styling. global form submits have a variation in margin from logged-in/out.
+.not-logged-in #main .view-my-health-record-stories form .form-submit {
+  margin-top: 1.6em;
+}
+
+
+
+// Content page.
+.section-news-and-media .field-name-field-news-topics {
+  margin-top: 1.25rem;
+}
+
+// Related media section styling.
+#block-ds-extras-more-like-this {
+  .field-name-field-recommended-content {
+    .field-items {
+      margin: 0;
+    }
+  }
+  margin-top: 4rem;
+  .block__title {
+    margin-bottom: rem(20);
+  }
+  .field-name-field-recommended-content > .field-items > .field-item {
+    display: inline-block;
+    margin: 0 3% 3.5% 0;
+    vertical-align: top;
+    width: 48%;
+    &:nth-child(2n+2) {
+      margin: 0 0 3.5% 0;
+    }
+    .file .content {
+      padding-top: 0;
+    }
+    img {
+      width: 100%;
+    }
+    @include to(small) {
+      margin: 0 0 4% 0;
+      width: 100%;
+    }
+  }
+}

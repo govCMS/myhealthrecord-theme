@@ -295,6 +295,8 @@
       $('.match-height').matchHeight();
       $('.node-how-to-page.view-mode-compact h3 > a').matchHeight();
       $('.statistic-numeric-items .item').matchHeight();
+      $('article.view-mode-card').matchHeight();
+      $('.view-news-and-media .view-mode-compact').matchHeight();
     }
   };
 

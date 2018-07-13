@@ -134,6 +134,9 @@ function govcms_mhr_preprocess_html(&$variables, $hook) {
         $variables['classes_array'][] = 'category-top-name-' . strtolower($category->name);
       }
     }
+    if (isset($node->field_page_style['und'][0]['value'])) {
+      $variables['classes_array'][] = $node->field_page_style['und'][0]['value'];
+    }
   }
 
   // ReadSpeker plugin
@@ -194,6 +197,29 @@ function govcms_mhr_preprocess_node(&$variables, $hook) {
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
+  }
+  // Add addthis widget script, to every node (still needs to hook the container for placement)
+  drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b3afda82b800d73', array(
+    'type' => 'external',
+    'scope' => 'header',
+    'group' => JS_THEME,
+    // 'every_page' => TRUE,
+    // 'weight' => -1,
+  ));
+
+  // Only on Cards or Compacts...
+  if ($variables['view_mode'] == 'card' || $variables['view_mode'] == 'compact') {
+    // Shorten the title on word wraps, max 60 chars
+    $max_width = 60;
+    if (strlen($variables['title']) > $max_width) {
+      $title = $variables['title'];
+      $title = wordwrap($title, $max_width);
+      $title = substr($title, 0, strpos($title, "\n"));
+      $title .= '...';
+      $variables['content']['title'][0]['#markup'] = '<h2><a href="/' . $variables['path']['alias'] . '">' . $title . '</a></h2>';
+    }
+    // Strip html from card view mode
+    $variables['content']['body'][0]['#markup'] = strip_tags($variables['content']['body'][0]['#markup']);
   }
 }
 

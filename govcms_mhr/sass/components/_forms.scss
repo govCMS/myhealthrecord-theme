@@ -167,11 +167,10 @@
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
   }
-  .webform-component-select select {
-    // background: none !important;
+  .webform-component-select select,
+  .views-exposed-widget select {
     border: 1px solid $gray-lighter;
     border-radius: 50px;
-    // height: 45px;
     padding: rem(11) rem(35) rem(11) rem(15);
     color: $text-color-link;
     background: white url("../images/icon_arrow-down.svg") no-repeat right 15px center;
@@ -186,6 +185,9 @@
       cursor: pointer;
       background-color: lighten($gray-lighter,5%);
     }
+  }
+  .views-exposed-widget label {
+    margin: 0 0 .5rem 0;
   }
 }
 
@@ -290,7 +292,7 @@
   }
 }
 
-// Bullet Points 
+// Bullet Points
 #block-bean-contact-us-below-form ul {
   margin-left: 30px;
   li {
@@ -303,4 +305,9 @@
       }
     }
   }
+}
+
+// pager styling.
+.item-list .pager {
+  margin: rem(20) 0;
 }

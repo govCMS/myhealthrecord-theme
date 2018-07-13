@@ -42,6 +42,8 @@
 @import "components/attachments";
 @import "components/languages";
 @import "components/link";
+@import "components/media-cards";
+@import "components/media-release";
 @import "components/readspeaker";
 @import "components/howto";
 @import "components/news";
@@ -58,5 +60,7 @@
 @import "pages/statistics";
 @import "pages/stakeholder-material";
 @import "pages/search-results";
+@import "pages/stories";
+@import "pages/news-and-media";
 @import "pages/opt-out";
 @import "base/print";

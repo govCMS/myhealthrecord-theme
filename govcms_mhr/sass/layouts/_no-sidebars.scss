@@ -35,3 +35,15 @@
     }
   }
 }
+
+// Layout for Media releases.
+.no-sidebars.media-releases-page,
+.no-sidebars.mhr-stories-page {
+  #main #content {
+    width: 90%;
+    padding: 0 rem(25);
+    @include to(medium) {
+     width: 100%;
+    }
+  }
+}

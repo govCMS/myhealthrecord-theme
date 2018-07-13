@@ -1,5 +1,4 @@
 // ----- Sidebar ----- //
-
 .region-sidebar-second {
   background: white;
   padding: rem(25) rem(25) 0;
@@ -50,5 +49,33 @@
   }
   @include to(medium) {
     max-width: none !important;
+  }
+}
+
+// Benefits page only.
+.node-type-benefits-page .region-sidebar-second {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: none;
+  #block-ds-extras-sidebar {
+    background: white;
+    padding: rem(25) rem(25) 0;
+    box-shadow: 0px 0px 80px 0px rgba(black, 0.1);
+    border-radius: 3px;
+  }
+  > .block {
+    max-width: 350px;
+    padding: rem(25);
+    .block__content {
+      padding: rem(10) 0;
+    }
+  }
+  @include to(medium) {
+    padding: 0;
+    > .block {
+      max-width: none;
+    }
   }
 }

@@ -1,0 +1,43 @@
+// Media release list item styling.
+.media-releases-page #content .view-media-releases .views-row {
+  margin: 0 0 0.7em 0;
+  padding: 1.4rem 0 0.7em;
+  .group-left {
+    padding-right: 2rem;
+    width: 70%;
+    .field-name-title .field-item > * {
+      font-weight: bold;
+      font-size: rem(20);
+    }
+    .field-name-title .field-item a {
+      position: relative;
+      &:hover, &:focus, &:active {
+        text-decoration: underline;
+      }
+    }
+    .field-name-post-date {
+      padding-bottom: rem(14);
+    }
+    @include to(small) {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+  .group-right {
+    width: 30%;
+    .field-name-field-news-image {
+      float: none;
+      margin: 0;
+      border: 1px solid $gray-lighter;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+    }
+    @include to(small) {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}

@@ -45,8 +45,6 @@
     a {
       @extend .btn;
       @extend .btn-secondary;
-
-
     }
   }
 }
@@ -98,7 +96,7 @@
   }
 }
 
-.node-type-news-article article { 
+.node-type-news-article article {
   img {
     max-height: 450px;
     padding-bottom: 20px;
@@ -107,8 +105,12 @@
     padding: 25px 0 15px;
     color: $text-color-sub_header;
   }
+  .field-name-field-author {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
   .file img.file-icon {
-    padding-bottom: 0; 
+    padding-bottom: 0;
   }
 }
 

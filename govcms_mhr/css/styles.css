@@ -102,7 +102,7 @@ html {
   font-size: 16px;
 }
 
-body {
+body, #page #content article.view-mode-card .field-name-body .field-item > * {
   font-size: 100%;
   color: #3E3E3E;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -110,12 +110,12 @@ body {
   font-weight: 300;
 }
 @media (max-width: 575px) {
-  body {
+  body, #page #content article.view-mode-card .field-name-body .field-item > * {
     font-size: 87.5%;
   }
 }
 @media (max-width: 768px) {
-  body {
+  body, #page #content article.view-mode-card .field-name-body .field-item > * {
     font-size: 93.5%;
   }
 }
@@ -144,7 +144,7 @@ h2, .statistic-numeric-items li .stat-number {
 h3 {
   color: #3E3E3E;
   font-family: "Roboto Slab", "Times New Roman", serif;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 0.875rem;
@@ -161,7 +161,7 @@ h4 {
   margin: 0.75rem 0 0;
 }
 
-h5 {
+h5, .news-media-page .region-sidebar-second .view-media-releases .view-header > * {
   color: #6A6C6E;
   font-family: "Roboto Slab", "Times New Roman", serif;
   font-size: 1rem;
@@ -428,6 +428,18 @@ body.cke_editable ul li li li,
   }
 }
 
+.no-sidebars.media-releases-page #main #content,
+.no-sidebars.mhr-stories-page #main #content {
+  width: 90%;
+  padding: 0 1.5625rem;
+}
+@media (max-width: 768px) {
+  .no-sidebars.media-releases-page #main #content,
+  .no-sidebars.mhr-stories-page #main #content {
+    width: 100%;
+  }
+}
+
 /*
  * Homepage
  */
@@ -509,10 +521,12 @@ body.cke_editable ul li li li,
   }
 }
 
+.style-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a,
 .section-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a {
   font-weight: 700;
   position: relative;
 }
+.style-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before,
 .section-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before {
   display: block;
   position: absolute;
@@ -527,38 +541,48 @@ body.cke_editable ul li li li,
   background-size: 25px;
 }
 @media (max-width: 768px) {
+  .style-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before,
   .section-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before {
     display: none;
   }
 }
+.style-consumer #header-content,
 .section-consumer #header-content {
   background-color: #de2f11;
 }
+.style-consumer #header-content:before,
 .section-consumer #header-content:before {
-  background-image: url(../images/header-trim-consumer.png);
+  background-image: url("../images/header-trim-consumer.png");
 }
+.style-consumer #header-content h1,
 .section-consumer #header-content h1 {
   color: #FFFFFF;
 }
+.style-consumer #header-content .breadcrumb li a,
 .section-consumer #header-content .breadcrumb li a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
+.style-consumer #header-content .breadcrumb li a:hover,
 .section-consumer #header-content .breadcrumb li a:hover {
   background-color: initial;
   border-color: rgba(255, 255, 255, 0.5);
 }
+.style-consumer #header-content .breadcrumb li:last-of-type,
 .section-consumer #header-content .breadcrumb li:last-of-type {
   color: rgba(255, 255, 255, 0.5);
 }
+.style-consumer #header-content *,
 .section-consumer #header-content * {
   color: #FFFFFF;
 }
 
+.style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a,
 .section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a {
   position: relative;
   font-weight: 700;
 }
+.style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before,
 .section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before {
   display: block;
   position: absolute;
@@ -573,30 +597,38 @@ body.cke_editable ul li li li,
   background-size: 25px;
 }
 @media (max-width: 768px) {
+  .style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before,
   .section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before {
     display: none;
   }
 }
+.style-professional #header-content,
 .section-health #header-content {
   background-color: #007FBF;
 }
+.style-professional #header-content:before,
 .section-health #header-content:before {
-  background-image: url(../images/header-trim-health.png);
+  background-image: url("../images/header-trim-health.png");
 }
+.style-professional #header-content h1,
 .section-health #header-content h1 {
   color: #FFFFFF;
 }
+.style-professional #header-content .breadcrumb li a,
 .section-health #header-content .breadcrumb li a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
+.style-professional #header-content .breadcrumb li a:hover,
 .section-health #header-content .breadcrumb li a:hover {
   background-color: initial;
   border-color: rgba(255, 255, 255, 0.5);
 }
+.style-professional #header-content .breadcrumb li:last-of-type,
 .section-health #header-content .breadcrumb li:last-of-type {
   color: rgba(255, 255, 255, 0.5);
 }
+.style-professional #header-content *,
 .section-health #header-content * {
   color: #FFFFFF;
 }
@@ -1404,6 +1436,35 @@ span.menu-collapser:hover {
   }
 }
 
+.node-type-benefits-page .region-sidebar-second {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: none;
+}
+.node-type-benefits-page .region-sidebar-second #block-ds-extras-sidebar {
+  background: white;
+  padding: 1.5625rem 1.5625rem 0;
+  box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.node-type-benefits-page .region-sidebar-second > .block {
+  max-width: 350px;
+  padding: 1.5625rem;
+}
+.node-type-benefits-page .region-sidebar-second > .block .block__content {
+  padding: 0.625rem 0;
+}
+@media (max-width: 768px) {
+  .node-type-benefits-page .region-sidebar-second {
+    padding: 0;
+  }
+  .node-type-benefits-page .region-sidebar-second > .block {
+    max-width: none;
+  }
+}
+
 a, a:visited {
   color: #002D81;
   text-decoration: none;
@@ -1424,12 +1485,12 @@ body.keynav a:focus, body.keynav a:visited:focus {
   box-shadow: 0 0 5px 2px #A5C7FE;
 }
 
-.btn-primary, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button {
+.btn-primary, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .sidebar-second #content .field-name-body a.button {
   background: #007dbc url(../images/arrow-right-2.svg) no-repeat center right 20px;
   color: #FFFFFF !important;
   font-weight: 300;
 }
-.btn-primary:hover, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button:hover {
+.btn-primary:hover, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button:hover, .sidebar-second #content .field-name-body a.button:hover {
   background-color: #005b89;
 }
 
@@ -1444,7 +1505,7 @@ body.keynav a:focus, body.keynav a:visited:focus {
   background-color: #e6e6e6;
 }
 
-.btn, #main .webform-submit, #main .form-submit, #block-views-latest-news-block .more-link a, .front .panel-col-middle .field-type-link-field .field-items a, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button {
+.btn, #main .webform-submit, #main .form-submit, #block-views-latest-news-block .more-link a, .front .panel-col-middle .field-type-link-field .field-items a, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .sidebar-second #content .field-name-body a.button {
   background-size: 10px;
   border-radius: 32px;
   box-shadow: none;
@@ -1457,7 +1518,7 @@ body.keynav a:focus, body.keynav a:visited:focus {
   /*compatability for IE*/
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .btn, #main .webform-submit, #main .form-submit, #block-views-latest-news-block .more-link a, .front .panel-col-middle .field-type-link-field .field-items a, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button {
+  .btn, #main .webform-submit, #main .form-submit, #block-views-latest-news-block .more-link a, .front .panel-col-middle .field-type-link-field .field-items a, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .sidebar-second #content .field-name-body a.button {
     /* IE10+ specific styles go here */
     background-size: 60px;
     background-position-x: right;
@@ -1616,7 +1677,8 @@ body.keynav a:focus, body.keynav a:visited:focus {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
-#main .webform-component-select select {
+#main .webform-component-select select,
+#main .views-exposed-widget select {
   border: 1px solid #DFDFDF;
   border-radius: 50px;
   padding: 0.6875rem 2.1875rem 0.6875rem 0.9375rem;
@@ -1630,9 +1692,14 @@ body.keynav a:focus, body.keynav a:visited:focus {
   appearance: none;
   transition: .2s ease all;
 }
-#main .webform-component-select select:hover, #main .webform-component-select select:focus {
+#main .webform-component-select select:hover, #main .webform-component-select select:focus,
+#main .views-exposed-widget select:hover,
+#main .views-exposed-widget select:focus {
   cursor: pointer;
   background-color: #ececec;
+}
+#main .views-exposed-widget label {
+  margin: 0 0 .5rem 0;
 }
 
 #block-webform-client-block-114 {
@@ -1748,6 +1815,10 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   list-style-type: circle;
 }
 
+.item-list .pager {
+  margin: 1.25rem 0;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -1842,7 +1913,7 @@ span.mailto {
   width: 15px;
 }
 
-.page-news .view-latest-news article .node-title a:after, .section-search #page #main .inner-wrapper #content .title a:after, .section-search #page #main #footer-content #footer #content .title a:after, #footer-content .section-search #page #main #footer #content .title a:after, .section-search #page #main #bottom-content .container #content .title a:after, #bottom-content .section-search #page #main .container #content .title a:after, .section-search #page #main #block-views-how-to-listing-block #content .title a:after,
+.more-link a:after, .page-news .view-latest-news article .node-title a:after, .section-search #page #main .inner-wrapper #content .title a:after, .section-search #page #main #footer-content #footer #content .title a:after, #footer-content .section-search #page #main #footer #content .title a:after, .section-search #page #main #bottom-content .container #content .title a:after, #bottom-content .section-search #page #main .container #content .title a:after, .section-search #page #main #block-views-how-to-listing-block #content .title a:after,
 .section-search #page #main #block-views-how-to-listing-block-1 #content .title a:after, .section-search #page #main #block-views-related-how-to-block .container #content .title a:after, #block-views-related-how-to-block .section-search #page #main .container #content .title a:after, .section-search #page #main #block-views-latest-news-block .container #content .title a:after, #block-views-latest-news-block .section-search #page #main .container #content .title a:after, .section-search #page #main .statistic-numeric-items #content .title a:after, .section-search #page #main .statistic-oneline #content .title a:after {
   content: url("../images/arrow-right-1.svg");
   vertical-align: middle;
@@ -1908,6 +1979,177 @@ img[alt="PDF icon"] {
 
 span.file-size {
   display: none;
+}
+
+.more-link a {
+  line-height: 1;
+}
+.more-link a:after {
+  transition: .2s ease all;
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+}
+.more-link a:hover:after {
+  transform: translateX(5px);
+}
+
+#page #content article.view-mode-card,
+#page #content .view-mode-compact {
+  cursor: pointer;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 0;
+  transition: 0.2s ease all;
+}
+#page #content article.view-mode-card a,
+#page #content .view-mode-compact a {
+  text-decoration: none;
+  border: 0;
+}
+#page #content article.view-mode-card:hover, #page #content article.view-mode-card:active, #page #content article.view-mode-card:focus,
+#page #content .view-mode-compact:hover,
+#page #content .view-mode-compact:active,
+#page #content .view-mode-compact:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
+}
+#page #content article.view-mode-card:hover .field-name-field-video-resource .content::before, #page #content article.view-mode-card:active .field-name-field-video-resource .content::before, #page #content article.view-mode-card:focus .field-name-field-video-resource .content::before,
+#page #content .view-mode-compact:hover .field-name-field-video-resource .content::before,
+#page #content .view-mode-compact:active .field-name-field-video-resource .content::before,
+#page #content .view-mode-compact:focus .field-name-field-video-resource .content::before {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+#content .view-news-and-media .item-list > ul {
+  margin: 0 0 0 0;
+}
+#content .view-news-and-media .item-list > ul > li {
+  border: 0;
+  padding: 0;
+}
+
+#block-views-news-and-media-block .view-display-id-block > .view-content > .item-list > ul {
+  margin: 0 0 2.5rem 0;
+}
+
+#page #content article.view-mode-card .field-name-title .field-item > * {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+#page #content article.view-mode-card .field-name-title .field-item a {
+  position: relative;
+}
+#page #content article.view-mode-card .field-name-title .field-item a:hover, #page #content article.view-mode-card .field-name-title .field-item a:focus, #page #content article.view-mode-card .field-name-title .field-item a:active {
+  text-decoration: none;
+}
+#page #content article.view-mode-card .field-name-field-video-resource .content {
+  position: relative;
+}
+#page #content article.view-mode-card .field-name-field-video-resource .content::before {
+  transition: ease all .2s;
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url(../images/play-button.png);
+  background-size: contain;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+#page #content article.view-mode-card .field-name-title {
+  padding: 1rem 1rem 0 1rem;
+}
+#page #content article.view-mode-card .field-name-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.node-video-content.node-promoted.view-mode-full .field-name-title {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  z-index: 444;
+  border: 1px solid #F5F5F5;
+  width: calc(100% - 2rem);
+  margin: -45px auto 3rem auto;
+  font-size: 1rem;
+}
+.node-video-content.node-promoted.view-mode-full .field-name-title .field-item > * {
+  margin: 0;
+}
+
+#page #content .view-mode-compact {
+  padding: 1rem;
+}
+#page #content .view-mode-compact .field-name-title .field-item > * {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+#page #content .view-mode-compact.node-video-content .field-name-title {
+  padding-right: 3.5rem;
+  position: relative;
+}
+#page #content .view-mode-compact.node-video-content .field-name-title::after {
+  display: block;
+  content: "";
+  background: url("../images/link-vid-arrow-background.svg");
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.media-releases-page #content .view-media-releases .views-row {
+  margin: 0 0 0.7em 0;
+  padding: 1.4rem 0 0.7em;
+}
+.media-releases-page #content .view-media-releases .views-row .group-left {
+  padding-right: 2rem;
+  width: 70%;
+}
+.media-releases-page #content .view-media-releases .views-row .group-left .field-name-title .field-item > * {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.media-releases-page #content .view-media-releases .views-row .group-left .field-name-title .field-item a {
+  position: relative;
+}
+.media-releases-page #content .view-media-releases .views-row .group-left .field-name-title .field-item a:hover, .media-releases-page #content .view-media-releases .views-row .group-left .field-name-title .field-item a:focus, .media-releases-page #content .view-media-releases .views-row .group-left .field-name-title .field-item a:active {
+  text-decoration: underline;
+}
+.media-releases-page #content .view-media-releases .views-row .group-left .field-name-post-date {
+  padding-bottom: 0.875rem;
+}
+@media (max-width: 575px) {
+  .media-releases-page #content .view-media-releases .views-row .group-left {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+.media-releases-page #content .view-media-releases .views-row .group-right {
+  width: 30%;
+}
+.media-releases-page #content .view-media-releases .views-row .group-right .field-name-field-news-image {
+  float: none;
+  margin: 0;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.media-releases-page #content .view-media-releases .views-row .group-right img {
+  width: 100%;
+}
+@media (max-width: 575px) {
+  .media-releases-page #content .view-media-releases .views-row .group-right {
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 /*
@@ -2469,6 +2711,10 @@ span.file-size {
   padding: 25px 0 15px;
   color: #7C7C7C;
 }
+.node-type-news-article article .field-name-field-author {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
 .node-type-news-article article .file img.file-icon {
   padding-bottom: 0;
 }
@@ -2623,7 +2869,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   display: block;
   font-weight: 400;
 }
-.front .panel-col-top .pane-bean-heading #home-content-top-navigation a.btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
+.front .panel-col-top .pane-bean-heading #home-content-top-navigation a.btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main a.form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
   padding: 1.25rem 3.125rem 1.25rem 2.5rem;
   font-size: 1rem;
   white-space: nowrap;
@@ -2966,7 +3212,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   .front .panel-col-top .pane-bean-heading #home-content-top-navigation p {
     display: block;
   }
-  .front .panel-col-top .pane-bean-heading #home-content-top-navigation .btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
+  .front .panel-col-top .pane-bean-heading #home-content-top-navigation .btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
     font-size: 0.875rem;
     margin: 0;
   }
@@ -3007,7 +3253,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
     height: auto;
     min-height: 440px;
   }
-  .front .panel-col-top .pane-bean-discover-more .btn, .front .panel-col-top .pane-bean-discover-more #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .webform-submit, .front .panel-col-top .pane-bean-discover-more #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .form-submit, .front .panel-col-top .pane-bean-discover-more #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more a, .front .panel-col-top .pane-bean-discover-more .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more a, .front .panel-col-top .pane-bean-discover-more .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more a.button {
+  .front .panel-col-top .pane-bean-discover-more .btn, .front .panel-col-top .pane-bean-discover-more #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .webform-submit, .front .panel-col-top .pane-bean-discover-more #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .form-submit, .front .panel-col-top .pane-bean-discover-more #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more a, .front .panel-col-top .pane-bean-discover-more .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more a, .front .panel-col-top .pane-bean-discover-more .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more a.button, .front .panel-col-top .pane-bean-discover-more .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-discover-more a.button {
     margin-top: 45px;
   }
   .front .panel-col-top .pane-bean-discover-more .online-access {
@@ -3103,7 +3349,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .getting-started-items a.item-small:nth-child(3) {
     margin: 20px 0 0 2.5%;
   }
-  .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .btn, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #main .webform-submit, #main .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .webform-submit, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #main .form-submit, #main .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .form-submit, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 a, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .pane-bean-for-healthcare-professionals-0 a, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 a.button {
+  .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .btn, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #main .webform-submit, #main .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .webform-submit, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #main .form-submit, #main .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .form-submit, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 a, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .pane-bean-for-healthcare-professionals-0 a, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 a.button, .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-middle .pane-bean-for-healthcare-professionals-0 a.button {
     visibility: hidden;
   }
 }
@@ -3115,7 +3361,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   .front .panel-col-top .pane-bean-heading #home-content-top-navigation p {
     display: block;
   }
-  .front .panel-col-top .pane-bean-heading #home-content-top-navigation .btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
+  .front .panel-col-top .pane-bean-heading #home-content-top-navigation .btn, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .webform-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .webform-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #main .form-submit, #main .front .panel-col-top .pane-bean-heading #home-content-top-navigation .form-submit, .front .panel-col-top .pane-bean-heading #home-content-top-navigation #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-heading #home-content-top-navigation a, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button, .front .panel-col-top .pane-bean-heading #home-content-top-navigation .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-heading #home-content-top-navigation a.button {
     margin: 0;
   }
   .front .panel-col-top .pane-bean-discover-more .online-access {
@@ -3145,7 +3391,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
     width: auto;
     max-width: none;
   }
-  .front .panel-col-top .pane-bean-discover-more .online-access .btn, .front .panel-col-top .pane-bean-discover-more .online-access #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .webform-submit, .front .panel-col-top .pane-bean-discover-more .online-access #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .form-submit, .front .panel-col-top .pane-bean-discover-more .online-access #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more .online-access a.button {
+  .front .panel-col-top .pane-bean-discover-more .online-access .btn, .front .panel-col-top .pane-bean-discover-more .online-access #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .webform-submit, .front .panel-col-top .pane-bean-discover-more .online-access #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .form-submit, .front .panel-col-top .pane-bean-discover-more .online-access #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more .online-access a.button, .front .panel-col-top .pane-bean-discover-more .online-access .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-discover-more .online-access a.button {
     margin: auto;
   }
   .front .panel-col-middle .pane-bean-how-to-home-page .how-to-container {
@@ -3220,7 +3466,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
     min-width: 480px;
     width: 30%;
   }
-  .front .panel-col-top .pane-bean-discover-more .online-access .btn, .front .panel-col-top .pane-bean-discover-more .online-access #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .webform-submit, .front .panel-col-top .pane-bean-discover-more .online-access #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .form-submit, .front .panel-col-top .pane-bean-discover-more .online-access #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more .online-access a.button {
+  .front .panel-col-top .pane-bean-discover-more .online-access .btn, .front .panel-col-top .pane-bean-discover-more .online-access #main .webform-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .webform-submit, .front .panel-col-top .pane-bean-discover-more .online-access #main .form-submit, #main .front .panel-col-top .pane-bean-discover-more .online-access .form-submit, .front .panel-col-top .pane-bean-discover-more .online-access #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .front .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .panel-col-top .pane-bean-discover-more .online-access a, .front .panel-col-top .pane-bean-discover-more .online-access .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second .front .panel-col-top .pane-bean-discover-more .online-access a.button, .front .panel-col-top .pane-bean-discover-more .online-access .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body .front .panel-col-top .pane-bean-discover-more .online-access a.button {
     margin: 30px 0;
   }
   .front .panel-col-middle .pane-bean-how-to-home-page .how-to-container {
@@ -3442,6 +3688,10 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   background-color: initial;
   border-color: #002D81;
 }
+.sidebar-second #content .field-name-body a.button {
+  border: 2px solid #FFFFFF;
+  font-weight: bold;
+}
 
 #block-bean-menu-navigation-prev-next {
   border-top: 1px solid #DFDFDF;
@@ -3510,11 +3760,16 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   position: relative;
   padding-bottom: 52.45%;
   /* Specific Ratio */
-  padding-top: 25px;
   height: 0;
   margin-bottom: 1rem;
 }
-#page div.video-filter > iframe {
+#page .div.video-filter img,
+#page .field-name-field-video-resource .file-video .content img,
+#page .field-name-field-news-image .field-item img {
+  width: 100%;
+}
+#page div.video-filter > iframe,
+#page .field-name-field-video-resource .file-video .content > iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -4120,6 +4375,330 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   padding: 8px 45px 32px 30px;
 }
 
+#content .view-my-health-record-stories .views-exposed-widget {
+  margin: 0 0 .5rem 0;
+}
+#content .view-my-health-record-stories #edit-field-category-value-wrapper {
+  width: 35%;
+}
+#content .view-my-health-record-stories #edit-field-category-value-wrapper select {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #content .view-my-health-record-stories #edit-field-category-value-wrapper {
+    width: auto;
+  }
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper {
+  position: relative;
+  max-width: 65%;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .chosen-container {
+  width: 100% !important;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .chosen-choices {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0.6875rem 2.1875rem 0.6875rem 0.9375rem;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .chosen-drop {
+  border: 0;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .chosen-drop li.highlighted {
+  background-color: #002D81;
+  background-image: none;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .form-type-select {
+  border: 1px solid #DFDFDF;
+  border-radius: 25px;
+  background: white url(../images/icon_arrow-down.svg) no-repeat right 15px center;
+  background-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  min-height: 45px;
+  appearance: none;
+  transition: .2s ease all;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .form-type-select:hover, #content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .form-type-select:focus {
+  cursor: pointer;
+  background-color: #ececec;
+}
+#content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper .form-type-select input[type="text"] {
+  font-size: 1rem;
+  color: #002D81;
+  border-radius: 0;
+  width: 100% !important;
+  padding: 0;
+  white-space: nowrap;
+  margin: 3px 5px 3px 0;
+  min-height: 0;
+}
+@media (max-width: 768px) {
+  #content .view-my-health-record-stories #edit-field-news-topics-tid-wrapper {
+    max-width: 100%;
+  }
+}
+#content .view-my-health-record-stories #edit-type-wrapper {
+  clear: left;
+}
+#content .view-my-health-record-stories #edit-submit-my-health-record-stories {
+  border: 1px solid #002D81;
+  color: white !important;
+  background: #002D81 url("../images/arrow-right-3.svg") no-repeat right 20px center;
+}
+#content .view-my-health-record-stories #edit-submit-my-health-record-stories:hover, #content .view-my-health-record-stories #edit-submit-my-health-record-stories:focus, #content .view-my-health-record-stories #edit-submit-my-health-record-stories:active {
+  cursor: pointer;
+  border: 1px solid #DFDFDF;
+  color: #002D81 !important;
+  background: #ececec url("../images/arrow-right-1.svg") no-repeat right 20px center;
+}
+#content .view-my-health-record-stories .views-submit-button,
+#content .view-my-health-record-stories .views-reset-button {
+  padding: 1rem 1rem 0 0;
+}
+#content .view-my-health-record-stories .views-submit-button .form-submit,
+#content .view-my-health-record-stories .views-reset-button .form-submit {
+  padding: 0.6875rem 2.1875rem 0.6875rem 0.9375rem;
+  margin-right: 0;
+}
+#content .view-my-health-record-stories .view-content ul {
+  margin: 0;
+}
+#content .view-my-health-record-stories .view-content ul li {
+  border: 0;
+  display: inline-block;
+  margin: 0 3% 3.5% 0;
+  padding: 0;
+  vertical-align: top;
+  width: 30%;
+}
+@media (min-width: 769px) {
+  #content .view-my-health-record-stories .view-content ul li:nth-child(3n+3) {
+    margin: 0 0 3.5% 0;
+  }
+}
+@media (max-width: 768px) {
+  #content .view-my-health-record-stories .view-content ul li {
+    width: 48%;
+  }
+  #content .view-my-health-record-stories .view-content ul li:nth-child(2n+2) {
+    margin: 0 0 2.5% 0;
+  }
+}
+@media (max-width: 575px) {
+  #content .view-my-health-record-stories .view-content ul li {
+    margin: 0 0 4% 0;
+    width: 100%;
+  }
+}
+#content .view-my-health-record-stories .view-filters {
+  margin: 0 0 2rem 0;
+}
+
+.not-logged-in #main .view-my-health-record-stories form .form-submit {
+  margin-top: 1.6em;
+}
+
+.section-news-and-media .field-name-field-news-topics {
+  margin-top: 1.25rem;
+}
+
+#block-ds-extras-more-like-this {
+  margin-top: 4rem;
+}
+#block-ds-extras-more-like-this .field-name-field-recommended-content .field-items {
+  margin: 0;
+}
+#block-ds-extras-more-like-this .block__title {
+  margin-bottom: 1.25rem;
+}
+#block-ds-extras-more-like-this .field-name-field-recommended-content > .field-items > .field-item {
+  display: inline-block;
+  margin: 0 3% 3.5% 0;
+  vertical-align: top;
+  width: 48%;
+}
+#block-ds-extras-more-like-this .field-name-field-recommended-content > .field-items > .field-item:nth-child(2n+2) {
+  margin: 0 0 3.5% 0;
+}
+#block-ds-extras-more-like-this .field-name-field-recommended-content > .field-items > .field-item .file .content {
+  padding-top: 0;
+}
+#block-ds-extras-more-like-this .field-name-field-recommended-content > .field-items > .field-item img {
+  width: 100%;
+}
+@media (max-width: 575px) {
+  #block-ds-extras-more-like-this .field-name-field-recommended-content > .field-items > .field-item {
+    margin: 0 0 4% 0;
+    width: 100%;
+  }
+}
+
+#page #content .view-news-and-media .attachment-after .view-news-and-media .views-row,
+#block-views-news-and-media-block-1 .view-id-news_and_media ul li {
+  display: inline-block;
+  margin: 0 3% 3% 0;
+  vertical-align: top;
+  width: 48%;
+}
+#page #content .view-news-and-media .attachment-after .view-news-and-media .views-row:nth-child(2n+2),
+#block-views-news-and-media-block-1 .view-id-news_and_media ul li:nth-child(2n+2) {
+  margin: 0 0 4% 0;
+}
+@media (max-width: 575px) {
+  #page #content .view-news-and-media .attachment-after .view-news-and-media .views-row,
+  #block-views-news-and-media-block-1 .view-id-news_and_media ul li {
+    margin: 0 0 4% 0;
+    width: 100%;
+  }
+}
+
+.news-media-page #block-views-news-and-media-block .block__title,
+.news-media-page #block-views-news-and-media-block-1 .block__title {
+  margin-bottom: 1.25rem;
+}
+.news-media-page .sidebars {
+  margin-top: 3.125rem;
+}
+@media (max-width: 768px) {
+  .news-media-page .sidebars {
+    margin-top: 1.5625rem;
+  }
+}
+.news-media-page aside.sidebars .region-sidebar-second {
+  margin-top: 0;
+}
+.news-media-page .region-sidebar-second {
+  background: white;
+  border: 0;
+  padding: 1.5625rem 1.5625rem 0;
+  border-radius: 3px;
+  box-shadow: none;
+  margin-top: 0;
+}
+.news-media-page .region-sidebar-second .view-media-releases,
+.news-media-page .region-sidebar-second .view-events .item-list .views-row {
+  border: 1px solid #DFDFDF;
+  padding: 1rem;
+  border-radius: 3px;
+}
+.news-media-page .region-sidebar-second .block .block__content li a:hover {
+  background: transparent;
+}
+.news-media-page .region-sidebar-second .view-media-releases {
+  margin-bottom: 4rem;
+  position: relative;
+}
+.news-media-page .region-sidebar-second .view-media-releases .view-header {
+  margin-bottom: 1rem;
+}
+.news-media-page .region-sidebar-second .view-media-releases .view-header > * {
+  margin: 0;
+}
+.news-media-page .region-sidebar-second .view-media-releases .view-content .item-list .views-row {
+  margin-bottom: 10px;
+}
+.news-media-page .region-sidebar-second .view-media-releases a {
+  text-decoration: underline;
+}
+.news-media-page .region-sidebar-second .view-media-releases .field-content a {
+  padding: 10px 15px 5px;
+}
+.news-media-page .region-sidebar-second .view-media-releases .view-footer {
+  background: #DFDFDF;
+  padding: .5rem;
+  border-radius: 3px;
+}
+.news-media-page .region-sidebar-second .view-media-releases .view-footer .more-link {
+  position: absolute;
+  bottom: -2.75rem;
+  right: 0;
+}
+.news-media-page .region-sidebar-second .view-events article {
+  position: relative;
+}
+.news-media-page .region-sidebar-second .view-events article .field-name-title {
+  min-height: 65px;
+  padding-right: 2.5rem;
+}
+.news-media-page .region-sidebar-second .view-events article .group-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.news-media-page .region-sidebar-second .view-events article .group-date > .field-name-field-news-date {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location::after {
+  display: block;
+  content: "";
+  background: url("../images/icon-marker.svg") no-repeat;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+.news-media-page .region-sidebar-second .view-events .item-list li {
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .news-media-page .region-sidebar-second {
+    padding: 1.5625rem 0 0;
+  }
+}
+
+.node-type-event .field-name-field-location .field-item > *,
+.node-type-event .field-name-field-location .field-item .street-block > *,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .field-item > *,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .field-item .street-block > * {
+  display: inline;
+  position: relative;
+}
+.node-type-event .field-name-field-location .street-block .thoroughfare,
+.node-type-event .field-name-field-location .street-block .premise,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .street-block .thoroughfare,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .street-block .premise {
+  margin-right: .25rem;
+}
+.node-type-event .field-name-field-location .street-block .thoroughfare::after,
+.node-type-event .field-name-field-location .street-block .premise::after,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .street-block .thoroughfare::after,
+.news-media-page .region-sidebar-second .view-events article .field-name-field-location .street-block .premise::after {
+  content: ", ";
+  display: inline-block;
+  padding-left: 0.05rem;
+}
+
+.section-news-and-media .field-name-field-video-resource {
+  overflow: hidden;
+}
+.section-news-and-media .field-name-field-video-resource .file-video .content {
+  position: relative;
+  padding-bottom: 52.45%;
+  /* Specific Ratio */
+  height: 0;
+  margin-bottom: 1rem;
+}
+
+.node-type-media-release .field-name-field-news-image,
+.node-type-media-release .field-name-field-news-date {
+  margin-bottom: 1.25rem;
+}
+
+.node-type-event .field-name-field-news-date,
+.node-type-event .field-name-field-location {
+  margin-bottom: 1.25rem;
+}
+
 /* FRONT */
 .pane-bean-hp-opt-out-notice .field-name-field-block-text {
   text-align: center;
@@ -4203,12 +4782,12 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   padding: 10px;
   margin: 0;
 }
-#block-bean-landing-opt-out-now a.btn.btn-primary, #block-bean-landing-opt-out-now #main a.btn-primary.webform-submit, #main #block-bean-landing-opt-out-now a.btn-primary.webform-submit, #block-bean-landing-opt-out-now #main a.btn-primary.form-submit, #main #block-bean-landing-opt-out-now a.btn-primary.form-submit, #block-bean-landing-opt-out-now #block-views-latest-news-block .more-link a.btn-primary, #block-views-latest-news-block .more-link #block-bean-landing-opt-out-now a.btn-primary, #block-bean-landing-opt-out-now .front .panel-col-middle .field-type-link-field .field-items a.btn-primary, .front .panel-col-middle .field-type-link-field .field-items #block-bean-landing-opt-out-now a.btn-primary, #block-bean-landing-opt-out-now .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #block-bean-landing-opt-out-now a.button {
+#block-bean-landing-opt-out-now a.btn.btn-primary, #block-bean-landing-opt-out-now #main a.btn-primary.webform-submit, #main #block-bean-landing-opt-out-now a.btn-primary.webform-submit, #block-bean-landing-opt-out-now #main a.btn-primary.form-submit, #main #block-bean-landing-opt-out-now a.btn-primary.form-submit, #block-bean-landing-opt-out-now #block-views-latest-news-block .more-link a.btn-primary, #block-views-latest-news-block .more-link #block-bean-landing-opt-out-now a.btn-primary, #block-bean-landing-opt-out-now .front .panel-col-middle .field-type-link-field .field-items a.btn-primary, .front .panel-col-middle .field-type-link-field .field-items #block-bean-landing-opt-out-now a.btn-primary, #block-bean-landing-opt-out-now .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #block-bean-landing-opt-out-now a.button, #block-bean-landing-opt-out-now .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body #block-bean-landing-opt-out-now a.button {
   border: 2px solid #FFFFFF;
   font-weight: bold !important;
 }
 
-.sidebar-second #content a.btn, .sidebar-second #content #main a.webform-submit, #main .sidebar-second #content a.webform-submit, .sidebar-second #content #main a.form-submit, #main .sidebar-second #content a.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .sidebar-second #content a, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button {
+.sidebar-second #content a.btn, .sidebar-second #content #main a.webform-submit, #main .sidebar-second #content a.webform-submit, .sidebar-second #content #main a.form-submit, #main .sidebar-second #content a.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link .sidebar-second #content a, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button, .sidebar-second #content .field-name-body a.button {
   background-size: 10px;
   border-radius: 32px;
   box-shadow: none;
@@ -4218,7 +4797,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   text-decoration: none;
   transition: background-color .2s ease-out;
 }
-.sidebar-second #content a.btn.btn-primary, .sidebar-second #content #main a.btn-primary.webform-submit, #main .sidebar-second #content a.btn-primary.webform-submit, .sidebar-second #content #main a.btn-primary.form-submit, #main .sidebar-second #content a.btn-primary.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a.btn-primary, #block-views-latest-news-block .more-link .sidebar-second #content a.btn-primary, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a.btn-primary, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a.btn-primary, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button {
+.sidebar-second #content a.btn.btn-primary, .sidebar-second #content #main a.btn-primary.webform-submit, #main .sidebar-second #content a.btn-primary.webform-submit, .sidebar-second #content #main a.btn-primary.form-submit, #main .sidebar-second #content a.btn-primary.form-submit, .sidebar-second #content #block-views-latest-news-block .more-link a.btn-primary, #block-views-latest-news-block .more-link .sidebar-second #content a.btn-primary, .sidebar-second #content .front .panel-col-middle .field-type-link-field .field-items a.btn-primary, .front .panel-col-middle .field-type-link-field .field-items .sidebar-second #content a.btn-primary, .landing-page.sidebar-second #content #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second #content a.button, .sidebar-second #content .field-name-body a.button {
   background-color: #007dbc;
   color: #FFFFFF !important;
   font-weight: 300;
@@ -4230,7 +4809,7 @@ body.opt-out-translated .text-highlight {
   padding: 20px 40px;
   margin-bottom: 1.4em;
 }
-body.opt-out-translated .text-highlight a.btn, body.opt-out-translated .text-highlight #main a.webform-submit, #main body.opt-out-translated .text-highlight a.webform-submit, body.opt-out-translated .text-highlight #main a.form-submit, #main body.opt-out-translated .text-highlight a.form-submit, body.opt-out-translated .text-highlight #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second body.opt-out-translated .text-highlight a.button {
+body.opt-out-translated .text-highlight a.btn, body.opt-out-translated .text-highlight #main a.webform-submit, #main body.opt-out-translated .text-highlight a.webform-submit, body.opt-out-translated .text-highlight #main a.form-submit, #main body.opt-out-translated .text-highlight a.form-submit, body.opt-out-translated .text-highlight #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second body.opt-out-translated .text-highlight a.button, body.opt-out-translated .text-highlight .sidebar-second #content .field-name-body a.button, .sidebar-second #content .field-name-body body.opt-out-translated .text-highlight a.button {
   border: 2px solid #FFFFFF !important;
   font-weight: bold !important;
 }
