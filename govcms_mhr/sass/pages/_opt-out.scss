@@ -25,6 +25,7 @@
   background-repeat: no-repeat;
   background-position: right 0 bottom 0;
   background-size: 332px 176px;
+  background-color: white;
   width: 422px;
   h3 {
     font-size: 1rem;
@@ -114,5 +115,20 @@
     background-color: #007dbc;
     color: #FFFFFF !important;
     font-weight: 300;
+  }
+}
+
+// Special opt-out translated page
+body.opt-out-translated {
+  .text-highlight {
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    padding: 20px 40px;
+    margin-bottom: 1.4em;
+
+    a.btn {
+      border: 2px solid #FFFFFF !important;
+      font-weight: bold !important;
+    }
   }
 }

@@ -4138,6 +4138,7 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   background-repeat: no-repeat;
   background-position: right 0 bottom 0;
   background-size: 332px 176px;
+  background-color: white;
   width: 422px;
 }
 .block-contact h3 {
@@ -4214,6 +4215,17 @@ html[dir="rtl"] #main #content article img[alt="PDF icon"] {
   background-color: #007dbc;
   color: #FFFFFF !important;
   font-weight: 300;
+}
+
+body.opt-out-translated .text-highlight {
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  padding: 20px 40px;
+  margin-bottom: 1.4em;
+}
+body.opt-out-translated .text-highlight a.btn, body.opt-out-translated .text-highlight #main a.webform-submit, #main body.opt-out-translated .text-highlight a.webform-submit, body.opt-out-translated .text-highlight #main a.form-submit, #main body.opt-out-translated .text-highlight a.form-submit, body.opt-out-translated .text-highlight #block-views-latest-news-block .more-link a, #block-views-latest-news-block .more-link body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .front .panel-col-middle .field-type-link-field .field-items a, .front .panel-col-middle .field-type-link-field .field-items body.opt-out-translated .text-highlight a, body.opt-out-translated .text-highlight .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second a.button, .landing-page.sidebar-second #main aside.sidebars .region-sidebar-second body.opt-out-translated .text-highlight a.button {
+  border: 2px solid #FFFFFF !important;
+  font-weight: bold !important;
 }
 
 /**
