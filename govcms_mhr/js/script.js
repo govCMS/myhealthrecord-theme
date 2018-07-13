@@ -323,4 +323,15 @@
     }
   };
 
+  /**
+   * Make a shocking RTL hack
+   */
+  Drupal.behaviors.rtlHack = {
+    attach: function(context, settings) {
+      if ( $('body.rtl-pages').length ) {
+        $("html").attr('dir', 'rtl');
+      }
+    }
+  };
+
 })(jQuery, Drupal, this, this.document);
