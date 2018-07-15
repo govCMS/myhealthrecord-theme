@@ -65,7 +65,7 @@ body .field {
   }
 }
 
-.front .page-header, .header, .front #header-content {
+.front .page-header, .header, .front #header-content, #content .translation-link {
   display: none;
 }
 
