@@ -13,7 +13,7 @@
   .panel-pane {
     border-top: none;
   }
-  .panel-col-top {
+  #content .panel-col-top {
     background-color: $white;
     background-image: url(../images/front-page_background.png);
     background-repeat: no-repeat;
@@ -25,6 +25,7 @@
     width: 100%;
     overflow-x: hidden;
     .pane-bean-heading {
+      padding: 0 20px;
       margin: rem(25) auto rem(50);
       text-align: center;
       h1 {
@@ -46,29 +47,22 @@
         padding: rem(20) rem(50) rem(20) rem(40);
         font-size: 1rem;
         white-space: nowrap;
+        @include at(small) {
+          padding: rem(20) rem(40) rem(20) rem(20);
+        }
       }
       #home-content-top-navigation p {
         margin: rem(20) rem(30);
       }
     }
-    .pane-bean-my-health-record-in-60-seconds {
+    .pane-bean-hp-opt-out-notice {
+      padding: 0 20px;
+    }
+    .pane-homepage-videos {
       margin: 90px auto 50px;
       .field-name-field-video-resource {
         position: relative;
         margin: 0 auto;
-        &:before {
-          display: block;
-          content: "";
-          background: url(../images/front-page_background-video.png) no-repeat 45% 50%;
-          background-size: contain;
-          width: 100%;
-          height: 375px;
-          position: absolute;
-          top: -30px;
-          left: 61px;
-          right: 0;
-          margin: auto;
-        }
         .field-items {
           position: relative;
           width: 100%;
@@ -108,23 +102,96 @@
       }
       .field-name-field-video-text {
         margin: 0 auto;
-        width: 370px;
+        max-width: 400px !important;
         .field-items {
           background-color: $white;
           border-radius: 5px;
-          margin-top: -45px;
+          margin: -45px auto;
+          width: calc(100% - 30px);
           padding: 15px;
           position: relative;
           z-index: 99;
           border: 1px solid $gray-lightest;
+          @include to(small) {
+            border-radius: 0;
+            margin: -10px auto;
+            width: 100%;
+          }
         }
-        .video-info h3 {
+        h3 {
           font-size: 1rem;
           margin: 0 0 rem(5);
           font-weight: $text-weight-bold;
+          text-align: center;
         }
-        .video-info p {
+        p {
           margin: 0;
+        }
+      }
+    }
+    // Homepage video layout displays
+    .pane-homepage-videos {
+      max-width: 1200px;
+      padding: 0 1rem;
+      position: relative;
+      .view-homepage-videos ul {
+        margin: 0;
+        .views-row {
+          border: none;
+          padding: 0;
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 1.5% 5rem 0;
+          &:last-child {
+            margin: 0 0 5rem 0;
+          }
+          @include to(small) {
+            margin: 0 1.5% 3rem 0;
+            &:last-child {
+              margin: 0 0 3rem 0;
+            }
+          }
+        }
+      }
+      .more-link {
+        text-align: center;
+        position: relative;
+      }
+      .view-homepage-videos ul .views-row:nth-last-child(n+1):nth-last-child(-n+1):first-child, ul .views-row:nth-last-child(n+1):nth-last-child(-n+1):first-child ~ .views-row {
+        width: 100%;
+      }
+      .view-homepage-videos ul .views-row:nth-last-child(n+2):nth-last-child(-n+2):first-child, ul .views-row:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .views-row {
+        &:first-child {
+          margin-left: calc(49% - 400px);
+          max-width: 400px;
+        }
+        max-width: 400px;
+        width: 49%;
+        @include to(large) {
+          &:first-child {
+            margin-left: auto;
+            max-width: none;
+          }
+          max-width: none;
+        }
+        @include to(medium) {
+          &:first-child {
+            margin-left: auto;
+            max-width: none;
+          }
+          max-width: none;
+          width: 100%;
+        }
+      }
+      .view-homepage-videos ul .views-row:nth-last-child(n+3):nth-last-child(-n+3):first-child, ul .views-row:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ .views-row {
+        &:first-child {
+          margin-left: auto;
+          max-width: none;
+        }
+        max-width: none;
+        width: 32%;
+        @include to(large) {
+          width: 100%;
         }
       }
     }
@@ -314,7 +381,8 @@
         margin-left: 1%;
       }
       @include to(medium) {
-        width: 49%;
+        width: 48%;
+        margin: 0 1% 1%;
       }
       @include to(small) {
         width: 100%;
@@ -394,8 +462,6 @@
     .panel-col-top {
       padding-top: 20px;
       .pane-bean-heading {
-        margin-left: 5%;
-        width: 90%;
         #home-content-top-navigation {
           // margin: 40px 0;
           h3 {
@@ -408,38 +474,6 @@
           .btn {
             font-size: rem(14);
             margin: 0;
-          }
-        }
-      }
-      .pane-bean-my-health-record-in-60-seconds {
-        background: url(../images/front-page_background-video.png) no-repeat 32% 10%;
-        background-size: 600px;
-        padding: 50px 0;
-        margin: 50px auto 0;
-        .field-name-field-video-resource {
-          min-width: unset;
-          width: 80%;
-          .field-items {
-            position: relative;
-            width: 100%;
-            iframe {
-              height: 100%;
-              width: 100%;
-            }
-          }
-          &:before {
-            display: none;
-          }
-        }
-        .field-name-field-video-text {
-          margin-top: -10px !important;
-          min-width: unset;
-          width: 80%;
-          max-width: 400px !important;
-          .field-items {
-            border-radius: 0;
-            margin: 0 auto;
-            width: 100%;
           }
         }
       }

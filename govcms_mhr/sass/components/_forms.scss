@@ -135,6 +135,10 @@
   }
 }
 
+select::-ms-expand {
+  visibility: hidden;
+}
+
 #main {
   .form-text, input[type="text"], input[type="email"], input[type="password"] {
     background-color: $white;
@@ -174,7 +178,7 @@
     padding: rem(11) rem(35) rem(11) rem(15);
     color: $text-color-link;
     background: white url("../images/icon_arrow-down.svg") no-repeat right 15px center;
-    background-size: 15px;
+    background-size: 15px 15px;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -190,7 +194,6 @@
     margin: 0 0 .5rem 0;
   }
 }
-
 
 // Helpful Yes/No Webform //
 

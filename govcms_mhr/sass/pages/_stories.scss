@@ -35,7 +35,7 @@
       border: 1px solid $gray-lighter;
       border-radius: 25px;
       background: white url(../images/icon_arrow-down.svg) no-repeat right 15px center;
-      background-size: 15px;
+      background-size: 15px 15px;
       -webkit-appearance: none;
       -moz-appearance: none;
       -ms-appearance: none;
@@ -66,27 +66,25 @@
     clear: left;
   }
   #edit-submit-my-health-record-stories {
-    border: 1px solid $text-color-link;
+    border: 1px solid $gray-lighter;
     color: white !important;
     background: $text-color-link url("../images/arrow-right-3.svg") no-repeat right 20px center;
     &:hover, &:focus, &:active {
       cursor: pointer;
-      border: 1px solid $gray-lighter;
-      color: $text-color-link !important;
-      background: lighten($gray-lighter,5%) url("../images/arrow-right-1.svg") no-repeat right 20px center;
+      background-color: lighten($text-color-link,10%);
     }
   }
-  // .views-submit-button {
-  //   clear: left;
-  //   margin-left: calc(100% - 214px);
-  // }
   .views-submit-button,
   .views-reset-button {
-    // padding: rem(16)0 0 rem(16);
     padding: 1rem 1rem 0 0;
     .form-submit {
       padding: rem(11) rem(35) rem(11) rem(15);
       margin-right: 0;
+    }
+  }
+  .views-submit-button {
+    @include to(medium) {
+      clear: left;
     }
   }
   .view-content ul {

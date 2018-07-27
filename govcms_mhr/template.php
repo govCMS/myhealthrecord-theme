@@ -216,10 +216,14 @@ function govcms_mhr_preprocess_node(&$variables, $hook) {
       $title = wordwrap($title, $max_width);
       $title = substr($title, 0, strpos($title, "\n"));
       $title .= '...';
-      $variables['content']['title'][0]['#markup'] = '<h2><a href="/' . $variables['path']['alias'] . '">' . $title . '</a></h2>';
+      if (isset($variables['content']['title'])) {
+        $variables['content']['title'][0]['#markup'] = '<h2><a href="/' . $variables['path']['alias'] . '">' . $title . '</a></h2>';
+      }
     }
     // Strip html from card view mode
-    $variables['content']['body'][0]['#markup'] = strip_tags($variables['content']['body'][0]['#markup']);
+    if (isset($variables['content']['body'])) {
+      $variables['content']['body'][0]['#markup'] = strip_tags($variables['content']['body'][0]['#markup']);
+    }
   }
 }
 
@@ -244,7 +248,7 @@ function govcms_mhr_preprocess_node_how_to_page(&$variables) {
 }
 
 function govcms_mhr_preprocess_file_entity(&$variables) {
-  if ($variables['type'] == 'video' && $variables['view_mode'] == "colorbox_video" ) {
+  if ($variables['type'] == 'video') {
     $pieces = explode("/", parse_url($variables['metadata']['media_oembed_local_thumbnail_path'], PHP_URL_PATH));
     if ($pieces[1] == 'i.ytimg.com') {
       $variables['video_provider'] = 'youtube';

@@ -112,6 +112,11 @@
   }
   .block__content {
     text-align: center;
+    span {
+      @media screen and (min-width: 768px) and (max-width: 970px) {
+        display: block;
+      }
+    }
   }
   ul.icon-social, h3, ul.icon-social li {
     display: inline-block;

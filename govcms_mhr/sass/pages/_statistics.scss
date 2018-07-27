@@ -12,6 +12,9 @@
       @include clearfix;
     }
   }
+  ul {
+    margin: 0;
+  }
 }
 
 .statistic-numeric-items {
@@ -50,6 +53,12 @@
       &:nth-of-type(2) {
         clear: right;
       }
+    }
+  }
+  @include to(small) {
+    li {
+      margin: 15px 0;
+      width: 100%;
     }
   }
 }

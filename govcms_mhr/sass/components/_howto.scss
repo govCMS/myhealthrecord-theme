@@ -12,7 +12,7 @@
 	min-height: 100px;
 	cursor: pointer;
 
-	h2 {
+	h3 {
 		margin: 0;
 		font-size: 18px;
 		font-family: $text-content-sans--serif;
@@ -60,31 +60,28 @@
 		margin: rem(40) auto rem(10);
 		font-size: rem(32);
 	}
-
+	.view-listing-unformatted {
+		margin: 0;
+	}
 	.view-header {
 		text-align: center;
 		margin-bottom: rem(50);
 	}
-
 	.vocabulary-how-to-category {
 		float: left;
 		width: 32%;
 		margin-right: 1.33%;
 		margin-bottom: 25px;
 	}
-
 	.views-row-4 .vocabulary-how-to-category {
 		clear: left;
 	}
-
 	.view-taxonomy-list .views-field-title {
 		border-bottom: 1px solid $gray-lighter;
 	}
-
 	.view-taxonomy-list .views-row-last .views-field-title {
 		border: 0;
 	}
-
 	.view-taxonomy-list .views-field-title span {
 		display: block;
 
@@ -104,7 +101,6 @@
 			width: 49%;
 			margin: 25px 0.5%;
 		}
-
 		.views-row-even .vocabulary-how-to-category {
 			clear: right;
 		}
@@ -114,7 +110,6 @@
 			width: 100%;
 			margin: 15px 0;
 		}
-
 		.views-row .vocabulary-how-to-category {
 			clear: right;
 		}
@@ -134,6 +129,9 @@
 			text-align: center;
 			margin-bottom: rem(30);
 			font-size: rem(32);
+		}
+		.view-listing-unformatted {
+			margin: 0;
 		}
 	}
 }

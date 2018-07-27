@@ -27,7 +27,7 @@ body, %body {
   color: $text-color-paragraph;
   font-family: $text-content-sans--serif;
   line-height: 1.6;
-  font-weight: $text-weight-light;
+  font-weight: $text-weight-regular;
   @include to(small) {
     font-size: 87.5%;
   }
@@ -54,6 +54,9 @@ h2, %h2  {
   font-weight: $text-weight-regular;
   margin-bottom: rem(20);
   line-height: 1.2;
+  * + & {
+    margin-top: 1.75rem;
+  }
 }
 h3, %h3  {
   color: $text-color-primary;

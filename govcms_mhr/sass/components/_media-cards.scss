@@ -1,5 +1,7 @@
 // Basic card styling - white background, grey border, border radius and transition.
-#page #content {
+#page #content,
+#page .region-content-bottom,
+#page .sidebars .view-related-how-to-s-videos  {
   article.view-mode-card,
   .view-mode-compact {
     cursor: pointer;
@@ -23,7 +25,8 @@
 }
 
 // News and media view styling.
-#content .view-news-and-media .item-list > ul {
+#content .view-news-and-media .item-list > ul,
+.view-consumer-landing-page-news .item-list > ul {
   margin: 0 0 0 0;
   > li {
     border: 0;
@@ -35,7 +38,9 @@
 }
 
 // Card styling for media.
-#page #content article.view-mode-card {
+#page #content article.view-mode-card,
+#page .region-content-bottom article.view-mode-card,
+#page .sidebars .view-related-how-to-s-videos article.view-mode-card {
   .field-name-title .field-item > * {
     font-weight: bold;
     font-size: rem(20);
@@ -93,6 +98,7 @@
 
 // compact card styling.
 #page #content .view-mode-compact {
+//#page .region-content-bottom .view-mode-card {
   padding: 1rem;
   .field-name-title .field-item > * {
     font-weight: bold;

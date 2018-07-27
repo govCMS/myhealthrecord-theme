@@ -71,6 +71,10 @@
         background: $gray-lighter;
         padding: .5rem;
         border-radius: 3px;
+        a {
+          display: inline-block;
+          word-break: break-all;
+        }
         .more-link {
           position: absolute;
           bottom: -2.75rem;

@@ -38,7 +38,7 @@
       }
     }
     // small logo
-    @include to(large) {
+    @media (max-width: 1060px) {
       padding: 15px 15px 14px;
       #mhr-logo-small,
       .mhr-logo-small {
@@ -50,7 +50,7 @@
         display: none;
       }
     }
-    @include to(medium) {
+    @media (max-width: 830px) {
       max-width: 150px;
       z-index: 11;
       position: relative;
@@ -99,12 +99,9 @@
           width: 35px;
           padding: 0 33px 0 0;
         }
-        // &:hover input.form-text {
-        //   width: 300px;
-        // }
       }
     }
-    @include to(medium) {
+    @media (max-width: 830px) {
       top: 32px;
       right: 60px;
     }
@@ -153,9 +150,6 @@
       font-weight: $text-weight-bold;
       padding: rem(11) rem(13);
       float: left;
-      // padding: rem(15) rem(60) rem(10) rem(15);
-      // background-size: rem(30);
-      // background: #FFFFFF url(../images/mygov-logo.jpg) no-repeat center right 20px;
       border: 1px solid $gray-lighter;
       transition: .2s ease all;
       &:hover {
@@ -182,7 +176,7 @@
         }
       }
     }
-    @include to(medium) {
+    @media (max-width: 830px) {
       top: 32px;
       right: 120px;
     }
@@ -335,7 +329,7 @@
       right: 10px;
     }
   }
-  @include to(medium) {
+  @media (max-width: 830px) {
     margin: auto !important;
     float: none !important;  // overide javascript
     position: absolute !important;  // overide javascript

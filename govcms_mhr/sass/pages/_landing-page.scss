@@ -186,3 +186,65 @@
 #block-bean-landig-page-list-consumer {
   display: none;
 }
+
+//news and video blocks for for you and your family and healthcare professional
+#page .view-consumer-landing-page-news .views-row,
+#page .attachment .view-latest-news .views-row,
+#page #block-views-latest-news-block .views-row
+{
+  display: inline-block;
+  margin: 0 3% 3% 0;
+  vertical-align: top;
+  width: 30%;
+  // &:nth-child(2n+2) {
+  //   margin: 0 0 4% 0;
+  // }
+  @include to(medium) {
+    margin: 0 0 4% 0;
+    width: 100%;
+  }
+}
+#page #block-views-latest-news-block {
+  .views-row .node-news-article {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .view-listing-unformatted {
+    margin-bottom: 0;
+  }
+}
+// TODO: fix this block ID
+// family landing page news block
+#block-views-2f620507042b0815e71a5c8f82419c8c {
+  background: lighten($gray-lighter,10%);
+  margin: 0 !important; // overide govcms
+  .container {
+    @extend .inner-wrapper;
+    @include clearfix;
+    padding: 50px 45px;
+  }
+  .block__title.block-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .field-name-title {
+    clear: both;
+    padding-top: 20px;
+    border-bottom: none;
+  }
+  .field-name-field-news-date{
+    margin-top: 10px;
+  }
+  .more-link {
+    clear: both;
+    text-align: center;
+    a {
+      @extend .btn;
+      @extend .btn-secondary;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

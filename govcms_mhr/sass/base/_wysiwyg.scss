@@ -42,12 +42,18 @@ body.cke_editable {
 // Big Text //
 
 .text-big {
-  color: rgba($gray-darker, 0.6);
+  color: rgba($gray-darker, 0.8);
   font-weight: $text-weight-light;
   font-size: rem(24);
   line-height: 1.4;
   font-family: $text-content-serif;
   letter-spacing: -1px;
+}
+
+.text-emphasised {
+  font-weight: $text-weight-regular;
+  font-size: rem(22);
+  line-height: 1.4;
 }
 
 // Blockquote //
@@ -123,4 +129,23 @@ body.cke_editable ul,
   div {
     display: inline-block;
   }
+  .file-application-pdf {
+    display: inline;
+    word-break: break-all;
+  }
+}
+
+// WCAG certified styling.
+.certified {
+  .media-element {
+    display: inline-block;
+    margin-top: 2px;
+    vertical-align: top;
+  }
+}
+
+// Image Captions.
+.field-name-field-image-comment {
+  font-size: .85rem;
+  margin: .5rem 0 1rem 0;
 }

@@ -8,7 +8,7 @@
   right: 30px;
   z-index: 100;
   top: 12px;
-  @include to(medium) {
+  @media (max-width: 830px) {
     display: none;
   }
   @include between(large, xlarge) {

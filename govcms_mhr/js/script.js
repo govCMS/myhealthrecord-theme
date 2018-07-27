@@ -234,7 +234,7 @@
     attach: function(context, settings) {
       // Create the collapse button
       $('.vocabulary-how-to-category .field-name-title').each(function(index) {
-        $(this).attr({ tabindex: '0', title: "Press [enter] to view list of How-to's"});
+        $(this).attr({ tabindex: '0', title: "Press [enter] to view list of How-to's", role: 'button'});
         $(this).prepend( '<span class="menu-collapser"></span>' );
         $(this).attr("aria-expanded", "false");
       });
@@ -261,6 +261,22 @@
       $this.attr("aria-expanded", "false");
     }
   }
+
+  /**
+   * Accessibility fixes
+   */
+  Drupal.behaviors.addAttributesHowto = {
+    attach: function(context, settings) {
+      // Add role="list" attribute to how to tiles on homepage
+      $('.front .field-name-field-how-to-items .field-items').each(function(index) {
+        $(this).attr({role: 'list'});
+      });
+      // Add role="listitem" attribute to how to tiles on homepage
+      $('.front .field-name-field-how-to-items .field-items .field-item').each(function(index) {
+        $(this).attr({role: 'listitem'});
+      });
+    }
+  };
 
   /**
    * Activate "keynav" mode, to better highlight tab focus, and to do not display outline on click (when off)
@@ -335,5 +351,38 @@
       }
     }
   };
+
+  /**
+ * Wrap tables in responsive div
+ */
+Drupal.behaviors.psaResponsiveTables = {
+  attach: function(context, settings) {
+
+    // Create the wrapper div
+    $('#main table').each(function(index) {
+      $(this).wrap( '<div class="table-responsive"></div>' );
+    });
+
+    // Resizing the window adds or removes table wrapper class
+    $( window ).resize(function() {
+
+    // Get the width of the wrapper
+    var containerWidth = $('.table-responsive').innerWidth();
+
+      $('#main table').each(function() {
+        $(this).parent().removeClass('large, small') ;
+          // Get the width of the table and add a class depending on the size
+          var tableWidth = $(this).width();
+          // console.log(containerWidth);
+          // console.log(tableWidth);
+          if (tableWidth < containerWidth) {
+              $(this).parent().addClass('large');
+          } else {
+              $(this).parent().addClass('small');
+          }
+      });
+    });
+  }
+};
 
 })(jQuery, Drupal, this, this.document);

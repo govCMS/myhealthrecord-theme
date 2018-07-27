@@ -44,11 +44,41 @@
       }
     }
   }
+  .view-related-how-to-s-videos .item-list ul li.views-row h2 {
+    margin-bottom: 0;
+    a {
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
   #block-views-related-topic-block {
     margin-bottom: 0;
   }
   @include to(medium) {
     max-width: none !important;
+  }
+}
+
+//specific to how to page
+.node-type-how-to-page {
+  .region-sidebar-second {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 350px;
+    #block-views-how-to-sibilings-block-1 {
+      background: white;
+      padding: rem(25) rem(25) 0;
+      box-shadow: 0px 0px 80px 0px rgba(black, 0.1);
+      border-radius: 3px;
+      max-width: 350px;
+    }
+    #block-views-related-how-to-s-videos-block {
+      padding: rem(25) rem(25) 0;
+      max-width: 350px;
+    }
   }
 }
 

@@ -1,0 +1,28 @@
+// Basic card styling for events.
+.view-events .item-list ul {
+  margin: 0;
+}
+#content .view-events .views-row {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+// .view-events .item-list .views-row {
+//   cursor: pointer;
+//   border: 1px solid $gray-lighter;
+//   border-radius: 6px;
+//   overflow: hidden;
+//   padding: 0;
+//   transition: 0.2s ease all;
+//   a {
+//     text-decoration: none;
+//     border: 0;
+//   }
+//   &:hover, &:active, &:focus {
+//     transform: translateY(-5px);
+//     box-shadow: 0 10px 50px -10px rgba(black, 0.1);
+//     .field-name-field-video-resource .content::before {
+//       transform: translate(-50%, -50%) scale(1.2);
+//     }
+//   }
+// }

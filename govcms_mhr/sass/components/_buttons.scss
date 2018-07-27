@@ -14,26 +14,29 @@ a, a:visited {
     text-decoration: none;
   }
 }
-.btn-primary {
+.btn-primary,
+a.button  {
   background: $blue-light url(../images/arrow-right-2.svg) no-repeat center right 20px;
   color: $white !important;
   font-weight: $text-weight-light;
-  &:hover {
-    background-color: darken( $blue-light, 10% );
+  &:hover, &:focus, &:active {
+    background: darken( $blue-light, 10% ) url(../images/arrow-right-2.svg) no-repeat center right 20px;
+    background-size: 10px 10px;
   }
 }
 .btn-secondary {
-  background: $white url(../images/arrow-right-1.png) no-repeat center right 20px;
-  background-size: rem(15) !important;
+  background: $white url(../images/arrow-right-1.svg) no-repeat center right 20px;
+  background-size: rem(15) rem(15) !important;
   border: 1px solid $gray-light;
   color: $text-color-link!important;
   font-weight: $text-weight-regular;
-  &:hover {
+  &:hover, &:focus, &:active {
     background-color: darken( $white, 10% );
   }
 }
-.btn {
-  background-size: 10px;
+.btn,
+a.button {
+  background-size: 10px 10px;
   border-radius: 32px;
   box-shadow: none;
   display: inline-block;
@@ -47,6 +50,9 @@ a, a:visited {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
    /* IE10+ specific styles go here */
    background-size: 60px;
-   background-position-x: right;
+   background-position-x: right 20px;
   }
+}
+a.button  {
+  font-weight: $text-weight-bold;
 }

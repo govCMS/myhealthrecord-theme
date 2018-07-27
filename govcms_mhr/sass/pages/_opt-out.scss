@@ -26,7 +26,8 @@
   background-position: right 0 bottom 0;
   background-size: 332px 176px;
   background-color: white;
-  width: 422px;
+  width: 100%;
+  max-width: 422px;
   h3 {
     font-size: 1rem;
     margin: 0;
@@ -102,7 +103,7 @@
 }
 
 .sidebar-second #content a.btn {
-  background-size: 10px;
+  background-size: 10px 10px;
   border-radius: 32px;
   box-shadow: none;
   display: inline-block;
@@ -112,9 +113,10 @@
   transition: background-color .2s ease-out;
 
   &.btn-primary {
-    background-color: #007dbc;
-    color: #FFFFFF !important;
-    font-weight: 300;
+    background-color: $blue-light;
+    &:hover {
+      background-color: darken( $blue-light, 10% );
+    }
   }
 }
 
