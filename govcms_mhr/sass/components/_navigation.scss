@@ -72,7 +72,7 @@
       padding: 0;
       right: 330px;
     }
-    @include to(medium) {
+    @media (max-width: 830px) {
       display: none;
     }
   }

@@ -1054,7 +1054,7 @@ span.menu-collapser:hover {
     right: 330px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   #navigation-content .region-navigation #block-block-14,
   #navigation-content .region-navigation #block-block-16,
   #navigation-content .region-navigation #block-locale-language {
