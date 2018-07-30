@@ -161,3 +161,36 @@
     }
   }
 }
+
+// Related media section styling.
+#block-ds-extras-more-like-this-news,
+#block-ds-extras-more-like-this {
+  .field-type-entityreference {
+    .field-items {
+      margin: 0;
+    }
+  }
+  margin-top: 4rem;
+  .block__title {
+    margin-bottom: rem(20);
+  }
+  .field-type-entityreference > .field-items > .field-item {
+    display: inline-block;
+    margin: 0 3% 3.5% 0;
+    vertical-align: top;
+    width: 48%;
+    &:nth-child(2n+2) {
+      margin: 0 0 3.5% 0;
+    }
+    .file .content {
+      padding-top: 0;
+    }
+    img {
+      width: 100%;
+    }
+    @include to(small) {
+      margin: 0 0 4% 0;
+      width: 100%;
+    }
+  }
+}
