@@ -2196,7 +2196,7 @@ span.file-size {
   padding: 0 1rem 1rem 1rem;
 }
 
-.node-video-content.node-promoted.view-mode-full .field-name-title {
+.node-video-content.view-mode-full .field-name-title {
   background-color: #FFFFFF;
   border-radius: 5px;
   padding: 15px;
@@ -2207,7 +2207,7 @@ span.file-size {
   margin: -45px auto 3rem auto;
   font-size: 1rem;
 }
-.node-video-content.node-promoted.view-mode-full .field-name-title .field-item > * {
+.node-video-content.view-mode-full .field-name-title .field-item > * {
   margin: 0;
 }
 
