@@ -198,6 +198,8 @@ function govcms_mhr_preprocess_node(&$variables, $hook) {
   if (function_exists($function)) {
     $function($variables, $hook);
   }
+
+/*
   // Add addthis widget script, to every node (still needs to hook the container for placement)
   drupal_add_js('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b3afda82b800d73', array(
     'type' => 'external',
@@ -206,6 +208,7 @@ function govcms_mhr_preprocess_node(&$variables, $hook) {
     // 'every_page' => TRUE,
     // 'weight' => -1,
   ));
+*/
 
   // Only on Cards or Compacts...
   if ($variables['view_mode'] == 'card' || $variables['view_mode'] == 'compact') {
