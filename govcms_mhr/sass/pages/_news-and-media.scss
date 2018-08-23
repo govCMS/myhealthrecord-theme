@@ -45,6 +45,22 @@
       padding: 1rem;
       border-radius: 3px;
     }
+    .views-field.views-field-title {
+      a {
+        line-height: 20px;
+        &:after {
+          transition: .2s ease all;
+          @extend %link-internal__icon;
+          transform: translateX(0);
+          -ms-transform: translateX(0);
+        }
+        &:hover {
+          &:after {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
     .block .block__content li a:hover {
       background: transparent;
     }
@@ -160,7 +176,9 @@
 }
 
 // News and media event content page.
-.node-type-event .field-name-field-news-date,
-.node-type-event .field-name-field-location {
-  margin-bottom: rem(20);
+.node-type-event .field.field-label-inline {
+  margin-bottom: rem(5);
+  .field-label {
+    width: 120px;
+  }
 }

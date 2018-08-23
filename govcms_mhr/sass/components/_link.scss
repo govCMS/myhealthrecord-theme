@@ -37,12 +37,24 @@ span.mailto {
   width: 15px;
 }
 %link-internal__icon {
-  content: url('../images/arrow-right-1.svg');
+  content: '';
+  background-image: url('../images/arrow-right-1.svg');
+  background-size: 1.25rem 1.25rem;
+  background-repeat: no-repeat;
   vertical-align: middle;
   display: inline-block;
   padding-left: .25rem;
   height: auto;
   width: 1.25rem;
+  position: absolute;
+  padding-bottom: 10%;
+
+  // content: url('../images/arrow-right-1.svg');
+  // vertical-align: middle;
+  // display: inline-block;
+  // padding-left: .25rem;
+  // height: auto;
+  // width: 1.25rem;
 }
 .link-external, %link-external {
   &:after {

@@ -2,7 +2,8 @@
  * no-sidebar layout
  */
 
-.no-sidebars {
+.no-sidebars,
+.node-type-event {
 .inner-wrapper {
   max-width: 1200px;
   margin: auto;
@@ -44,6 +45,76 @@
     padding: 0 rem(25);
     @include to(medium) {
      width: 100%;
+    }
+  }
+}
+
+// Layout for Media releases.
+.no-sidebars.node-type-event,
+.no-sidebars.events-page {
+  .region-highlighted {
+    width: 100%;
+    padding: 0 rem(25);
+    margin: -3rem auto 0 auto;
+    @include from(xlarge) {
+      max-width: 1350px;
+    }
+  }
+  #main #content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #block-views-events-block .view-events .view-content {
+/*    width: 90%;
+    padding: 0 rem(25);
+    margin: 0 5%;
+    @include to(medium) {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+    }*/
+  }
+}
+
+// Layout for Event node.
+.no-sidebars.node-type-event {
+  .region-highlighted {
+    max-width: 1200px;
+    margin: -3rem auto 0;
+    width: 100%;
+    @include from(xlarge) {
+      max-width: 1200px;
+    }
+  }
+  #content {
+    max-width: 90%;
+    .node-event.view-mode-full,
+    #block-ds-extras-event-details  {
+      @include from(large) {
+        padding: 0 rem(25);
+      }
+      display: inline-block;
+      vertical-align: top;
+    }
+    #block-ds-extras-event-details  {
+      @include to(medium) {
+        box-shadow: 0 10px 90px -12px rgba(black, 0.2);
+        padding: 2rem;
+      }
+    }
+    .node-event.view-mode-full {
+      padding-left: 0;
+      width: 65%;
+    }
+    #block-ds-extras-event-details {
+      width: 34%;
+    }
+    @include to(medium) {
+      width: 100%;
+      .node-event.view-mode-full,
+      #block-ds-extras-event-details  {
+        width: 100%;
+      }
     }
   }
 }

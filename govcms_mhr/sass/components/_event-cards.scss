@@ -2,27 +2,369 @@
 .view-events .item-list ul {
   margin: 0;
 }
-#content .view-events .views-row {
-  margin: 0;
-  padding: 0;
-  border: none;
+
+#page #content .view-events .views-row,
+.no-sidebars.events-page .region-highlighted,
+.section-news-and-media #block-views-events-block-1 {
+  .node-event {
+    display: flex;
+    position: relative;
+  }
+  .group-date {
+    position: absolute;
+    height: 6rem;
+    width: 10rem;
+    z-index: 1;
+    text-align: center;
+    > .field-name-field-event-date {
+      font-family: $text-content-serif;
+      font-weight: $text-weight-regular;
+      font-size: 0;
+      line-height: 1.25;
+      position: relative;
+      span {
+        font-size: 1.5rem;
+      }
+      .field-item {
+        display: inline-block;
+      }
+      .date-display-end {
+        margin-left: 0.5rem;
+        border-left: solid 1px;
+        padding-left: 0.5rem;
+      }
+    }
+    .field-name-month {
+      font-size: 0;
+      color: $gray;
+      span {
+        font-size: 0.8rem;
+      }
+      .date-display-end {
+        margin-left: 10px;
+      }
+      .field-name-field-event-date .field-item {
+        display: inline-block;
+      }
+    }
+    .field-name-field-event-date .field-item.odd {
+      margin-left: 0.5rem;
+    }
+  }
+  .group-centre {
+    background: white;
+    padding: 2rem;
+    position: relative;
+    .field-name-field-location .field-item > * {
+      display: block;
+    }
+  }
+  article.view-mode-card {
+    background: white;
+    border: 0;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background: $red url(../images/icon-tickets.svg) no-repeat;
+      background-size: 60px;
+      background-position: center right 25%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
-// .view-events .item-list .views-row {
-//   cursor: pointer;
-//   border: 1px solid $gray-lighter;
-//   border-radius: 6px;
-//   overflow: hidden;
-//   padding: 0;
-//   transition: 0.2s ease all;
-//   a {
-//     text-decoration: none;
-//     border: 0;
-//   }
-//   &:hover, &:active, &:focus {
-//     transform: translateY(-5px);
-//     box-shadow: 0 10px 50px -10px rgba(black, 0.1);
-//     .field-name-field-video-resource .content::before {
-//       transform: translate(-50%, -50%) scale(1.2);
-//     }
-//   }
-// }
+
+//Event node page feature card Styling
+.no-sidebars.node-type-event .region-highlighted .block-ds-extras {
+  max-height: rem(230);
+  margin: 0;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  .block{
+    margin: 0;
+  }
+}
+
+// Feature landing card styling.
+.no-sidebars.events-page .region-highlighted {
+  article.view-mode-card {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    box-shadow: 10px 20px 50px 0px rgba(black, 0.1);
+  }
+  .view-listing-unformatted,
+  .block-views {
+    margin: 0;
+  }
+  .group-date {
+    right: 0;
+    top: 0;
+    background: url(../images/small-curve.svg) no-repeat;
+    background-position-x: 1px;
+    background-size: 10rem;
+    padding: .5rem .5rem 1rem 3.5rem;
+    position: absolute;
+  }
+  .group-centre {
+    width: 40%;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url(../images/large-curve.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -415px;
+      top: 0;
+      width: 418px;
+      background-position: top left;
+      bottom: -1px;
+    }
+    h2 {
+      font-size: rem(26);
+    }
+    .field-name-node-link a {
+      @extend .button;
+      background: $gray-lightest url(../images/arrow-right-1.svg) no-repeat center right 20px;
+      background-size: rem(15) rem(15) !important;
+      border: 0;
+      color: $text-color-link!important;
+      font-weight: $text-weight-regular;
+      &:hover, &:focus, &:active {
+        background: darken( $white, 10% ) url(../images/arrow-right-1.svg) no-repeat center right 20px;
+        background-size: rem(15) rem(15) !important;
+      }
+      margin-top: 20px;
+    }
+  }
+  .field-name-field-event-image {
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    right: 0;
+    background: $gray-light;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.95;
+      border: solid 1px $gray-lightest;
+      @include to(large) {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+// Main body cards
+#page #content .view-events .views-row {
+  border: none;
+  position: relative;
+  .group-date  {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    margin-left: 12px;
+    margin-top: 7px;
+    &::before {
+      left: -12px;
+      top: -7px;
+      position: absolute;
+      content: "";
+      background: url(../images/small-curve-grey-2.svg) no-repeat;
+      background-size: contain;
+      display: block;
+      height: 4.4rem;
+      width: 11rem;
+    }
+    & > .field-name-field-event-date {
+      min-width: 60px;
+    }
+    * {
+      position: relative;
+    }
+  }
+  .group-centre {
+    padding: 2rem 2rem 2rem 8rem;
+    width: calc(100% - 12rem);
+    .field-name-title {
+      padding: 0;
+    }
+  }
+  .field-name-field-event-image {
+    z-index: 1;
+    height: 7rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background: $gray-lightest;
+    img {
+      max-width: none;
+      max-height: 100%;
+      max-height: 7rem;
+      min-width: 100%;
+      opacity: 0.95;
+      border: solid 1px $gray-lightest;
+    }
+  }
+  .field-name-node-link {
+    display: none; // TODO: remove in drupal
+  }
+  article.view-mode-card {
+    box-shadow: 0 10px 90px -12px rgba(black, 0.2);
+    &::before {
+      background: $orange-light url(../images/icon-tickets.svg) no-repeat;
+      background-size: 40px;
+      background-position: center;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 7rem;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10rem;
+    }
+  }
+  &:nth-child(3n+2) {
+    article.view-mode-card::before {
+      background-color: $orange-dark;
+    }
+  }
+  &:nth-child(3n) {
+    article.view-mode-card::before {
+      background-color: $red;
+    }
+  }
+}
+@include to(large) {
+  .no-sidebars.events-page .region-highlighted {
+    .group-centre {
+      width: 60%;
+      &::after {
+        display: none;
+      }
+    }
+    .field-name-field-event-image {
+      width: 40%;
+    }
+  }
+}
+@include to(small) {
+  #page #content .view-events .views-row,
+  .no-sidebars.events-page .region-highlighted {
+    .group-date  {
+      right: auto;
+      left: 0;
+      top: 0;
+      background: url(../images/small-curve-grey.svg) no-repeat;
+      background-size: contain;
+      // padding: .5rem 3.5rem 1rem .5rem;
+      padding: .5rem 6.4rem 1rem 0rem;
+      height: 75px;
+      min-width: 190px;
+    }
+    .group-centre {
+      background: transparent;
+      width: 100%;
+      padding: 5.5rem 2rem 2rem 1rem;
+    }
+    .field-name-field-event-image {
+      display: none;
+    }
+    article.view-mode-card::before {
+      background-size: 0;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 0;
+      transform: inherit;
+    }
+  }
+}
+
+//compact events
+#page .sidebars .view-events {
+  .view-mode-compact {
+    .group-date  {
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      margin-left: 12px;
+      margin-top: 7px;
+      &::before {
+        left: -12px;
+        top: -7px;
+        position: absolute;
+        content: "";
+        background: url(../images/small-curve-grey-2.svg) no-repeat;
+        background-size: contain;
+        display: block;
+        height: 4.4rem;
+        width: 11rem;
+      }
+      * {
+        position: relative;
+      }
+    }
+    .group-centre {
+      padding: 5rem 1rem 0;
+      width: 100%;
+      .field-name-title {
+        padding: 1rem 0 0 0;
+        h2 {
+          margin-bottom: 5px;
+        }
+      }
+      .field-name-node-link {
+        text-align: right;
+      }
+    }
+  }
+  .item-list .views-row {
+    padding: 0 0 1rem 0;
+  }
+}
+
+// even
+
+.node-type-event {
+  #block-ds-extras-event-details {
+    @include to(medium) {
+      position: relative;
+      top: -90px;
+      background: white;
+      border-radius: 10px;
+    }
+    .field-name-field-event-date, .field-name-field-location {
+      font-size: 16px;
+    }
+  }
+  @include from(large) {
+    .node-event.view-mode-full {
+      float: left;
+    }
+  }
+}

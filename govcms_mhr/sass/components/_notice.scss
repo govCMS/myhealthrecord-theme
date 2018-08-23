@@ -1,0 +1,11 @@
+.notice {
+  background-color: $gray-lightest;
+  border-left: solid 5px $orange-dark;
+  padding: 30px 45px;
+  margin-bottom: 20px;
+  &.notice-title {
+    padding-bottom: 0;
+    @extend h3;
+    margin: 0;
+  }
+}

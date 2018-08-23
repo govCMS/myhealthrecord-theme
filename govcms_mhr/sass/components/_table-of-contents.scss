@@ -1,0 +1,13 @@
+.toc-filter div.toc-filter-content {
+  background-color: $gray-lightest;
+  border-left: solid 5px $blue-darkest;
+  border-radius: 3px;
+}
+
+.div.toc-filter-back-to-top {
+  margin: 1em 0 3em;
+}
+
+div.toc-filter-back-to-top a:link, div.toc-filter-back-to-top a:visited {
+  margin-top: 1em;
+}

@@ -1,0 +1,62 @@
+body.events-page {
+  background-color: lighten($gray-lightest, 10%);
+  #main {
+    padding-top: 1rem;
+  }
+  #edit-field-location-locality-wrapper {
+    display: none; // TODO: hide properly in drupal.
+  }
+  .view-filters {
+    margin: 0 0 2rem 0;
+  }
+  .views-exposed-widget.views-widget-sort-by {
+    display: none;
+  }
+  .views-submit-button {
+    padding: 1em 1em 0 0;
+    #edit-submit-events {
+      border: 1px solid $gray-lighter;
+      color: white !important;
+      background: $text-color-link url("../images/arrow-right-3.svg") no-repeat right 20px center;
+      &:hover, &:focus, &:active {
+        cursor: pointer;
+        background-color: lighten($text-color-link,10%);
+      }
+    }
+  }
+  .views-submit-button,
+  .views-reset-button {
+    padding: 1em 1em 0 0;
+    #edit-submit-events,
+    #edit-reset {
+      margin-top: 1.6em;
+      padding: rem(11) rem(35) rem(11) rem(15);
+    }
+  }
+  @include to(large) {
+    .views-submit-button {
+      clear: left;
+    }
+  }
+}
+
+.node-type-event #header-content .inner-wrapper {
+  padding-bottom: 20px;
+}
+.page-node.node-type-event {
+  .field-name-field-event-image {
+    margin-top: -90px;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .field-name-body {
+    margin-top: 1rem;
+  }
+  .field-type-list-text {
+    li {
+      list-style: none;
+    }
+  }
+}

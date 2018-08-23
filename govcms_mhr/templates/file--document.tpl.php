@@ -68,6 +68,7 @@
  * @ingroup themeable
  */
 ?>
+
 <div id="<?php print $id; ?>" class="<?php print $classes ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
@@ -75,10 +76,6 @@
     <h3<?php print $title_attributes; ?>><a href="<?php print $file_url; ?>"><?php print $label; ?></a></h3>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
-
-  <?php if ($image_comment): ?>
-  <?php print render($image_comment); ?>
-  <?php endif; ?>
 
   <?php if ($display_submitted): ?>
     <div class="submitted">

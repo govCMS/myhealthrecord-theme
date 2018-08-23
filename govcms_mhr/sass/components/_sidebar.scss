@@ -68,7 +68,7 @@
     box-shadow: none;
     border-radius: 0;
     max-width: 350px;
-    #block-views-how-to-sibilings-block-1 {
+    #block-views-how-to-sibilings-block-1, #block-views-related-topic-block, #block-menu-block-2 {
       background: white;
       padding: rem(25) rem(25) 0;
       box-shadow: 0px 0px 80px 0px rgba(black, 0.1);
@@ -78,6 +78,9 @@
     #block-views-related-how-to-s-videos-block {
       padding: rem(25) rem(25) 0;
       max-width: 350px;
+      .field-name-field-news-image a {
+        margin: -15px;
+      }
     }
   }
 }

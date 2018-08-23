@@ -43,6 +43,7 @@
 @import "components/languages";
 @import "components/link";
 @import "components/media-cards";
+@import "components/media-details";
 @import "components/event-cards";
 @import "components/media-release";
 @import "components/readspeaker";
@@ -51,11 +52,14 @@
 @import "components/table";
 @import "components/translations";
 @import "components/social-share";
+@import "components/table-of-contents";
+@import "components/notice";
 
 // ----- Pages ----- //
 @import "pages/home";
 @import "pages/landing-page";
 @import "pages/content-page";
+@import "pages/events";
 @import "pages/maintenance-page";
 @import "pages/glossary";
 @import "pages/site-map";

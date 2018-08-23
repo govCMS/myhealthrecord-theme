@@ -40,7 +40,8 @@
 // Card styling for media.
 #page #content article.view-mode-card,
 #page .region-content-bottom article.view-mode-card,
-#page .sidebars .view-related-how-to-s-videos article.view-mode-card {
+#page .sidebars .view-related-how-to-s-videos article.view-mode-card,
+#page .sidebars .view-events .view-mode-compact {
   .field-name-title .field-item > * {
     font-weight: bold;
     font-size: rem(20);

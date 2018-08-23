@@ -78,3 +78,8 @@ body {
   #hidden-region {
   display: none;
 }
+
+// Hide TOC / Back to top links
+a.toc-filter-processed[href="#top"] {
+  display: none !important;
+}

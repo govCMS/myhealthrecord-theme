@@ -4,7 +4,8 @@
     #edit-reset,
     #edit-submit-stakeholder-materials-listing,
     #edit-submit-stakeholder-view {
-      padding: 8px 40px;
+      padding: 10px 40px 10px 30px;
+      margin-top: 33px;
       white-space: nowrap;
       font-size: 14px;
     }
@@ -28,12 +29,17 @@
       border-bottom: 1px solid $gray-lighter;
     }
 
+    th.views-field-field-thumbnail {
+      min-width: 120px;
+    }
+
     td {
       padding-bottom: 3rem;
 
       a {
         color: $blue;
         font-weight: $text-weight-bold;
+        word-break: normal;
       }
     }
 

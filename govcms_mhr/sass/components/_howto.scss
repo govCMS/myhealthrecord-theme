@@ -174,11 +174,11 @@
 				bottom: 0;
 				right: 0;
 			}
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 50px -10px rgba(black, 0.1);
-      }
 		}
+	}
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 50px -10px rgba(black, 0.1);
 	}
 	@include to(large) {
 		width: 48%;
