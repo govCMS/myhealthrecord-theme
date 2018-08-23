@@ -302,6 +302,15 @@ function govcms_mhr_preprocess_region(&$variables, $hook) {
  */
 function govcms_mhr_preprocess_block(&$variables, $hook) {
 
+  // Process ACSF site path in blocks. See functions below
+  if ($variables['elements']['#block']->module == 'block' && !empty($variables['elements']['#markup'])) {
+    $content = $variables['elements']['#markup'];
+     // Fix the ACSF site path.
+    $content = _govcms_mhr_acsfix_path($content);
+     // Apply tokens to body field.
+    $variables['content'] = token_replace($content);
+  }
+
   // Readspeaker plugin button
   if ($variables['block_html_id'] == 'block-bean-readspeaker-button') {
     $current_path = urlencode($_SERVER['HTTP_HOST'] . request_uri());
@@ -436,14 +445,13 @@ function govcms_mhr_preprocess_search_api_page_result(&$variables) {
     }
   }
   $variables['bredcrumbs'] = $bredcrumbs;
-
   // Make headings for resuts accessible
   // $variables['snippet'] = filter_xss($variables['snippet'], $allowed_tags = array('strong', 'p', 'br', 'em'));
   $variables['snippet'] = preg_replace('/<h[1-3]>(.*?)<\/h[1-3]>/', '<h4>$1</h4>', $variables['snippet']);
 }
 
 /**
- * Addition to an existing iglossary view of taxonomy term, grouping by first letter,
+ * Addition to an existing glossary view of taxonomy term, grouping by first letter,
  * This snippet only deal with converting the grouping rendered output uppecase,
  * otherwise lowercase and uppercase will be interpreted as different value (A!=a).
  * Taken from https://drupal.stackexchange.com/questions/84120/views-grouping-rows-case-sensitive-i-need-to-ignore-case#answer-95173
@@ -464,4 +472,81 @@ function govcms_mhr_views_pre_render(&$view) {
       $result->glossary_initial_upper = strtoupper($result->taxonomy_term_data_name);
     }
   }
+}
+
+/**
+ * ******* Fix ACSF site paths issue *******
+ * modified from https://github.com/govCMS/govcms-theme/commit/1281634e9dc185592324ebbb81a693eef80c7164
+ * Replace the AcquiaCloudSiteFactory themes reference in the blocks content (@see preprocess_block)
+ * with the current one, using per-clone configuration. It checks for local settings as well.
+ * Body field for nodes is currently disabled.
+ **/
+
+/**
+* Preprocess the field.
+*
+* @param $vars
+*/
+/*
+function govcms_mhr_preprocess_field(&$vars) {
+  $function = 'govcms_mhr_preprocess_field__' . $vars['element']['#field_name'];
+  if (function_exists($function)) {
+    $function($vars);
+  }
+}
+*/
+
+/**
+* Preprocess the body field.
+*
+* @param $vars
+*/
+/*
+function govcms_mhr_preprocess_field__body(&$vars) {
+ // Process ACSF site path.
+  if (!empty($vars['items'][0]['#markup'])) {
+   $content = $vars['items'][0]['#markup'];
+    // Fix the ACSF site path.
+   $content = _govcms_mhr_acsfix_path($content);
+    // Apply tokens to body field.
+   $vars['items'][0]['#markup'] = token_replace($content);
+  }
+}
+*/
+
+/**
+* Check the ACSF path.
+*
+* @param $text
+*
+* @return mixed
+*/
+function _govcms_mhr_acsfix_path($text) {
+  // Return the text as quick as possible.
+  if (false === strpos($text, 'sites/g/files/net')) {
+    return $text;
+  }
+  // Find all ACSF links in $content.
+  preg_match_all('@/sites/g/files/(net[a-zA-Z0-9]+)/themes/site/@', $text, $matches);
+  // Return the text if no matches.
+  if (empty($matches) || !isset($matches[0])) {
+    return $text;
+  }
+  // Get ACSF net paths.
+  $ascf_paths = $matches[0];
+  // Replace the paths to current site path.
+  $text = str_replace($ascf_paths, _govcms_mhr_file_path(), $text);
+  return $text;
+}
+
+/**
+* Return the current Drupal site file paths.
+*/
+function _govcms_mhr_file_path() {
+  $conf_path = conf_path(); // On ACSF returns 'sites/g/files/netXXXX'
+  if ( $conf_path == 'sites/default') {
+    // Local env
+    return '/sites/all/themes/';
+  }
+  return '/' . conf_path() . '/themes/site/';
 }
