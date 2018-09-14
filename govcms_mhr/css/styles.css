@@ -2740,16 +2740,19 @@ span.file-size {
   }
 }
 @media (max-width: 575px) {
-  #page #content .view-events .views-row .group-date,
-  .no-sidebars.events-page .region-highlighted .group-date {
-    right: auto;
-    left: 0;
-    top: 0;
-    background: url(../images/small-curve-grey.svg) no-repeat;
-    background-size: contain;
-    padding: .5rem 6.4rem 1rem 0rem;
-    height: 75px;
-    min-width: 190px;
+  #page #content .view-events .views-row,
+  .no-sidebars.events-page .region-highlighted {
+    /*    .group-date  {
+          right: auto;
+          left: 0;
+          top: 0;
+          background: url(../images/small-curve-grey.svg) no-repeat;
+          background-size: contain;
+          // padding: .5rem 3.5rem 1rem .5rem;
+          padding: .5rem 6.4rem 1rem 0rem;
+          height: 75px;
+          min-width: 190px;
+        }*/
   }
   #page #content .view-events .views-row .group-centre,
   .no-sidebars.events-page .region-highlighted .group-centre {
@@ -3458,19 +3461,19 @@ span.file-size {
   transform: translateX(5px);
 }
 
-.node-type-news-article article img {
+.node-type-news-article img {
   max-height: 450px;
   padding-bottom: 20px;
 }
-.node-type-news-article article .field-name-field-news-date {
+.node-type-news-article .field-name-field-news-date {
   padding: 25px 0 15px;
   color: #7C7C7C;
 }
-.node-type-news-article article .field-name-field-author {
+.node-type-news-article .field-name-field-author {
   font-style: italic;
   margin-bottom: 1rem;
 }
-.node-type-news-article article .file img.file-icon {
+.node-type-news-article .file img.file-icon {
   padding-bottom: 0;
 }
 
@@ -5702,7 +5705,6 @@ body.events-page .views-reset-button #edit-reset {
 .node-type-event .field-name-field-location .field-item .street-block > *,
 .news-media-page .region-sidebar-second .view-events article .field-name-field-location .field-item > *,
 .news-media-page .region-sidebar-second .view-events article .field-name-field-location .field-item .street-block > * {
-  display: inline;
   position: relative;
 }
 .node-type-event .field-name-field-location .street-block .thoroughfare,
