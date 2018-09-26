@@ -632,6 +632,9 @@ body.cke_editable ul li li li,
   border-bottom: none;
   margin: 0 0 10px;
   padding: 0;
+  overflow: hidden;
+  text-indent: -9000px;
+  display: block;
 }
 #header-content .breadcrumb li a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

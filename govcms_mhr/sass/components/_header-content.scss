@@ -30,6 +30,7 @@
     li:last-of-type {
       color: rgba(black,.5);
     }
+    @include hide-text; // @TODO breadcrumbs are only temporarily being hidden
   }
   h1 {
     color: $black;
