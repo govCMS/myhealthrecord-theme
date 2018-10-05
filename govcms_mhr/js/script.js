@@ -328,7 +328,7 @@
       $('#edit-keys-1').attr("tabindex","5");
       $('#block-block-12 a').attr("tabindex","6");
       $('#block-bean-readspeaker-button a').attr("tabindex","6");
-      $('select.tinynav').attr("tabindex","7");
+      $('select.tinynav').attr("tabindex","-1");
     }
   };
 
@@ -384,5 +384,51 @@ Drupal.behaviors.psaResponsiveTables = {
     });
   }
 };
+
+/*
+ * Add a button to language selector
+ */
+  Drupal.behaviors.mhrLanguageButton = {
+    attach: function(context, settings) {
+      // Create the button
+      $('#block-block-14, #block-block-16, #block-locale-language').prepend( '<a href="/node/1141" title="Information in your language" tabindex="7" class="button-language">Information in your language</a>' );
+    }
+  };    
+
+/*
+ * Update the html language attribute for non-english content pages
+ */
+  Drupal.behaviors.mhrContentLanguage = {
+    attach: function(context, settings) {
+      // variables for content language
+      var languages = [
+        {name:"Arabic", metaTag:'[content="ar"]', lang:"ar"},
+        {name:"Chinese", metaTag:'[content="zh-Hans"]', lang:"zh-Hans"}, //chinense-simplified
+        {name:"Croatian", metaTag:'[content="hr"]', lang:"hr"},
+        {name:"Greek", metaTag:'[content="el"]', lang:"el"},
+        {name:"Hindi", metaTag:'[content="hi"]', lang:"hi"},
+        {name:"Italian", metaTag:'[content="it"]', lang:"it"},
+        {name:"Japanese", metaTag:'[content="ja"]', lang:"ja"},
+        {name:"Korean", metaTag:'[content="ko"]', lang:"ko"},
+        {name:"Macedonian", metaTag:'[content="mk"]', lang:"mk"},
+        {name:"Persian", metaTag:'[content="fa"]', lang:"fa"},
+        {name:"Punjabi", metaTag:'[content="pa"]', lang:"pa"},
+        {name:"Russian", metaTag:'[content="ru"]', lang:"ru"},
+        {name:"Serbian", metaTag:'[content="sr"]', lang:"sr"},
+        {name:"Spanish", metaTag:'[content="es"]', lang:"es"},
+        {name:"Thai", metaTag:'[content="th"]', lang:"th"},
+        {name:"Turkish", metaTag:'[content="tr"]', lang:"tr"},
+        {name:"Vietnamese", metaTag:'[content="vi"]', lang:"vi"}
+      ]
+
+      $.each(languages, function(index, lang) {
+        // detect the language and update the html lang attribute
+        if ($('head').find(lang.metaTag).length > 0) {
+          $("html").attr('lang', lang.lang);
+        }        
+      });
+
+    }
+  };
 
 })(jQuery, Drupal, this, this.document);

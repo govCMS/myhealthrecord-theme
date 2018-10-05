@@ -670,11 +670,6 @@ body.cke_editable ul li li li,
   }
 }
 
-.style-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a,
-.section-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a {
-  font-weight: 700;
-  position: relative;
-}
 .style-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before,
 .section-consumer #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a:before {
   display: block;
@@ -726,13 +721,8 @@ body.cke_editable ul li li li,
   color: #FFFFFF;
 }
 
-.style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a,
-.section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a {
-  position: relative;
-  font-weight: 700;
-}
-.style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before,
-.section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before {
+.style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1.active > a:before,
+.section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1.active > a:before {
   display: block;
   position: absolute;
   content: "";
@@ -746,8 +736,8 @@ body.cke_editable ul li li li,
   background-size: 25px;
 }
 @media (max-width: 768px) {
-  .style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before,
-  .section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a:before {
+  .style-professional #block-superfish-1 .menu li.sf-item-2.sf-depth-1.active > a:before,
+  .section-health #block-superfish-1 .menu li.sf-item-2.sf-depth-1.active > a:before {
     display: none;
   }
 }
@@ -1535,6 +1525,12 @@ span.menu-collapser:hover {
   }
 }
 
+#block-superfish-1 .menu li.sf-depth-1 > a.active {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: -0.02rem !important;
+}
+
 .region-sidebar-second {
   background: white;
   padding: 1.5625rem 1.5625rem 0;
@@ -2066,22 +2062,20 @@ body.keynav #block-webform-client-block-114 form.webform-client-form .form-item-
   height: 1px;
   border: 0;
 }
-#block-block-14 .block__content,
-#block-block-16 .block__content,
-#block-locale-language .block__content {
-  margin-top: -30px;
-}
-#block-block-14::before,
-#block-block-16::before,
-#block-locale-language::before {
+#block-block-14 .button-language,
+#block-block-16 .button-language,
+#block-locale-language .button-language {
+  overflow: hidden;
+  text-indent: -9000px;
+  display: block;
   background-image: url(../images/globe.png);
   background-size: 20px 20px;
-  display: inline-block;
   width: 20px;
   height: 20px;
   content: "";
-  margin-left: -30px;
-  margin-top: 5px;
+  position: absolute;
+  top: 5px;
+  left: -30px;
 }
 
 span.ext {

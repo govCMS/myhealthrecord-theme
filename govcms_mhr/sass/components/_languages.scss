@@ -26,17 +26,18 @@
   label.tinynav_label {
     @include is-invisible;
   }
-  .block__content{
-    margin-top: -30px;
+  .block__content {
+    // margin-top: -30px;
   }
-  &::before {
+  .button-language {
+    @include hide-text;
     background-image: url(../images/globe.png);
     background-size: 20px 20px;
-    display: inline-block;
     width: 20px;
     height: 20px;
     content:"";
-    margin-left: -30px;
-    margin-top: 5px;
+    position: absolute;
+    top: 5px;
+    left: -30px;  
   }
 }

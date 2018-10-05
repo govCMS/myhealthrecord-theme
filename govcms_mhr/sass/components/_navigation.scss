@@ -396,3 +396,10 @@
     }
   }
 }
+
+// active state for first level menu
+#block-superfish-1 .menu li.sf-depth-1 > a.active {
+  position: relative;
+  font-weight: $text-weight-bold;
+  letter-spacing: -0.02rem !important; // this offsets the width change due to font weight changing
+}

@@ -30,7 +30,7 @@
     li:last-of-type {
       color: rgba(black,.5);
     }
-    @include hide-text; // @TODO breadcrumbs are only temporarily being hidden
+    @include hide-text; // @TODO breadcrumbs are only temporarily being hidden 
   }
   h1 {
     color: $black;
@@ -56,10 +56,7 @@
 // active state For you and your family
 .style-consumer,
 .section-consumer {
-// .section-for-you-your-family {
-  #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a {
-    font-weight: $text-weight-bold;
-    position: relative;
+  #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a { 
     &:before {
       display: block;
       position: absolute;
@@ -107,10 +104,7 @@
 // active state For healthcare professionals
 .style-professional,
 .section-health {
-// .section-for-healthcare-professionals {
-  #block-superfish-1 .menu li.sf-item-2.sf-depth-1 > a {
-    position: relative;
-    font-weight: $text-weight-bold;
+  #block-superfish-1 .menu li.sf-item-2.sf-depth-1.active > a {
     &:before {
       display: block;
       position: absolute;
