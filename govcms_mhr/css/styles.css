@@ -632,9 +632,6 @@ body.cke_editable ul li li li,
   border-bottom: none;
   margin: 0 0 10px;
   padding: 0;
-  overflow: hidden;
-  text-indent: -9000px;
-  display: block;
 }
 #header-content .breadcrumb li a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -2254,6 +2251,14 @@ span.file-size {
 #page .sidebars .view-related-how-to-s-videos .view-mode-compact:focus .field-name-field-video-resource .content::before {
   transform: translate(-50%, -50%) scale(1.2);
 }
+#page #content article.view-mode-card .field-type-text-with-summary,
+#page #content .view-mode-compact .field-type-text-with-summary,
+#page .region-content-bottom article.view-mode-card .field-type-text-with-summary,
+#page .region-content-bottom .view-mode-compact .field-type-text-with-summary,
+#page .sidebars .view-related-how-to-s-videos article.view-mode-card .field-type-text-with-summary,
+#page .sidebars .view-related-how-to-s-videos .view-mode-compact .field-type-text-with-summary {
+  cursor: default !important;
+}
 
 #content .view-news-and-media .item-list > ul,
 .view-consumer-landing-page-news .item-list > ul {
@@ -3618,6 +3623,148 @@ div.toc-filter-back-to-top a:link, div.toc-filter-back-to-top a:visited {
   margin: 0;
 }
 
+@media only screen and (min-width: 64em) {
+  a.sf-depth-2 {
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+
+  li.sf-depth-1 {
+    line-height: 1.4em !important;
+  }
+  li.sf-depth-1 > a {
+    margin-top: 40px !important;
+    padding-top: 35px !important;
+  }
+  li.sf-depth-1 > a:after {
+    top: 35px !important;
+  }
+
+  li.sf-depth-1 a:before {
+    background: none !important;
+  }
+  li.sf-depth-1 a:hover {
+    background: #f2f2f2 !important;
+  }
+  li.sf-depth-1 > ul {
+    border-top: solid 4px #ffa620 !important;
+  }
+  li.sf-depth-1:nth-child(1) > ul {
+    border-top: solid 4px #de2f11 !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul {
+    border-top: solid 4px #007fbf !important;
+  }
+
+  li.sf-depth-1.sfHover > a {
+    color: #000000 !important;
+    background: #ffa620 !important;
+  }
+  li.sf-depth-1.sfHover:nth-child(1) > a {
+    background: #de2f11 !important;
+    color: #ffffff !important;
+  }
+  li.sf-depth-1.sfHover:nth-child(2) > a {
+    background: #007fbf !important;
+    color: #ffffff !important;
+  }
+
+  li.sf-depth-1 > a:hover {
+    color: #000000 !important;
+    background: #ffa620 !important;
+  }
+  li.sf-depth-1:nth-child(1) > a:hover {
+    background: #de2f11 !important;
+    color: #ffffff !important;
+  }
+  li.sf-depth-1:nth-child(2) > a:hover {
+    background: #007fbf !important;
+    color: #ffffff !important;
+  }
+  li.sf-depth-1:nth-child(1) > a:hover:after {
+    content: url(../images/icon_arrow-down-white.svg) !important;
+  }
+  li.sf-depth-1:nth-child(2) > a:hover:after {
+    content: url(../images/icon_arrow-down-white.svg) !important;
+  }
+}
+/**
+ * Styles for megamenu. support up to 5 items
+ * You also need to specify the list which will have megamenu affect. In this case, they are the second and the fifth
+ */
+@media screen and (min-width: 64em) {
+  li.sf-depth-1 {
+    display: table-cell;
+  }
+
+  li.sf-depth-1:nth-child(2) li, li.sf-depth-1:nth-child(5) li {
+    display: table-cell !important;
+  }
+  li.sf-depth-1:nth-child(2) li li, li.sf-depth-1:nth-child(5) li li {
+    display: block !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul, li.sf-depth-1:nth-child(5) > ul {
+    position: absolute !important;
+    top: auto !important;
+    padding: 0 !important;
+    /* one item */
+    /* two items */
+    /* three items */
+    /* four items */
+    /* five items */
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2 {
+    display: inline-block !important;
+    vertical-align: top !important;
+    border-right: solid 1px #f2f2f2;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:last-child, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:last-child {
+    border-right: none !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2 li.sf-depth-3 a, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2 li.sf-depth-3 a {
+    font-size: 14px !important;
+    font-weight: normal !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2 a.sf-depth-2:after, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2 a.sf-depth-2:after {
+    content: url(../images/icon_arrow-down.svg) !important;
+    transform: translateY(10px) rotate(-90deg) !important;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px !important;
+    float: none !important;
+    display: inline-block !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2 ul, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2 ul {
+    width: 100% !important;
+    position: static !important;
+    visibility: visible !important;
+    display: block !important;
+    box-shadow: none !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(1), li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(1) {
+    width: 100% !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(2),
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(2) ~ li, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(2),
+  li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(2) ~ li {
+    width: 50% !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(3),
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(3) ~ li, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(3),
+  li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(3) ~ li {
+    width: 33.3333% !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(4),
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(4) ~ li, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(4),
+  li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(4) ~ li {
+    width: 25% !important;
+  }
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(5),
+  li.sf-depth-1:nth-child(2) > ul li.sf-depth-2:first-child:nth-last-child(5) ~ li, li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(5),
+  li.sf-depth-1:nth-child(5) > ul li.sf-depth-2:first-child:nth-last-child(5) ~ li {
+    width: 20% !important;
+  }
+}
 .pane-block {
   clear: both;
 }

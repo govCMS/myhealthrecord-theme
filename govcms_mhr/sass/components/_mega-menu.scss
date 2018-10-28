@@ -1,0 +1,152 @@
+// Update general styles
+@media only screen and (min-width: 64em) {      
+
+    a.sf-depth-2 {
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+    
+    li.sf-depth-1 {
+        line-height: 1.4em !important;
+        & > a{
+            margin-top: 40px !important;
+            padding-top: 35px !important;
+        }
+        & > a:after {
+            top: 35px !important;            
+        }        
+    }    
+      
+    li.sf-depth-1 {
+        & a:before {
+            background: none !important;
+        }
+        & a:hover {
+            background: #f2f2f2 !important;
+        }
+        & > ul {
+            border-top: solid 4px #ffa620 !important; 
+        }
+        &:nth-child(1) > ul {
+            border-top: solid 4px #de2f11 !important;
+        }
+        &:nth-child(2) > ul {
+            border-top: solid 4px #007fbf !important;
+        }            
+    }
+    li.sf-depth-1.sfHover {
+        & > a {
+            color: #000000 !important;
+            background: #ffa620 !important;
+        }        
+        &:nth-child(1) > a {
+            background: #de2f11 !important;
+            color: #ffffff !important;
+        }
+        &:nth-child(2) > a {
+            background:  #007fbf !important;
+            color: #ffffff !important;
+        }        
+    }
+
+    li.sf-depth-1 {
+        & > a:hover {
+            color: #000000 !important;
+            background: #ffa620 !important;
+        }        
+        &:nth-child(1) > a:hover {
+            background: #de2f11 !important;
+            color: #ffffff !important;
+        }
+        &:nth-child(2) > a:hover {
+            background:  #007fbf !important;
+            color: #ffffff !important;
+        } 
+        
+        &:nth-child(1) > a:hover:after {         
+            content: url(../images/icon_arrow-down-white.svg) !important;
+        }
+        &:nth-child(2) > a:hover:after {           
+            content: url(../images/icon_arrow-down-white.svg) !important;
+        } 
+    }
+}
+
+/**
+ * Styles for megamenu. support up to 5 items
+ * You also need to specify the list which will have megamenu affect. In this case, they are the second and the fifth
+ */
+@media screen and (min-width:64em)
+{
+    li.sf-depth-1 {
+        display: table-cell;
+    }
+
+    li.sf-depth-1:nth-child(2), li.sf-depth-1:nth-child(5)  {
+        & li {                                            
+            display: table-cell !important;                      
+            & li {
+                display: block !important;
+            }                   
+        }  
+
+        & > ul {
+            position: absolute !important;           
+            top: auto !important;
+            padding: 0 !important;
+            li.sf-depth-2 {
+                display: inline-block !important;
+                vertical-align:  top !important;
+                border-right: solid 1px #f2f2f2;                                   
+                &:last-child {
+                    border-right: none !important;
+                }          
+                & li.sf-depth-3 a {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                }
+                & a.sf-depth-2:after {
+                    content: url(../images/icon_arrow-down.svg) !important;
+                    transform: translateY(10px) rotate(-90deg) !important;                
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 2px !important;
+                    float: none !important;
+                    display: inline-block !important;
+                }                
+                
+                & ul {
+                    width: 100% !important;                    
+                    position: static !important;        
+                    visibility: visible !important;
+                    display: block !important;
+                    box-shadow: none !important;   
+                }
+            }
+            /* one item */
+            li.sf-depth-2:first-child:nth-last-child(1) {
+                width: 100% !important;
+            }            
+            /* two items */
+            li.sf-depth-2:first-child:nth-last-child(2),
+            li.sf-depth-2:first-child:nth-last-child(2) ~ li {
+                width: 50% !important;
+            }            
+            /* three items */
+            li.sf-depth-2:first-child:nth-last-child(3),
+            li.sf-depth-2:first-child:nth-last-child(3) ~ li {
+                width: 33.3333% !important; //could be 33.3333%
+            }            
+            /* four items */
+            li.sf-depth-2:first-child:nth-last-child(4),
+            li.sf-depth-2:first-child:nth-last-child(4) ~ li {
+                width: 25% !important;
+            }            
+            /* five items */
+            li.sf-depth-2:first-child:nth-last-child(5),
+            li.sf-depth-2:first-child:nth-last-child(5) ~ li {
+                width: 20% !important;
+            } 
+        }
+    }    
+}

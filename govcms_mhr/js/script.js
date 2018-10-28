@@ -13,6 +13,49 @@
 
 (function ($, Drupal, window, document, undefined) {
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
+ 
+  /**
+   * Trigger menu for specified menu item (the second and the fifth)
+   */
+  Drupal.behaviors.triggerMegaMenu = {
+    attach: function () {
+      
+      // This is 2 menu items that specified to have megamenu effect
+      var secondMenu = $('li.sf-depth-1:nth-child(2) > ul');
+      var fifthMenu = $('li.sf-depth-1:nth-child(5) > ul');     
+      
+      // Trigger megamenu style
+      function triggerMegaMenuStyle() {
+        var topMenuWidth = $('#block-superfish-1').width();
+        var topMenuPos = $('li.sf-depth-1:nth-child(2)').position().left - $('#block-superfish-1').position().left;
+        secondMenu.css({'width':topMenuWidth,'left':"-"+topMenuPos+"px"});
+        fifthMenu.css({'width':topMenuWidth,'left':topMenuPos});
+      }
+
+      // Reset megamenu style
+      function resetMegaMenuStyle() {      
+        secondMenu.css({'width':'16em','left':'auto'});
+        fifthMenu.css({'width':'16em','left':'auto'});
+      }
+
+      // On window load
+      $(window).load(function () {
+        if($(window).width() > 1024) {
+          triggerMegaMenuStyle();
+        }       
+      });
+
+      // On window resize
+      $(window).resize(function () {
+        if($(window).width() > 1024) {
+          triggerMegaMenuStyle();
+        } else {
+          resetMegaMenuStyle();
+        }        
+      });
+      
+    }
+  }
 
   Drupal.behaviors.languageMenu = {
     attach: function (context, settings) {
@@ -329,6 +372,7 @@
       $('#block-block-12 a').attr("tabindex","6");
       $('#block-bean-readspeaker-button a').attr("tabindex","6");
       $('select.tinynav').attr("tabindex","-1");
+      $('select.tinynav').attr("aria-hidden", "true");
     }
   };
 
@@ -392,6 +436,7 @@ Drupal.behaviors.psaResponsiveTables = {
     attach: function(context, settings) {
       // Create the button
       $('#block-block-14, #block-block-16, #block-locale-language').prepend( '<a href="/node/1141" title="Information in your language" tabindex="7" class="button-language">Information in your language</a>' );
+      //$("html").attr('dir', 'rtl');
     }
   };    
 

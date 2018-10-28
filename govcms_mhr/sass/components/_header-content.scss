@@ -30,7 +30,6 @@
     li:last-of-type {
       color: rgba(black,.5);
     }
-    @include hide-text; // @TODO breadcrumbs are only temporarily being hidden 
   }
   h1 {
     color: $black;
@@ -56,7 +55,7 @@
 // active state For you and your family
 .style-consumer,
 .section-consumer {
-  #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a { 
+  #block-superfish-1 .menu li.sf-item-1.sf-depth-1 > a {
     &:before {
       display: block;
       position: absolute;
