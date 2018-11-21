@@ -1,6 +1,6 @@
+// I try to overide the existing style from govcms module, thus css needs important.
 // Update general styles
-@media only screen and (min-width: 64em) {      
-
+@media only screen and (min-width: 64em) {
     a.sf-depth-2 {
         font-size: 16px !important;
         font-weight: bold !important;
@@ -80,6 +80,10 @@
 {
     li.sf-depth-1 {
         display: table-cell;
+
+        & li.sf-clone-parent {
+            display: none !important;
+        }
     }
 
     li.sf-depth-1:nth-child(2), li.sf-depth-1:nth-child(5)  {
@@ -87,15 +91,19 @@
             display: table-cell !important;                      
             & li {
                 display: block !important;
-            }                   
-        }  
+            }            
+        }
+
+        & li.sf-clone-parent {
+            display: none !important;
+        }
 
         & > ul {
             position: absolute !important;           
             top: auto !important;
             padding: 0 !important;
             li.sf-depth-2 {
-                display: inline-block !important;
+                display: table-cell !important;
                 vertical-align:  top !important;
                 border-right: solid 1px #f2f2f2;                                   
                 &:last-child {

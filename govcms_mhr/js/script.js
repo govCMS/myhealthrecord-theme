@@ -27,9 +27,9 @@
       // Trigger megamenu style
       function triggerMegaMenuStyle() {
         var topMenuWidth = $('#block-superfish-1').width();
-        var topMenuPos = $('li.sf-depth-1:nth-child(2)').position().left - $('#block-superfish-1').position().left;
-        secondMenu.css({'width':topMenuWidth,'left':"-"+topMenuPos+"px"});
-        fifthMenu.css({'width':topMenuWidth,'left':topMenuPos});
+        var secondLeft = 0 - parseFloat($('li.sf-depth-1:nth-child(1)').width());        
+        secondMenu.css({'width':topMenuWidth,'left':secondLeft});       
+        fifthMenu.css({'width':topMenuWidth,'left':'auto'});
       }
 
       // Reset megamenu style
@@ -40,14 +40,16 @@
 
       // On window load
       $(window).load(function () {
-        if($(window).width() > 1024) {
+        if($(window).width() >= 1024) {
           triggerMegaMenuStyle();
-        }       
+        } else {
+          resetMegaMenuStyle();
+        }      
       });
-
+      
       // On window resize
       $(window).resize(function () {
-        if($(window).width() > 1024) {
+        if($(window).width() >= 1024) {
           triggerMegaMenuStyle();
         } else {
           resetMegaMenuStyle();
